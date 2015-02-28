@@ -22,7 +22,8 @@ class Feed: NSParseObject {
             name = ""
         }
         
-        if let tempFile = parseObject["coverImage"] as? PFFile {
+        if let tempFile = parseObject["image"] as? PFFile {
+            println("has an image to load")
             coverImage = NSParseImage(pffile: tempFile)
         }
         else {

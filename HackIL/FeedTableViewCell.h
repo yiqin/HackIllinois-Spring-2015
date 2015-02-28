@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <HackIL-Swift.h>
+#import <Parse/PFFile.h>
+#import <PFImageView.h>
 
 @interface FeedTableViewCell : UITableViewCell
 

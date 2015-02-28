@@ -61,15 +61,19 @@
     return self.objects.count;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [FeedTableViewCell cellHeight];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *CellIdentifier = @"FeedCell";
     FeedTableViewCell *cell = (FeedTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    Feed *feed = [self.objects objectAtIndex:indexPath.row];
+    Feed *feed = [[FeedsDataManager sharedInstance].objects objectAtIndex:indexPath.row];
     if (feed) {
-        cell.textLabel.text = feed.name;
-        // [cell setContentValue:feed];
+        [cell setContentValue:feed];
     }
+    // cell.textLabel.text = feed.name;
     
     return cell;
 }
