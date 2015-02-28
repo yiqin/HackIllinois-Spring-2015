@@ -20,6 +20,7 @@ class NSParseUser: NSParseObject {
         else {
             name = ""
         }
+        println("name: \(name)")
         
         if let tempFile = parseObject["profileImage"] as? PFFile {
             rawCoverImage = NSParseImage(pffile: tempFile)

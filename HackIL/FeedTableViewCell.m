@@ -12,8 +12,13 @@
 
 @interface FeedTableViewCell ()
 
+@property(nonatomic) CGFloat profileSize;
+
 @property(nonatomic, strong) UILabel *messageLabel;
 @property(nonatomic, strong) UIImageView *displayImageView;
+
+@property(nonatomic, strong) UIImageView *goingUserProfile1;
+
 
 @end
 
@@ -22,6 +27,8 @@
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        self.profileSize = 85.0;
+        
         self.displayImageView = [[UIImageView alloc] init];
         self.displayImageView.contentMode = UIViewContentModeCenter;
         self.displayImageView.clipsToBounds = YES;
@@ -32,7 +39,14 @@
         self.messageLabel.textAlignment = NSTextAlignmentCenter;
         self.messageLabel.numberOfLines = 0;
         self.messageLabel.font = [UIFont fontWithName:@"OpenSans-Bold" size:17.0];
-        [self addSubview:self.messageLabel];
+        // [self addSubview:self.messageLabel];
+        
+        
+        self.goingUserProfile1 = [[UIImageView alloc] init];
+        self.goingUserProfile1.layer.masksToBounds = YES;
+        self.goingUserProfile1.layer.cornerRadius = self.profileSize*0.5;
+        [self addSubview:self.goingUserProfile1];
+        
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
@@ -46,6 +60,12 @@
 
 - (void)setContentValue:(Feed *)feed {
     self.messageLabel.text = feed.name;
+    
+    if (feed.goingUsers.count > 0) {
+        GoingUser *goingUser1 = [feed.goingUsers objectAtIndex:0];
+        NSLog(@"goring user name %@", goingUser1.name);
+        self.goingUserProfile1.image = goingUser1.rawCoverImage.image;
+    }
     
     if (feed.hasCoverImage) {
         if (feed.rawCoverImage.isLoading) {
@@ -75,9 +95,14 @@
 
 - (void)layoutSubviews {
     // This will be a fixed size.
-    self.displayImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), [FeedTableViewCell cellHeight:NO]);
+    CGFloat tempWidth = CGRectGetWidth(self.frame);
+    CGFloat tempHeigth = CGRectGetHeight(self.frame);
     
-    self.messageLabel.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), [FeedTableViewCell cellHeight:NO]);
+    self.displayImageView.frame = CGRectMake(0, 0, tempWidth, [FeedTableViewCell cellHeight:NO]);
+    
+    self.messageLabel.frame = CGRectMake(0, 0, tempWidth, [FeedTableViewCell cellHeight:NO]);
+    
+    self.goingUserProfile1.frame = CGRectMake(40, 100, self.profileSize, self.profileSize);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

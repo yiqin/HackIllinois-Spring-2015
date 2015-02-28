@@ -18,6 +18,8 @@ class Feed: NSParseObject {
     
     var releasedAt : NSDate
     
+    var goingUsers:[GoingUser] = []
+    
     override init(parseObject: PFObject) {
         if let tempName = parseObject["name"] as? String {
             name = tempName
@@ -77,6 +79,7 @@ class Feed: NSParseObject {
                     }
                     
                     println("Find users........")
+                    self.goingUsers += [goingUser]
                 }
                 
                 /*

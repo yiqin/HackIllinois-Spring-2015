@@ -15,6 +15,7 @@ class GoingUser: NSParseUser {
     override init(parseObject: PFObject) {
         responsedAt = NSDate()
         super.init(parseObject: parseObject)
+        println(objectId)
     }
     
 
