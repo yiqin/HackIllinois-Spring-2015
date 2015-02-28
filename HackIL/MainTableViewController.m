@@ -8,12 +8,23 @@
 
 #import "MainTableViewController.h"
 #import "FeedTableViewCell.h"
+#import <HackIL-Swift.h>
 
 @interface MainTableViewController ()
+
+@property(nonatomic, strong) NSArray *objects;
 
 @end
 
 @implementation MainTableViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.objects = [[NSArray alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +33,17 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [[FeedsDataManager sharedInstance] startLoadingDataFromParse:0 completionClosure:^(BOOL success) {
+        if (success) {
+            NSLog(@"sdfawegen");
+            
+            self.objects = [[NSArray alloc] initWithArray:[FeedsDataManager sharedInstance].objects];
+            [self.tableView reloadData];
+        }
+        
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +58,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.objects.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

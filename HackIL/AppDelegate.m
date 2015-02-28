@@ -55,13 +55,7 @@
     }
     
     
-    [[FeedsDataManager sharedInstance] startLoadingDataFromParse:0 completionClosure:^(BOOL success) {
-        if (success) {
-            NSLog(@"sdfawegen");
-        }
-        
-        
-    }];
+    
     
     return YES;
 }

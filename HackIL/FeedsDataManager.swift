@@ -10,9 +10,9 @@ import UIKit
 
 class FeedsDataManager: NSObject {
     
-    // we need a mutable array here.
-    var currentPageIndex = 0;
-    let itemsPerPage = 10;
+    var objects : [Feed] = []
+    var currentPageIndex = 0
+    let itemsPerPage = 10
     
     class var sharedInstance : FeedsDataManager {
         struct Static {
@@ -41,17 +41,17 @@ class FeedsDataManager: NSObject {
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
             if error == nil {
                 println("Load data (DataManager) from Parse.com.")
-                var recieved = NSMutableArray()
+                var recieved:[Feed] = []
                 
                 for object in objects {
                     let newFeed = Feed(parseObject: object as PFObject)
-                    // recievedArticles.addObject(newArtical)
+                    recieved.append(newFeed)
                 }
                 
                 if (pageIndex == 0){
-                    // self.articles.removeAllObjects()
+                    self.objects = []
                 }
-                // self.articles.addObjectsFromArray(recievedArticles)
+                self.objects += recieved
                 completionClosure(success: true)
                 
             } else {
