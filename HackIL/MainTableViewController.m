@@ -103,7 +103,7 @@
     
     NSArray *indexPaths = [[NSArray alloc] initWithObjects:self.clickingIndexPath, nil];
     [self.tableView beginUpdates];
-    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationFade];
+    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationNone];
     [self.tableView endUpdates];
     
 }
