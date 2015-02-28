@@ -23,6 +23,13 @@ class NSParseImage: NSObject {
         super.init()
         
         let manager = AFHTTPRequestOperationManager()
+        manager.responseSerializer = AFImageResponseSerializer()
+        manager.GET(file.url, parameters: nil, success: { (responseObject : AFHTTPRequestOperation!, response:AnyObject!) -> Void in
+            println(response)
+            
+            }) { (responseObject : AFHTTPRequestOperation!, error:NSError!) -> Void in
+            
+        }
         /*
         let tempImagePFImageView = PFImageView()
         tempImagePFImageView.file = pffile
@@ -34,6 +41,14 @@ class NSParseImage: NSObject {
             }
         }
         */
+    }
+    
+    override init(){
+        image = UIImage()
+        isLoading = true
+        file = PFFile()
+        
+        super.init()
     }
     
 

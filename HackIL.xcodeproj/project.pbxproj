@@ -20,6 +20,7 @@
 		8D92F7A61AA1B07C00AE759B /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */; };
 		8D92F7A81AA1B38A00AE759B /* FeedsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7A71AA1B38A00AE759B /* FeedsDataManager.swift */; };
 		8D92F7AA1AA1EB7100AE759B /* NSParseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7A91AA1EB7100AE759B /* NSParseImage.swift */; };
+		8D92F7AC1AA1EF4D00AE759B /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7AB1AA1EF4D00AE759B /* Feed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 		8D92F7A71AA1B38A00AE759B /* FeedsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsDataManager.swift; sourceTree = "<group>"; };
 		8D92F7A91AA1EB7100AE759B /* NSParseImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSParseImage.swift; sourceTree = "<group>"; };
+		8D92F7AB1AA1EF4D00AE759B /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		CD6A55DFDC11EB2027C45ECD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -115,7 +117,7 @@
 				8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */,
 				8D92F7A41AA1B07C00AE759B /* FeedTableViewCell.h */,
 				8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */,
-				8D92F7A71AA1B38A00AE759B /* FeedsDataManager.swift */,
+				8D92F7AD1AA1F0D300AE759B /* DataManager */,
 				8D92F7A01AA1A7C800AE759B /* DataClass */,
 				8D92F7811AA147B500AE759B /* Main.storyboard */,
 				8D92F7841AA147B500AE759B /* Images.xcassets */,
@@ -158,8 +160,17 @@
 			children = (
 				8D92F79E1AA151BC00AE759B /* NSParseObject.swift */,
 				8D92F7A91AA1EB7100AE759B /* NSParseImage.swift */,
+				8D92F7AB1AA1EF4D00AE759B /* Feed.swift */,
 			);
 			name = DataClass;
+			sourceTree = "<group>";
+		};
+		8D92F7AD1AA1F0D300AE759B /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				8D92F7A71AA1B38A00AE759B /* FeedsDataManager.swift */,
+			);
+			name = DataManager;
 			sourceTree = "<group>";
 		};
 		EFC5FA986401E7C1D54E93AF /* Frameworks */ = {
@@ -306,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */,
+				8D92F7AC1AA1EF4D00AE759B /* Feed.swift in Sources */,
 				8D92F7A61AA1B07C00AE759B /* FeedTableViewCell.m in Sources */,
 				8D92F79F1AA151BC00AE759B /* NSParseObject.swift in Sources */,
 				8D92F7771AA147B500AE759B /* main.m in Sources */,
