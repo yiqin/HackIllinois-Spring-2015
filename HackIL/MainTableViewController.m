@@ -73,7 +73,11 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BOOL isClicked = [self.clickedCollection containsObject:indexPath];
+    
+    Feed *feed = [self.objects objectAtIndex:indexPath.row];
+    
+    BOOL isClicked = [self.clickedCollection containsObject:feed];
+    
     // NSLog(@"%f", [FeedTableViewCell cellHeight:isClicked]);
     return [FeedTableViewCell cellHeight:isClicked];
 }
@@ -94,15 +98,18 @@
     
     self.clickingIndexPath = indexPath;
     
-    [self.clickedCollection addOrDeleteUniqueObject:indexPath];
-    NSLog(@"number of clicked Collection  %lu", (unsigned long)self.clickedCollection.count);
-    NSLog(@"row: %ld", indexPath.row);
+    Feed *feed = [self.objects objectAtIndex:indexPath.row];
+    if ([self.clickedCollection containsObject:feed]) {
+        [self.clickedCollection removeObject:feed];
+    }
+    else {
+        [self.clickedCollection addObject:feed];
+    }
     
     NSArray *indexPaths = [[NSArray alloc] initWithObjects:self.clickingIndexPath, nil];
     [self.tableView beginUpdates];
     [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationFade];
     [self.tableView endUpdates];
-    
     
 }
 
