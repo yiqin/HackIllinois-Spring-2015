@@ -10,10 +10,12 @@
 #import "FeedTableViewCell.h"
 #import <HackIL-Swift.h>
 #import "AFNetworking.h"
+#import "NSMutableSet+UniqueObject.h"
 
 @interface MainTableViewController ()
 
 @property(nonatomic, strong) NSArray *objects;
+@property(nonatomic, strong) NSMutableSet *clickedCollection;
 
 @end
 
@@ -23,11 +25,14 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.objects = [[NSArray alloc] init];
+        self.clickedCollection = [[NSMutableSet alloc] init];
     }
     return self;
 }
 
 - (void)viewDidLoad {
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -37,17 +42,13 @@
     
     [[FeedsDataManager sharedInstance] startLoadingDataFromParse:0 completionClosure:^(BOOL success) {
         if (success) {
-            NSLog(@"sdfawegen");
-            
             [self reloadThisTableView];
-            
         }
-        
-        
     }];
 }
 
 - (void)reloadThisTableView {
+    self.clickedCollection = [[NSMutableSet alloc] init];
     self.objects = [[NSArray alloc] initWithArray:[FeedsDataManager sharedInstance].objects];
     [self.tableView reloadData];
 }
@@ -75,18 +76,23 @@
     NSString *CellIdentifier = @"FeedCell";
     FeedTableViewCell *cell = (FeedTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    Feed *feed = [[FeedsDataManager sharedInstance].objects objectAtIndex:indexPath.row];
+    Feed *feed = [self.objects objectAtIndex:indexPath.row];
     if (feed) {
         [cell setContentValue:feed];
     }
-    // cell.textLabel.text = feed.name;
-    
-    
-    
     
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"User click something....");
+    
+    @synchronized(self.clickedCollection) {
+        [self.clickedCollection addOrDeleteUniqueObject:indexPath];
+    }
+    
+    
+}
 
 /*
 // Override to support conditional editing of the table view.

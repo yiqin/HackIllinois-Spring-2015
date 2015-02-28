@@ -22,19 +22,15 @@
     return self;
 }
 
-
-
 - (void)awakeFromNib {
     // Initialization code
 }
 
 - (void)setContentValue:(Feed *)feed {
     if (feed.coverImage.isLoading) {
-        
+        NSLog(@"load image in the cell.");
         
         NSString *tempString = [NSString stringWithFormat:@"%@", feed.coverImage.file.url];
-        
-        
         AFHTTPRequestOperationManager *operationManager = [AFHTTPRequestOperationManager manager];
         operationManager.responseSerializer = [AFImageResponseSerializer serializer];
         [operationManager GET:tempString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -44,27 +40,10 @@
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             
         }];
-        
-        
-        /*
-        PFImageView *pfImageView = [[PFImageView alloc] init];
-        pfImageView.file = feed.coverImage.file;
-        NSLog(@"%@",pfImageView.file.url);
-        
-        
-        [pfImageView loadInBackground:^(UIImage *image, NSError *error) {
-            NSLog(@"successfully loading");
-        }];
-        */
-        
-        
-        
     }
     else {
         self.displayImageView.image = feed.coverImage.image;
     }
-    
-    
 }
 
 - (void)layoutSubviews {
