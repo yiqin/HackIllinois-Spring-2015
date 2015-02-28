@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
-
+#import "Colours.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +19,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Setting the navigation bar style
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:61.0/255.0 green:69.0/255.0 blue:75.0/255.0 alpha:1.0]];
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:61.0/255.0 green:69.0/255.0 blue:75.0/255.0 alpha:1.0]];
+    // White or black
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    // Set status bar style
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"Lato-Bold" size:17.0], NSFontAttributeName, nil]];
+    
+    
     // Initialize Parse.
-          
     [Parse setApplicationId:@"vp04lCdgsjHajEk8gLQfn4kD7DWcdxaYE5FJDrbS"
                   clientKey:@"b9evNhc0ht9JdmuQ75YjIdgvm91KFsWbXKUdFizM"];
     
