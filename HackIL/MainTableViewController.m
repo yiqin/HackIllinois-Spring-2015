@@ -28,7 +28,6 @@
     if (self) {
         self.objects = [[NSArray alloc] init];
         self.clickedCollection = [[NSMutableSet alloc] init];
-        // self.clickingIndexPath = [[NSIndexPath alloc] init];
         self.clickingIndexPath = [NSIndexPath indexPathForItem:1 inSection:0];
     }
     return self;
@@ -73,12 +72,8 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     Feed *feed = [self.objects objectAtIndex:indexPath.row];
-    
     BOOL isClicked = [self.clickedCollection containsObject:feed];
-    
-    // NSLog(@"%f", [FeedTableViewCell cellHeight:isClicked]);
     return [FeedTableViewCell cellHeight:isClicked];
 }
 

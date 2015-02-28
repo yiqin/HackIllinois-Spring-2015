@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5E4C29DD8D5689BEAAA6A595 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6A55DFDC11EB2027C45ECD /* libPods.a */; };
+		8D5D2D131AA24C6B003BE326 /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2CFD1AA24C6B003BE326 /* NYXImagesHelper.m */; };
+		8D5D2D141AA24C6B003BE326 /* UIImage+Blurring.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D001AA24C6B003BE326 /* UIImage+Blurring.m */; };
+		8D5D2D151AA24C6B003BE326 /* UIImage+Enhancing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D021AA24C6B003BE326 /* UIImage+Enhancing.m */; };
+		8D5D2D161AA24C6B003BE326 /* UIImage+Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D041AA24C6B003BE326 /* UIImage+Filtering.m */; };
+		8D5D2D171AA24C6B003BE326 /* UIImage+Masking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D061AA24C6B003BE326 /* UIImage+Masking.m */; };
+		8D5D2D181AA24C6B003BE326 /* UIImage+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D081AA24C6B003BE326 /* UIImage+Reflection.m */; };
+		8D5D2D191AA24C6B003BE326 /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D0A1AA24C6B003BE326 /* UIImage+Resizing.m */; };
+		8D5D2D1A1AA24C6B003BE326 /* UIImage+Rotating.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D0C1AA24C6B003BE326 /* UIImage+Rotating.m */; };
+		8D5D2D1B1AA24C6B003BE326 /* UIImage+Saving.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D0E1AA24C6B003BE326 /* UIImage+Saving.m */; };
+		8D5D2D1C1AA24C6B003BE326 /* UIScrollView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D101AA24C6B003BE326 /* UIScrollView+Screenshot.m */; };
+		8D5D2D1D1AA24C6B003BE326 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D121AA24C6B003BE326 /* UIView+Screenshot.m */; };
 		8D92F7771AA147B500AE759B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7761AA147B500AE759B /* main.m */; };
 		8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7791AA147B500AE759B /* AppDelegate.m */; };
 		8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F77B1AA147B500AE759B /* HackIL.xcdatamodeld */; };
@@ -37,6 +48,29 @@
 /* Begin PBXFileReference section */
 		69046B0FDD868508318D6AB7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		82CEB7904133DCD12B8FEF07 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8D5D2CFC1AA24C6B003BE326 /* NYXImagesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesHelper.h; sourceTree = "<group>"; };
+		8D5D2CFD1AA24C6B003BE326 /* NYXImagesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYXImagesHelper.m; sourceTree = "<group>"; };
+		8D5D2CFE1AA24C6B003BE326 /* NYXImagesKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesKit.h; sourceTree = "<group>"; };
+		8D5D2CFF1AA24C6B003BE326 /* UIImage+Blurring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blurring.h"; sourceTree = "<group>"; };
+		8D5D2D001AA24C6B003BE326 /* UIImage+Blurring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blurring.m"; sourceTree = "<group>"; };
+		8D5D2D011AA24C6B003BE326 /* UIImage+Enhancing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Enhancing.h"; sourceTree = "<group>"; };
+		8D5D2D021AA24C6B003BE326 /* UIImage+Enhancing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Enhancing.m"; sourceTree = "<group>"; };
+		8D5D2D031AA24C6B003BE326 /* UIImage+Filtering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Filtering.h"; sourceTree = "<group>"; };
+		8D5D2D041AA24C6B003BE326 /* UIImage+Filtering.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Filtering.m"; sourceTree = "<group>"; };
+		8D5D2D051AA24C6B003BE326 /* UIImage+Masking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Masking.h"; sourceTree = "<group>"; };
+		8D5D2D061AA24C6B003BE326 /* UIImage+Masking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Masking.m"; sourceTree = "<group>"; };
+		8D5D2D071AA24C6B003BE326 /* UIImage+Reflection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Reflection.h"; sourceTree = "<group>"; };
+		8D5D2D081AA24C6B003BE326 /* UIImage+Reflection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Reflection.m"; sourceTree = "<group>"; };
+		8D5D2D091AA24C6B003BE326 /* UIImage+Resizing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resizing.h"; sourceTree = "<group>"; };
+		8D5D2D0A1AA24C6B003BE326 /* UIImage+Resizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resizing.m"; sourceTree = "<group>"; };
+		8D5D2D0B1AA24C6B003BE326 /* UIImage+Rotating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotating.h"; sourceTree = "<group>"; };
+		8D5D2D0C1AA24C6B003BE326 /* UIImage+Rotating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotating.m"; sourceTree = "<group>"; };
+		8D5D2D0D1AA24C6B003BE326 /* UIImage+Saving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Saving.h"; sourceTree = "<group>"; };
+		8D5D2D0E1AA24C6B003BE326 /* UIImage+Saving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Saving.m"; sourceTree = "<group>"; };
+		8D5D2D0F1AA24C6B003BE326 /* UIScrollView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Screenshot.h"; sourceTree = "<group>"; };
+		8D5D2D101AA24C6B003BE326 /* UIScrollView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Screenshot.m"; sourceTree = "<group>"; };
+		8D5D2D111AA24C6B003BE326 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		8D5D2D121AA24C6B003BE326 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		8D92F7711AA147B500AE759B /* HackIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D92F7751AA147B500AE759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D92F7761AA147B500AE759B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +125,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8D5D2CFA1AA24C6B003BE326 /* ThirdPartyLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				8D5D2CFB1AA24C6B003BE326 /* NYXImagesKit */,
+			);
+			path = ThirdPartyLibraries;
+			sourceTree = SOURCE_ROOT;
+		};
+		8D5D2CFB1AA24C6B003BE326 /* NYXImagesKit */ = {
+			isa = PBXGroup;
+			children = (
+				8D5D2CFC1AA24C6B003BE326 /* NYXImagesHelper.h */,
+				8D5D2CFD1AA24C6B003BE326 /* NYXImagesHelper.m */,
+				8D5D2CFE1AA24C6B003BE326 /* NYXImagesKit.h */,
+				8D5D2CFF1AA24C6B003BE326 /* UIImage+Blurring.h */,
+				8D5D2D001AA24C6B003BE326 /* UIImage+Blurring.m */,
+				8D5D2D011AA24C6B003BE326 /* UIImage+Enhancing.h */,
+				8D5D2D021AA24C6B003BE326 /* UIImage+Enhancing.m */,
+				8D5D2D031AA24C6B003BE326 /* UIImage+Filtering.h */,
+				8D5D2D041AA24C6B003BE326 /* UIImage+Filtering.m */,
+				8D5D2D051AA24C6B003BE326 /* UIImage+Masking.h */,
+				8D5D2D061AA24C6B003BE326 /* UIImage+Masking.m */,
+				8D5D2D071AA24C6B003BE326 /* UIImage+Reflection.h */,
+				8D5D2D081AA24C6B003BE326 /* UIImage+Reflection.m */,
+				8D5D2D091AA24C6B003BE326 /* UIImage+Resizing.h */,
+				8D5D2D0A1AA24C6B003BE326 /* UIImage+Resizing.m */,
+				8D5D2D0B1AA24C6B003BE326 /* UIImage+Rotating.h */,
+				8D5D2D0C1AA24C6B003BE326 /* UIImage+Rotating.m */,
+				8D5D2D0D1AA24C6B003BE326 /* UIImage+Saving.h */,
+				8D5D2D0E1AA24C6B003BE326 /* UIImage+Saving.m */,
+				8D5D2D0F1AA24C6B003BE326 /* UIScrollView+Screenshot.h */,
+				8D5D2D101AA24C6B003BE326 /* UIScrollView+Screenshot.m */,
+				8D5D2D111AA24C6B003BE326 /* UIView+Screenshot.h */,
+				8D5D2D121AA24C6B003BE326 /* UIView+Screenshot.m */,
+			);
+			path = NYXImagesKit;
+			sourceTree = "<group>";
+		};
 		8D92F7681AA147B500AE759B = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +192,7 @@
 				8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */,
 				8D92F7A41AA1B07C00AE759B /* FeedTableViewCell.h */,
 				8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */,
+				8D5D2CFA1AA24C6B003BE326 /* ThirdPartyLibraries */,
 				8DDB0F2E1AA2115A005FA34D /* Categories */,
 				8D92F7AD1AA1F0D300AE759B /* DataManager */,
 				8D92F7A01AA1A7C800AE759B /* DataClass */,
@@ -330,15 +403,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DDB0F2D1AA21154005FA34D /* NSMutableSet+UniqueObject.m in Sources */,
+				8D5D2D1D1AA24C6B003BE326 /* UIView+Screenshot.m in Sources */,
+				8D5D2D1A1AA24C6B003BE326 /* UIImage+Rotating.m in Sources */,
 				8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */,
 				8D92F7AC1AA1EF4D00AE759B /* Feed.swift in Sources */,
 				8D92F7A61AA1B07C00AE759B /* FeedTableViewCell.m in Sources */,
 				8D92F79F1AA151BC00AE759B /* NSParseObject.swift in Sources */,
+				8D5D2D191AA24C6B003BE326 /* UIImage+Resizing.m in Sources */,
+				8D5D2D1B1AA24C6B003BE326 /* UIImage+Saving.m in Sources */,
 				8D92F7771AA147B500AE759B /* main.m in Sources */,
+				8D5D2D181AA24C6B003BE326 /* UIImage+Reflection.m in Sources */,
 				8D92F7AA1AA1EB7100AE759B /* NSParseImage.swift in Sources */,
+				8D5D2D151AA24C6B003BE326 /* UIImage+Enhancing.m in Sources */,
+				8D5D2D161AA24C6B003BE326 /* UIImage+Filtering.m in Sources */,
 				8D92F7A31AA1AF3200AE759B /* MainTableViewController.m in Sources */,
 				8D92F7A81AA1B38A00AE759B /* FeedsDataManager.swift in Sources */,
+				8D5D2D171AA24C6B003BE326 /* UIImage+Masking.m in Sources */,
 				8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */,
+				8D5D2D1C1AA24C6B003BE326 /* UIScrollView+Screenshot.m in Sources */,
+				8D5D2D141AA24C6B003BE326 /* UIImage+Blurring.m in Sources */,
+				8D5D2D131AA24C6B003BE326 /* NYXImagesHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
