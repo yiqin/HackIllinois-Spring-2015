@@ -27,6 +27,22 @@
     testObject[@"foo"] = @"bar";
     [testObject saveInBackground];
     
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        // do stuff with the user
+        NSLog(@"logined before");
+    } else {
+        // show the signup or login screen
+        [PFAnonymousUtils logInWithBlock:^(PFUser *user, NSError *error) {
+            if (error) {
+                NSLog(@"Anonymous login failed.");
+            } else {
+                NSLog(@"Anonymous user logged in.");
+            }
+        }];
+    }
+    
+    
     return YES;
 }
 
