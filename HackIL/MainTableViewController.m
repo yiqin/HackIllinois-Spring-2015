@@ -45,6 +45,7 @@
     
     [[FeedsDataManager sharedInstance] startLoadingDataFromParse:0 completionClosure:^(BOOL success) {
         if (success) {
+            [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(reloadThisTableView) userInfo:nil repeats:NO];
             [self reloadThisTableView];
         }
     }];

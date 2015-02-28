@@ -69,6 +69,14 @@ class Feed: NSParseObject {
                     // let article = Article(parseObject: object as PFObject)
                     // self.articles += [article]
                     
+                    let tempPFObject = object as PFObject
+                    let goingUser = GoingUser(parseObject: tempPFObject)
+                    
+                    if let tempResponsedAt = tempPFObject["releasedAt"] as? NSDate {
+                        goingUser.responsedAt = tempResponsedAt
+                    }
+                    
+                    println("Find users........")
                 }
                 
                 /*

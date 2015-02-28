@@ -31,6 +31,7 @@
 		8D5D2D341AA264C9003BE326 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D5D2D2A1AA264C9003BE326 /* OpenSans-Semibold.ttf */; };
 		8D5D2D351AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D5D2D2B1AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf */; };
 		8D5D2D381AA26D10003BE326 /* RandomColorGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */; };
+		8D5D2D3A1AA2735F003BE326 /* GoingUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D391AA2735F003BE326 /* GoingUser.swift */; };
 		8D92F7771AA147B500AE759B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7761AA147B500AE759B /* main.m */; };
 		8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7791AA147B500AE759B /* AppDelegate.m */; };
 		8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F77B1AA147B500AE759B /* HackIL.xcdatamodeld */; };
@@ -97,6 +98,7 @@
 		8D5D2D2B1AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		8D5D2D361AA26D10003BE326 /* RandomColorGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomColorGenerator.h; sourceTree = "<group>"; };
 		8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomColorGenerator.m; sourceTree = "<group>"; };
+		8D5D2D391AA2735F003BE326 /* GoingUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoingUser.swift; sourceTree = "<group>"; };
 		8D92F7711AA147B500AE759B /* HackIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D92F7751AA147B500AE759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D92F7761AA147B500AE759B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 				8D92F79E1AA151BC00AE759B /* NSParseObject.swift */,
 				8D92F7A91AA1EB7100AE759B /* NSParseImage.swift */,
 				8D5D2D1F1AA25E63003BE326 /* NSParseUser.swift */,
+				8D5D2D391AA2735F003BE326 /* GoingUser.swift */,
 				8D92F7AB1AA1EF4D00AE759B /* Feed.swift */,
 			);
 			name = DataClass;
@@ -473,6 +476,7 @@
 				8D92F7771AA147B500AE759B /* main.m in Sources */,
 				8D5D2D181AA24C6B003BE326 /* UIImage+Reflection.m in Sources */,
 				8D92F7AA1AA1EB7100AE759B /* NSParseImage.swift in Sources */,
+				8D5D2D3A1AA2735F003BE326 /* GoingUser.swift in Sources */,
 				8D5D2D151AA24C6B003BE326 /* UIImage+Enhancing.m in Sources */,
 				8D5D2D201AA25E63003BE326 /* NSParseUser.swift in Sources */,
 				8D5D2D161AA24C6B003BE326 /* UIImage+Filtering.m in Sources */,
