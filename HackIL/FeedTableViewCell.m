@@ -10,8 +10,31 @@
 
 @implementation FeedTableViewCell
 
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.displayImageView = [[UIImageView alloc] init];
+        [self addSubview:self.displayImageView];
+        
+        
+    }
+    return self;
+}
+
+
+
 - (void)awakeFromNib {
     // Initialization code
+}
+
+- (void)setContentValue:(Feed *)feed {
+    
+    
+    
+}
+
+- (void)layoutSubviews {
+    self.displayImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

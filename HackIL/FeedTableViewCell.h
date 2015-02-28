@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <HackIL-Swift.h>
 
 @interface FeedTableViewCell : UITableViewCell
+
+@property(nonatomic, strong) UIImageView *displayImageView;
+
+- (void)setContentValue:(Feed *)feed;
 
 + (CGFloat)cellHeight;
 

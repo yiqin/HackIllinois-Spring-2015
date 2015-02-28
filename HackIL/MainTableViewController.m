@@ -65,8 +65,11 @@
     NSString *CellIdentifier = @"FeedCell";
     FeedTableViewCell *cell = (FeedTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    cell.textLabel.text = @"hello";
-    
+    Feed *feed = [self.objects objectAtIndex:indexPath.row];
+    if (feed) {
+        cell.textLabel.text = feed.name;
+        // [cell setContentValue:feed];
+    }
     
     return cell;
 }
