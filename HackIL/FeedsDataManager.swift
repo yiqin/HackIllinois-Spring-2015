@@ -12,7 +12,7 @@ class FeedsDataManager: NSObject {
     
     var objects : [Feed] = []
     var currentPageIndex = 0
-    let itemsPerPage = 10
+    let itemsPerPage = 20
     
     class var sharedInstance : FeedsDataManager {
         struct Static {

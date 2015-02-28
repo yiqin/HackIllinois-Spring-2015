@@ -7,4 +7,4 @@
 //
 
 
-#define kRatio        (CGFloat)0.8
+#define kRatio        (CGFloat)0.7
