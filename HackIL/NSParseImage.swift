@@ -25,7 +25,6 @@ class NSParseImage: NSObject {
         let manager = AFHTTPRequestOperationManager()
         manager.responseSerializer = AFImageResponseSerializer()
         manager.GET(file.url, parameters: nil, success: { (responseObject : AFHTTPRequestOperation!, response:AnyObject!) -> Void in
-            println(response)
             self.image = response as UIImage
             self.isLoading = false
             

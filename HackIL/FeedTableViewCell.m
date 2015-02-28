@@ -61,7 +61,6 @@
         
     }
     else {
-        NSLog(@"assign the image");
         self.displayImageView.image = feed.coverImage.image;
     }
     
