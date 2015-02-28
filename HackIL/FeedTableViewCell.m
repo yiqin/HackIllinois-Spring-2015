@@ -16,15 +16,17 @@
     if (self) {
         self.displayImageView = [[UIImageView alloc] init];
         self.displayImageView.contentMode = UIViewContentModeCenter;
+        self.displayImageView.clipsToBounds = YES;
         [self addSubview:self.displayImageView];
         
-        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
 
 - (void)awakeFromNib {
     // Initialization code
+    self.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)setContentValue:(Feed *)feed {
@@ -49,7 +51,7 @@
 
 - (void)layoutSubviews {
     // This will be a fixed size.
-    self.displayImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
+    self.displayImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 200);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -60,10 +62,11 @@
 
 + (CGFloat)cellHeight:(BOOL) isClicked {
     if (isClicked) {
-        return 400;
+        NSLog(@"this is extend cell.....");
+        return 300;
     }
     else {
-        return 330;
+        return 200;
     }
 }
 

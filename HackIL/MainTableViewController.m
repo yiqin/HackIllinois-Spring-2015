@@ -17,6 +17,8 @@
 @property(nonatomic, strong) NSArray *objects;
 @property(nonatomic, strong) NSMutableSet *clickedCollection;
 
+@property(nonatomic, strong) NSIndexPath *clickingIndexPath;
+
 @end
 
 @implementation MainTableViewController
@@ -26,6 +28,9 @@
     if (self) {
         self.objects = [[NSArray alloc] init];
         self.clickedCollection = [[NSMutableSet alloc] init];
+        // self.clickingIndexPath = [[NSIndexPath alloc] init];
+        self.clickingIndexPath = [NSIndexPath indexPathForItem:1 inSection:0];
+        
     }
     return self;
 }
@@ -69,8 +74,17 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BOOL isClicked = [self.clickedCollection containsObject:indexPath];
-    return [FeedTableViewCell cellHeight:isClicked];
+    if (self.clickedCollection.count == 0) {
+        return 200;
+    }
+    // NSLog(@"happppp.....   %ld", (long)indexPath.row);
+    
+    @synchronized(self.clickedCollection) {
+        BOOL isClicked = [self.clickedCollection containsObject:indexPath];
+        // NSLog(@"%f", [FeedTableViewCell cellHeight:isClicked]);
+        return [FeedTableViewCell cellHeight:isClicked];
+    }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -86,18 +100,34 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    
     NSLog(@"User click something....");
     
+    
     @synchronized(self.clickedCollection) {
+        self.clickingIndexPath = indexPath;
+        
         [self.clickedCollection addOrDeleteUniqueObject:indexPath];
+        NSLog(@"number of clicked Collection  %lu", (unsigned long)self.clickedCollection.count);
+        
+        
+        NSLog(@"row: %ld", indexPath.row);
+        
+        [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(animatdddd) userInfo:nil repeats:NO];
     }
     
-    [self.tableView beginUpdates];
-    NSArray *indexPaths = [[NSArray alloc] initWithObjects:indexPath, nil];
-    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationTop];
-    [self.tableView endUpdates];
-    
 }
+
+
+- (void)animatdddd {
+    NSArray *indexPaths = [[NSArray alloc] initWithObjects:self.clickingIndexPath, nil];
+    [self.tableView beginUpdates];
+    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationFade];
+    [self.tableView endUpdates];
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
