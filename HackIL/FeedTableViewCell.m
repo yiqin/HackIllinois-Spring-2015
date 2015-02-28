@@ -8,6 +8,7 @@
 
 #import "FeedTableViewCell.h"
 #import "AFNetworking.h"
+#import "Constants.h"
 
 @implementation FeedTableViewCell
 
@@ -53,7 +54,7 @@
 
 - (void)layoutSubviews {
     // This will be a fixed size.
-    self.displayImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), 200);
+    self.displayImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), [FeedTableViewCell cellHeight:NO]);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -63,11 +64,13 @@
 }
 
 + (CGFloat)cellHeight:(BOOL) isClicked {
+    CGFloat kScreenWidth = [[UIScreen mainScreen] bounds].size.width;
+    
     if (isClicked) {
-        return 300;
+        return kScreenWidth*kRatio+100;
     }
     else {
-        return 200;
+        return kScreenWidth*kRatio;
     }
 }
 

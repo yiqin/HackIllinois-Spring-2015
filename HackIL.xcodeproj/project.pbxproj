@@ -71,6 +71,7 @@
 		8D5D2D101AA24C6B003BE326 /* UIScrollView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Screenshot.m"; sourceTree = "<group>"; };
 		8D5D2D111AA24C6B003BE326 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
 		8D5D2D121AA24C6B003BE326 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
+		8D5D2D1E1AA25757003BE326 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8D92F7711AA147B500AE759B /* HackIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D92F7751AA147B500AE759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D92F7761AA147B500AE759B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 			children = (
 				8D92F7781AA147B500AE759B /* AppDelegate.h */,
 				8D92F7791AA147B500AE759B /* AppDelegate.m */,
+				8D5D2D1E1AA25757003BE326 /* Constants.h */,
 				8D92F7A11AA1AF3200AE759B /* MainTableViewController.h */,
 				8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */,
 				8D92F7A41AA1B07C00AE759B /* FeedTableViewCell.h */,
