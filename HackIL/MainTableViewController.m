@@ -94,12 +94,7 @@
     self.clickingIndexPath = indexPath;
     
     Feed *feed = [self.objects objectAtIndex:indexPath.row];
-    if ([self.clickedCollection containsObject:feed]) {
-        [self.clickedCollection removeObject:feed];
-    }
-    else {
-        [self.clickedCollection addObject:feed];
-    }
+    [self.clickedCollection addOrDeleteUniqueObject:feed];
     
     NSArray *indexPaths = [[NSArray alloc] initWithObjects:self.clickingIndexPath, nil];
     [self.tableView beginUpdates];

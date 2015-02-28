@@ -25,12 +25,12 @@ class Feed: NSParseObject {
         }
         
         if let tempFile = parseObject["image"] as? PFFile {
-            hasCoverImage = false
+            hasCoverImage = true
             rawCoverImage = NSParseImage(pffile: tempFile)
             
         }
         else {
-            hasCoverImage = true
+            hasCoverImage = false
             rawCoverImage = NSParseImage()
         }
         

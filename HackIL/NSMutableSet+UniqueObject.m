@@ -15,6 +15,7 @@
         [self removeObject:object];
     }
     else {
+        [self removeAllObjects];
         [self addObject:object];
     }
 }
