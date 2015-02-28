@@ -11,7 +11,6 @@
 		8D92F7771AA147B500AE759B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7761AA147B500AE759B /* main.m */; };
 		8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7791AA147B500AE759B /* AppDelegate.m */; };
 		8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F77B1AA147B500AE759B /* HackIL.xcdatamodeld */; };
-		8D92F7801AA147B500AE759B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F77F1AA147B500AE759B /* ViewController.m */; };
 		8D92F7831AA147B500AE759B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D92F7811AA147B500AE759B /* Main.storyboard */; };
 		8D92F7851AA147B500AE759B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D92F7841AA147B500AE759B /* Images.xcassets */; };
 		8D92F7881AA147B500AE759B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D92F7861AA147B500AE759B /* LaunchScreen.xib */; };
@@ -38,8 +37,6 @@
 		8D92F7781AA147B500AE759B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D92F7791AA147B500AE759B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8D92F77C1AA147B500AE759B /* HackIL.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HackIL.xcdatamodel; sourceTree = "<group>"; };
-		8D92F77E1AA147B500AE759B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8D92F77F1AA147B500AE759B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8D92F7821AA147B500AE759B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D92F7841AA147B500AE759B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8D92F7871AA147B500AE759B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -104,8 +101,6 @@
 			children = (
 				8D92F7781AA147B500AE759B /* AppDelegate.h */,
 				8D92F7791AA147B500AE759B /* AppDelegate.m */,
-				8D92F77E1AA147B500AE759B /* ViewController.h */,
-				8D92F77F1AA147B500AE759B /* ViewController.m */,
 				8D92F7A01AA1A7C800AE759B /* DataClass */,
 				8D92F7811AA147B500AE759B /* Main.storyboard */,
 				8D92F7841AA147B500AE759B /* Images.xcassets */,
@@ -297,7 +292,6 @@
 				8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */,
 				8D92F79F1AA151BC00AE759B /* NSParseObject.swift in Sources */,
 				8D92F7771AA147B500AE759B /* main.m in Sources */,
-				8D92F7801AA147B500AE759B /* ViewController.m in Sources */,
 				8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
