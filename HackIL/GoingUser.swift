@@ -8,12 +8,30 @@
 
 import UIKit
 
-class GoingUser: NSParseUser {
+class GoingUser: NSParseObject {
     
-    var responsedAt: NSDate
+    var name : String
+    var rawCoverImage:NSParseImage
+    
     
     override init(parseObject: PFObject) {
-        responsedAt = NSDate()
+        
+        if let tempName = parseObject["user_name"] as? String {
+            name = tempName
+        }
+        else {
+            name = ""
+        }
+        
+        if let tempFile = parseObject["user_profileImage"] as? PFFile {
+            rawCoverImage = NSParseImage(pffile: tempFile)
+            println("In GoingUser.........")
+        }
+        else {
+            rawCoverImage = NSParseImage()
+            println("In GoingUser.........  NO file.... to load")
+        }
+        
         super.init(parseObject: parseObject)
         println(objectId)
     }

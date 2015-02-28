@@ -27,7 +27,7 @@
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.profileSize = 85.0;
+        self.profileSize = 85.0/2;
         
         self.displayImageView = [[UIImageView alloc] init];
         self.displayImageView.contentMode = UIViewContentModeCenter;
@@ -65,6 +65,8 @@
         GoingUser *goingUser1 = [feed.goingUsers objectAtIndex:0];
         NSLog(@"goring user name %@", goingUser1.name);
         self.goingUserProfile1.image = goingUser1.rawCoverImage.image;
+        NSLog(@"%f", self.goingUserProfile1.image.size.height);
+        
     }
     
     if (feed.hasCoverImage) {
@@ -102,7 +104,7 @@
     
     self.messageLabel.frame = CGRectMake(0, 0, tempWidth, [FeedTableViewCell cellHeight:NO]);
     
-    self.goingUserProfile1.frame = CGRectMake(40, 100, self.profileSize, self.profileSize);
+    self.goingUserProfile1.frame = CGRectMake(40/2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -31,6 +31,7 @@ class NSParseImage: NSObject {
             self.image = response as UIImage
             self.isLoading = false
             
+            /*
             let tempImage = self.image
             let tempImageWidth = tempImage.size.width
             let tempImageHeight = tempImage.size.height
@@ -45,6 +46,7 @@ class NSParseImage: NSObject {
             let scaledTempImage = tempImage.scaleToSize(CGSizeMake(kScreenWidth, tempImageHeight*ratio))
             let croppedTempImage = scaledTempImage.cropToSize(CGSizeMake(kScreenWidth, 100), usingMode: NYXCropModeCenter)
             self.croppedImage = croppedTempImage
+            */
             
             }) { (responseObject : AFHTTPRequestOperation!, error:NSError!) -> Void in
             
