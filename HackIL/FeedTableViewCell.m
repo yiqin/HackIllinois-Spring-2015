@@ -15,6 +15,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.displayImageView = [[UIImageView alloc] init];
+        self.displayImageView.contentMode = UIViewContentModeCenter;
         [self addSubview:self.displayImageView];
         
         
@@ -47,6 +48,7 @@
 }
 
 - (void)layoutSubviews {
+    // This will be a fixed size.
     self.displayImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
 }
 
@@ -56,8 +58,13 @@
     // Configure the view for the selected state
 }
 
-+ (CGFloat)cellHeight {
-    return 330;
++ (CGFloat)cellHeight:(BOOL) isClicked {
+    if (isClicked) {
+        return 400;
+    }
+    else {
+        return 330;
+    }
 }
 
 @end

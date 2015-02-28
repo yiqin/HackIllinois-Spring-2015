@@ -17,6 +17,6 @@
 
 - (void)setContentValue:(Feed *)feed;
 
-+ (CGFloat)cellHeight;
++ (CGFloat)cellHeight:(BOOL) isClicked;
 
 @end

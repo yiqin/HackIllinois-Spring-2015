@@ -69,7 +69,8 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [FeedTableViewCell cellHeight];
+    BOOL isClicked = [self.clickedCollection containsObject:indexPath];
+    return [FeedTableViewCell cellHeight:isClicked];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -91,6 +92,10 @@
         [self.clickedCollection addOrDeleteUniqueObject:indexPath];
     }
     
+    [self.tableView beginUpdates];
+    NSArray *indexPaths = [[NSArray alloc] initWithObjects:indexPath, nil];
+    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationTop];
+    [self.tableView endUpdates];
     
 }
 
