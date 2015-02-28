@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "Colours.h"
 #import <HackIL-Swift.h>
+#import <AFNetworking.h>
 
 @interface AppDelegate ()
 

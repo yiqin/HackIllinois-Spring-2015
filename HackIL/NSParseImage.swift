@@ -32,6 +32,7 @@ class NSParseImage: NSObject {
             }) { (responseObject : AFHTTPRequestOperation!, error:NSError!) -> Void in
             
         }
+
         /*
         let tempImagePFImageView = PFImageView()
         tempImagePFImageView.file = pffile

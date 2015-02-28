@@ -31,24 +31,31 @@
 - (void)setContentValue:(Feed *)feed {
     if (feed.coverImage.isLoading) {
         
-        /*
+        
         NSString *tempString = [NSString stringWithFormat:@"%@", feed.coverImage.file.url];
         
         
         AFHTTPRequestOperationManager *operationManager = [AFHTTPRequestOperationManager manager];
-        [operationManager GET:@"http://files.parsetfss.com/80bf5d55-10a8-400f-8ee6-56ba5df99927/tfss-faa505e5-ea82-4a96-b3ea-e2c572f4fc03-Cityscape_12.14_by_thejunglephoto.pw.jpg" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        operationManager.responseSerializer = [AFImageResponseSerializer serializer];
+        [operationManager GET:tempString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            
+            self.displayImageView.image = responseObject;
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             
         }];
-        */
         
+        
+        /*
         PFImageView *pfImageView = [[PFImageView alloc] init];
         pfImageView.file = feed.coverImage.file;
+        NSLog(@"%@",pfImageView.file.url);
+        
+        
         [pfImageView loadInBackground:^(UIImage *image, NSError *error) {
             NSLog(@"successfully loading");
         }];
-        
+        */
         
         
         

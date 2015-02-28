@@ -9,6 +9,7 @@
 #import "MainTableViewController.h"
 #import "FeedTableViewCell.h"
 #import <HackIL-Swift.h>
+#import "AFNetworking.h"
 
 @interface MainTableViewController ()
 
@@ -38,12 +39,17 @@
         if (success) {
             NSLog(@"sdfawegen");
             
-            self.objects = [[NSArray alloc] initWithArray:[FeedsDataManager sharedInstance].objects];
-            [self.tableView reloadData];
+            [self reloadThisTableView];
+            
         }
         
         
     }];
+}
+
+- (void)reloadThisTableView {
+    self.objects = [[NSArray alloc] initWithArray:[FeedsDataManager sharedInstance].objects];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +80,9 @@
         [cell setContentValue:feed];
     }
     // cell.textLabel.text = feed.name;
+    
+    
+    
     
     return cell;
 }
