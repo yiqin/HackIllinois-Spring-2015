@@ -20,6 +20,7 @@
 
 @property(nonatomic, strong) UIImageView *goingUserProfile1;
 
+@property(nonatomic, strong) UILabel *timeLabel;
 
 @end
 
@@ -39,14 +40,21 @@
         self.messageLabel.textColor = [UIColor whiteColor];
         self.messageLabel.textAlignment = NSTextAlignmentCenter;
         self.messageLabel.numberOfLines = 0;
-        self.messageLabel.font = [UIFont fontWithName:@"OpenSans-Bold" size:17.0];
-        // [self addSubview:self.messageLabel];
+        self.messageLabel.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:17.0];
+        [self addSubview:self.messageLabel];
         
+        self.timeLabel = [[UILabel alloc] init];
+        self.timeLabel.textColor = [UIColor whiteColor];
+        self.timeLabel.textAlignment = NSTextAlignmentCenter;
+        self.timeLabel.numberOfLines = 1;
+        self.timeLabel.font = [UIFont fontWithName:@"OpenSans-Light" size:14.0];
+        [self addSubview:self.timeLabel];
         
         self.goingUserProfile1 = [[UIImageView alloc] init];
         self.goingUserProfile1.layer.masksToBounds = YES;
         self.goingUserProfile1.layer.cornerRadius = self.profileSize*0.5;
         [self addSubview:self.goingUserProfile1];
+        
         
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -61,6 +69,8 @@
 
 - (void)setContentValue:(Feed *)feed {
     self.messageLabel.text = feed.name;
+    self.timeLabel.text = feed.releasedAtString;
+    NSLog(@"%@", self.timeLabel);
     
     if (feed.goingUsers.count > 0) {
         GoingUser *goingUser1 = [feed.goingUsers objectAtIndex:0];
@@ -103,9 +113,12 @@
     
     self.displayImageView.frame = CGRectMake(0, 0, tempWidth, [FeedTableViewCell cellHeight:NO]);
     
-    self.messageLabel.frame = CGRectMake(0, 0, tempWidth, [FeedTableViewCell cellHeight:NO]);
+    self.messageLabel.frame = CGRectMake(40, 0, tempWidth-80, [FeedTableViewCell cellHeight:NO]);
+    
+    self.timeLabel.frame = CGRectMake(0, 65, tempWidth, 30);
     
     self.goingUserProfile1.frame = CGRectMake(40/2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -118,7 +131,7 @@
     CGFloat kScreenWidth = [[UIScreen mainScreen] bounds].size.width;
     
     if (isClicked) {
-        return kScreenWidth*kRatio+100;
+        return kScreenWidth*kRatio+80;
     }
     else {
         return kScreenWidth*kRatio;

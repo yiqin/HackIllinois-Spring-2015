@@ -34,7 +34,7 @@ class FeedsDataManager: NSObject {
     func startLoadingDataFromParse(pageIndex:Int, completionClosure: (success :Bool) ->()) {
         var query  = PFQuery(className: "Feed")
         
-        query.orderByDescending("createdAt")
+        query.orderByDescending("releasedAt")
         query.limit = itemsPerPage
         query.skip = pageIndex*itemsPerPage
         

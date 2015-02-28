@@ -18,6 +18,8 @@ class Feed: NSParseObject {
     
     var releasedAt : NSDate
     
+    var releasedAtString : String
+    
     var goingUsers:[GoingUser] = []
     
     var backgroundSolidColor : UIColor = UIColor.whiteColor()
@@ -42,9 +44,11 @@ class Feed: NSParseObject {
         
         if let tempReleasedAt = parseObject["releasedAt"] as? NSDate {
             releasedAt = tempReleasedAt
+            releasedAtString = releasedAt.timeAgoSinceNow()
         }
         else {
             releasedAt = NSDate()
+            releasedAtString = ""
         }
         
         super.init(parseObject:parseObject)

@@ -14,7 +14,7 @@ static int myInt = -1;
 
 +(NSArray *)getColorsArrays {
     UIColor *color0 = [UIColor colorFromHexString:@"b17ec3"];
-    UIColor *color1 = [UIColor colorFromHexString:@"fabd2d"];
+    UIColor *color1 = [UIColor colorFromHexString:@"ffb745"];
     UIColor *color2 = [UIColor colorFromHexString:@"ffa792"];
     UIColor *color3 = [UIColor colorFromHexString:@"92c0ce"];
     UIColor *color4 = [UIColor colorFromHexString:@"3d5fc4"];

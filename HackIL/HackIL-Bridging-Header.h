@@ -10,3 +10,5 @@
 #import "UIImage+Filtering.h"
 
 #import "RandomColorGenerator.h"
+
+#import <DateTools.h>
