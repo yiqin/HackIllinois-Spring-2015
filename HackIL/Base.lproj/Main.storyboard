@@ -22,16 +22,16 @@
             </objects>
             <point key="canvasLocation" x="350" y="200"/>
         </scene>
-        <!--Main Table View Controller-->
+        <!--Discovery-->
         <scene sceneID="DFZ-ud-QKd">
             <objects>
                 <tableViewController id="cWB-ZM-WPg" customClass="MainTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3LA-ke-cqx">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="22" sectionFooterHeight="22" id="3LA-ke-cqx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eNu-CP-cDq">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FeedCell" rowHeight="122" id="eNu-CP-cDq">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eNu-CP-cDq" id="cQc-vr-jHS">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -43,7 +43,7 @@
                             <outlet property="delegate" destination="cWB-ZM-WPg" id="Cmq-6T-5i2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="v8a-Zf-Mbb"/>
+                    <navigationItem key="navigationItem" title="Discovery" id="v8a-Zf-Mbb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PJU-YV-oQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

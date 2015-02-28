@@ -17,6 +17,7 @@
 		8D92F7941AA147B500AE759B /* HackILTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7931AA147B500AE759B /* HackILTests.m */; };
 		8D92F79F1AA151BC00AE759B /* NSParseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F79E1AA151BC00AE759B /* NSParseObject.swift */; };
 		8D92F7A31AA1AF3200AE759B /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */; };
+		8D92F7A61AA1B07C00AE759B /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		8D92F79E1AA151BC00AE759B /* NSParseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSParseObject.swift; sourceTree = "<group>"; };
 		8D92F7A11AA1AF3200AE759B /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		8D92F7A41AA1B07C00AE759B /* FeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
+		8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 		CD6A55DFDC11EB2027C45ECD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +109,8 @@
 				8D92F7791AA147B500AE759B /* AppDelegate.m */,
 				8D92F7A11AA1AF3200AE759B /* MainTableViewController.h */,
 				8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */,
+				8D92F7A41AA1B07C00AE759B /* FeedTableViewCell.h */,
+				8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */,
 				8D92F7A01AA1A7C800AE759B /* DataClass */,
 				8D92F7811AA147B500AE759B /* Main.storyboard */,
 				8D92F7841AA147B500AE759B /* Images.xcassets */,
@@ -295,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */,
+				8D92F7A61AA1B07C00AE759B /* FeedTableViewCell.m in Sources */,
 				8D92F79F1AA151BC00AE759B /* NSParseObject.swift in Sources */,
 				8D92F7771AA147B500AE759B /* main.m in Sources */,
 				8D92F7A31AA1AF3200AE759B /* MainTableViewController.m in Sources */,
