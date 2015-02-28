@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "HackIL": {
+            "applicationId": "vp04lCdgsjHajEk8gLQfn4kD7DWcdxaYE5FJDrbS", 
+            "masterKey": "pPx6gFZYyXoiNK0mZWZwPP4GbvJYt5fgjvB9Qrwr"
+        }, 
+        "_default": {
+            "link": "HackIL"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.5"
+    }
+}
