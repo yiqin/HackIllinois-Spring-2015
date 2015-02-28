@@ -12,11 +12,14 @@ import UIKit
 class NSParseImage: NSObject {
     
     var image : UIImage
+    var croppedImage : UIImage
+    
     var isLoading : Bool
     var file : PFFile
     
     init(pffile : PFFile) {
         image = UIImage()
+        croppedImage = UIImage()
         isLoading = true
         file = pffile
         
@@ -28,25 +31,29 @@ class NSParseImage: NSObject {
             self.image = response as UIImage
             self.isLoading = false
             
+            let tempImage = self.image
+            let tempImageWidth = tempImage.size.width
+            let tempImageHeight = tempImage.size.height
+            
+            let kScreenBounds = UIScreen.mainScreen().bounds
+            let kScreenSize   = kScreenBounds.size
+            let kScreenWidth  = kScreenSize.width
+            let kScreenHeight = kScreenSize.height
+            
+            let ratio = kScreenWidth/tempImageWidth
+            
+            let scaledTempImage = tempImage.scaleToSize(CGSizeMake(kScreenWidth, tempImageHeight*ratio))
+            let croppedTempImage = scaledTempImage.cropToSize(CGSizeMake(kScreenWidth, 100), usingMode: NYXCropModeCenter)
+            self.croppedImage = croppedTempImage
+            
             }) { (responseObject : AFHTTPRequestOperation!, error:NSError!) -> Void in
             
         }
-
-        /*
-        let tempImagePFImageView = PFImageView()
-        tempImagePFImageView.file = pffile
-        tempImagePFImageView.loadInBackground { (image:UIImage!, error:NSError!) -> Void in
-            if ((error) == nil){
-                self.image = image
-                self.isLoading = false
-                println("test image")
-            }
-        }
-        */
     }
     
     override init(){
         image = UIImage()
+        croppedImage = UIImage()
         isLoading = true
         file = PFFile()
         

@@ -12,7 +12,9 @@ class Feed: NSParseObject {
     
     var name:String
     
-    var coverImage:NSParseImage
+    var hasCoverImage : Bool
+    
+    var rawCoverImage:NSParseImage
     
     override init(parseObject: PFObject) {
         if let tempName = parseObject["name"] as? String {
@@ -23,10 +25,13 @@ class Feed: NSParseObject {
         }
         
         if let tempFile = parseObject["image"] as? PFFile {
-            coverImage = NSParseImage(pffile: tempFile)
+            hasCoverImage = false
+            rawCoverImage = NSParseImage(pffile: tempFile)
+            
         }
         else {
-            coverImage = NSParseImage()
+            hasCoverImage = true
+            rawCoverImage = NSParseImage()
         }
         
         super.init(parseObject:parseObject)

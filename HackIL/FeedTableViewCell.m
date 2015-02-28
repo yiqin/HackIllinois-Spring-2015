@@ -30,22 +30,24 @@
 }
 
 - (void)setContentValue:(Feed *)feed {
-    if (feed.coverImage.isLoading) {
+    if (feed.rawCoverImage.isLoading) {
         NSLog(@"load image in the cell.");
         
-        NSString *tempString = [NSString stringWithFormat:@"%@", feed.coverImage.file.url];
+        NSString *tempString = [NSString stringWithFormat:@"%@", feed.rawCoverImage.file.url];
         AFHTTPRequestOperationManager *operationManager = [AFHTTPRequestOperationManager manager];
         operationManager.responseSerializer = [AFImageResponseSerializer serializer];
         [operationManager GET:tempString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
             
             self.displayImageView.image = responseObject;
             
+            
+            
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             
         }];
     }
     else {
-        self.displayImageView.image = feed.coverImage.image;
+        self.displayImageView.image = feed.rawCoverImage.image;
     }
 }
 
@@ -62,7 +64,6 @@
 
 + (CGFloat)cellHeight:(BOOL) isClicked {
     if (isClicked) {
-        NSLog(@"this is extend cell.....");
         return 300;
     }
     else {
