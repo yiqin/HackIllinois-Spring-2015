@@ -14,11 +14,11 @@ static int myInt = -1;
 
 +(NSArray *)getColorsArrays {
     UIColor *color0 = [UIColor colorFromHexString:@"b17ec3"];
-    UIColor *color1 = [UIColor colorFromHexString:@"fab03a"];
+    UIColor *color1 = [UIColor colorFromHexString:@"fabd2d"];
     UIColor *color2 = [UIColor colorFromHexString:@"ffa792"];
-    UIColor *color3 = [UIColor colorFromHexString:@"64c7b5"];
+    UIColor *color3 = [UIColor colorFromHexString:@"92c0ce"];
     UIColor *color4 = [UIColor colorFromHexString:@"3d5fc4"];
-    NSArray *colors= [[NSArray alloc] initWithObjects:color0, color1, color4, color2, color3, nil];
+    NSArray *colors= [[NSArray alloc] initWithObjects:color4,  color1, color0,  color2, color3, nil];
     
     return colors;
 }

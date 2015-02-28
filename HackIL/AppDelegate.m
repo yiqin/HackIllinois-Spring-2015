@@ -23,17 +23,22 @@
     // Override point for customization after application launch.
     
     // Setting the navigation bar style
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:61.0/255.0 green:69.0/255.0 blue:75.0/255.0 alpha:1.0]];
-    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:61.0/255.0 green:69.0/255.0 blue:75.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorFromHexString:@"f0f0f0"]];
+    [[UITabBar appearance] setTintColor:[UIColor colorFromHexString:@"4d4d4d"]];
     // White or black
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    // [UIColor colorFromHexString:@"4d4d4d"]
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor colorFromHexString:@"4d4d4d"], NSForegroundColorAttributeName,
+                                                           [UIFont fontWithName:@"OpenSans-Semibold" size:17.0],NSFontAttributeName, nil]];
+    
+    
     // Set status bar style
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     [[UINavigationBar appearance] setTranslucent:NO];
-    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"OpenSans-Bold" size:17.0], NSFontAttributeName, nil]];
+    // [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"OpenSans-Semibold" size:17.0], NSFontAttributeName, nil]];
     
     
     // Initialize Parse.
