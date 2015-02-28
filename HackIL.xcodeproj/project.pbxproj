@@ -106,7 +106,7 @@
 				8D92F7791AA147B500AE759B /* AppDelegate.m */,
 				8D92F77E1AA147B500AE759B /* ViewController.h */,
 				8D92F77F1AA147B500AE759B /* ViewController.m */,
-				8D92F79E1AA151BC00AE759B /* NSParseObject.swift */,
+				8D92F7A01AA1A7C800AE759B /* DataClass */,
 				8D92F7811AA147B500AE759B /* Main.storyboard */,
 				8D92F7841AA147B500AE759B /* Images.xcassets */,
 				8D92F7861AA147B500AE759B /* LaunchScreen.xib */,
@@ -141,6 +141,14 @@
 				8D92F7921AA147B500AE759B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D92F7A01AA1A7C800AE759B /* DataClass */ = {
+			isa = PBXGroup;
+			children = (
+				8D92F79E1AA151BC00AE759B /* NSParseObject.swift */,
+			);
+			name = DataClass;
 			sourceTree = "<group>";
 		};
 		EFC5FA986401E7C1D54E93AF /* Frameworks */ = {

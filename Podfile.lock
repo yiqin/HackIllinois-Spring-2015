@@ -1,5 +1,6 @@
 PODS:
   - Bolts (1.1.3)
+  - Colours (5.6.1)
   - Facebook-iOS-SDK (3.23.0):
     - Bolts (~> 1.0)
   - Parse (1.6.3):
@@ -13,12 +14,14 @@ PODS:
   - SVProgressHUD (HEAD based on 1.1.2)
 
 DEPENDENCIES:
+  - Colours
   - Parse
   - ParseUI
   - SVProgressHUD (HEAD)
 
 SPEC CHECKSUMS:
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
+  Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
   Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
   Parse: f725f76ef200c5127420690fc6882e57c3813923
   ParseFacebookUtils: bb14e63862f920cc3f3864b0e373d6771b765255
