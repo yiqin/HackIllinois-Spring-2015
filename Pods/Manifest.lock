@@ -1,4 +1,7 @@
 PODS:
+  - AsyncDisplayKit (1.1.1):
+    - AsyncDisplayKit/ASDealloc2MainObject (= 1.1.1)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.1.1)
   - Bolts (1.1.3)
   - Colours (5.6.1)
   - Facebook-iOS-SDK (3.23.0):
@@ -14,12 +17,14 @@ PODS:
   - SVProgressHUD (HEAD based on 1.1.2)
 
 DEPENDENCIES:
+  - AsyncDisplayKit
   - Colours
   - Parse
   - ParseUI
   - SVProgressHUD (HEAD)
 
 SPEC CHECKSUMS:
+  AsyncDisplayKit: 897b28140c6c73fbe8d6168f19ce7cbd87c94ee8
   Bolts: 3db0a875235e0c9042b013af13af0f00f79b102c
   Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
   Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
