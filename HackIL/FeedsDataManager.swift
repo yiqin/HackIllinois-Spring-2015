@@ -45,6 +45,10 @@ class FeedsDataManager: NSObject {
                 
                 for object in objects {
                     let newFeed = Feed(parseObject: object as PFObject)
+                    
+                    newFeed.backgroundSolidColor = RandomColorGenerator.getColor()
+                    
+                    
                     recieved.append(newFeed)
                 }
                 

@@ -9,6 +9,7 @@
 #import "FeedTableViewCell.h"
 #import "AFNetworking.h"
 #import "Constants.h"
+#import "RandomColorGenerator.h"
 
 @interface FeedTableViewCell ()
 
@@ -90,7 +91,7 @@
     }
     else {
         self.displayImageView.image = nil;
-        self.displayImageView.backgroundColor = [UIColor redColor];
+        self.displayImageView.backgroundColor = feed.backgroundSolidColor;
     }
     
 }

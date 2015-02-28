@@ -11,4 +11,6 @@
 
 @interface RandomColorGenerator : NSObject
 
++ (UIColor *)getColor;
+
 @end

@@ -20,6 +20,8 @@ class Feed: NSParseObject {
     
     var goingUsers:[GoingUser] = []
     
+    var backgroundSolidColor : UIColor = UIColor.whiteColor()
+    
     override init(parseObject: PFObject) {
         if let tempName = parseObject["name"] as? String {
             name = tempName
