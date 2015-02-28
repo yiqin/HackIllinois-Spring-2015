@@ -16,6 +16,8 @@ class Feed: NSParseObject {
     
     var rawCoverImage:NSParseImage
     
+    var releasedAt : NSDate
+    
     override init(parseObject: PFObject) {
         if let tempName = parseObject["name"] as? String {
             name = tempName
@@ -34,6 +36,13 @@ class Feed: NSParseObject {
             rawCoverImage = NSParseImage()
         }
         
+        if let tempReleasedAt = parseObject["releasedAt"] as? NSDate {
+            releasedAt = tempReleasedAt
+        }
+        else {
+            releasedAt = NSDate()
+        }
+        
         super.init(parseObject:parseObject)
         
         
@@ -46,7 +55,7 @@ class Feed: NSParseObject {
     func startToLoadGoingUsers(){
         var query = PFQuery(className: "Going")
         query.whereKey("feed", equalTo: self.parseObject)
-        query.orderByAscending("createdAt")
+        query.orderByAscending("releasedAt")
         
         println("starting.........")
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in

@@ -31,6 +31,7 @@
         self.messageLabel.textColor = [UIColor whiteColor];
         self.messageLabel.textAlignment = NSTextAlignmentCenter;
         self.messageLabel.numberOfLines = 0;
+        self.messageLabel.font = [UIFont fontWithName:@"OpenSans-Bold" size:17.0];
         [self addSubview:self.messageLabel];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
