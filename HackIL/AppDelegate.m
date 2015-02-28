@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "Colours.h"
+#import <HackIL-Swift.h>
 
 @interface AppDelegate ()
 
@@ -53,6 +54,14 @@
         }];
     }
     
+    
+    [[FeedsDataManager sharedInstance] startLoadingDataFromParse:0 completionClosure:^(BOOL success) {
+        if (success) {
+            NSLog(@"sdfawegen");
+        }
+        
+        
+    }];
     
     return YES;
 }

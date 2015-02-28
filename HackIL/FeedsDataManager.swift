@@ -44,7 +44,7 @@ class FeedsDataManager: NSObject {
                 var recieved = NSMutableArray()
                 
                 for object in objects {
-                    // let newArtical = Article(parseObject: object as PFObject)
+                    let newFeed = Feed(parseObject: object as PFObject)
                     // recievedArticles.addObject(newArtical)
                 }
                 
