@@ -24,10 +24,6 @@
     [Parse setApplicationId:@"vp04lCdgsjHajEk8gLQfn4kD7DWcdxaYE5FJDrbS"
                   clientKey:@"b9evNhc0ht9JdmuQ75YjIdgvm91KFsWbXKUdFizM"];
     
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
-    
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) {
         // do stuff with the user
