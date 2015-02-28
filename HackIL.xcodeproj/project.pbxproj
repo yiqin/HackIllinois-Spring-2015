@@ -30,6 +30,7 @@
 		8D5D2D331AA264C9003BE326 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D5D2D291AA264C9003BE326 /* OpenSans-Regular.ttf */; };
 		8D5D2D341AA264C9003BE326 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D5D2D2A1AA264C9003BE326 /* OpenSans-Semibold.ttf */; };
 		8D5D2D351AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D5D2D2B1AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf */; };
+		8D5D2D381AA26D10003BE326 /* RandomColorGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */; };
 		8D92F7771AA147B500AE759B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7761AA147B500AE759B /* main.m */; };
 		8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7791AA147B500AE759B /* AppDelegate.m */; };
 		8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F77B1AA147B500AE759B /* HackIL.xcdatamodeld */; };
@@ -94,6 +95,8 @@
 		8D5D2D291AA264C9003BE326 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		8D5D2D2A1AA264C9003BE326 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		8D5D2D2B1AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		8D5D2D361AA26D10003BE326 /* RandomColorGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomColorGenerator.h; sourceTree = "<group>"; };
+		8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomColorGenerator.m; sourceTree = "<group>"; };
 		8D92F7711AA147B500AE759B /* HackIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D92F7751AA147B500AE759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D92F7761AA147B500AE759B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 				8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */,
 				8D92F7A41AA1B07C00AE759B /* FeedTableViewCell.h */,
 				8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */,
+				8D5D2D361AA26D10003BE326 /* RandomColorGenerator.h */,
+				8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */,
 				8D5D2CFA1AA24C6B003BE326 /* ThirdPartyLibraries */,
 				8DDB0F2E1AA2115A005FA34D /* Categories */,
 				8D92F7AD1AA1F0D300AE759B /* DataManager */,
@@ -458,6 +463,7 @@
 				8DDB0F2D1AA21154005FA34D /* NSMutableSet+UniqueObject.m in Sources */,
 				8D5D2D1D1AA24C6B003BE326 /* UIView+Screenshot.m in Sources */,
 				8D5D2D1A1AA24C6B003BE326 /* UIImage+Rotating.m in Sources */,
+				8D5D2D381AA26D10003BE326 /* RandomColorGenerator.m in Sources */,
 				8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */,
 				8D92F7AC1AA1EF4D00AE759B /* Feed.swift in Sources */,
 				8D92F7A61AA1B07C00AE759B /* FeedTableViewCell.m in Sources */,
