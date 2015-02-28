@@ -51,6 +51,7 @@
         [self addSubview:self.timeLabel];
         
         self.goingUserProfile1 = [[UIImageView alloc] init];
+        self.goingUserProfile1.contentMode = UIViewContentModeScaleAspectFill;
         self.goingUserProfile1.layer.masksToBounds = YES;
         self.goingUserProfile1.layer.cornerRadius = self.profileSize*0.5;
         [self addSubview:self.goingUserProfile1];
