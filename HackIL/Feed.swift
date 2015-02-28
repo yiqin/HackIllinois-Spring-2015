@@ -37,8 +37,46 @@ class Feed: NSParseObject {
         super.init(parseObject:parseObject)
         
         
+        startToLoadGoingUsers()
+        
+        
         
     }
+    
+    func startToLoadGoingUsers(){
+        var query = PFQuery(className: "Going")
+        query.whereKey("feed", equalTo: self.parseObject)
+        query.orderByAscending("createdAt")
+        
+        println("starting.........")
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                println("successullly get Articles")
+                
+                // Only call this notification one time...
+                NSNotificationCenter.defaultCenter().postNotificationName("reloadSessionStreetImageTableViewCell", object: nil, userInfo: nil)
+                
+                for object in objects {
+                    // let article = Article(parseObject: object as PFObject)
+                    // self.articles += [article]
+                    
+                }
+                
+                /*
+                self.startToLoadCoverImage()
+                
+
+                
+                */
+                
+                
+                
+            } else {
+                NSLog("Error: %@ %@", error, error.userInfo!)
+            }
+        }
+    }
+    
     
     
 }

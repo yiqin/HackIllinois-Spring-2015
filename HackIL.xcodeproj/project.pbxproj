@@ -19,6 +19,7 @@
 		8D5D2D1B1AA24C6B003BE326 /* UIImage+Saving.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D0E1AA24C6B003BE326 /* UIImage+Saving.m */; };
 		8D5D2D1C1AA24C6B003BE326 /* UIScrollView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D101AA24C6B003BE326 /* UIScrollView+Screenshot.m */; };
 		8D5D2D1D1AA24C6B003BE326 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D121AA24C6B003BE326 /* UIView+Screenshot.m */; };
+		8D5D2D201AA25E63003BE326 /* NSParseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D1F1AA25E63003BE326 /* NSParseUser.swift */; };
 		8D92F7771AA147B500AE759B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7761AA147B500AE759B /* main.m */; };
 		8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7791AA147B500AE759B /* AppDelegate.m */; };
 		8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F77B1AA147B500AE759B /* HackIL.xcdatamodeld */; };
@@ -72,6 +73,7 @@
 		8D5D2D111AA24C6B003BE326 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
 		8D5D2D121AA24C6B003BE326 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 		8D5D2D1E1AA25757003BE326 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8D5D2D1F1AA25E63003BE326 /* NSParseUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSParseUser.swift; sourceTree = "<group>"; };
 		8D92F7711AA147B500AE759B /* HackIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D92F7751AA147B500AE759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D92F7761AA147B500AE759B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			children = (
 				8D92F79E1AA151BC00AE759B /* NSParseObject.swift */,
 				8D92F7A91AA1EB7100AE759B /* NSParseImage.swift */,
+				8D5D2D1F1AA25E63003BE326 /* NSParseUser.swift */,
 				8D92F7AB1AA1EF4D00AE759B /* Feed.swift */,
 			);
 			name = DataClass;
@@ -417,6 +420,7 @@
 				8D5D2D181AA24C6B003BE326 /* UIImage+Reflection.m in Sources */,
 				8D92F7AA1AA1EB7100AE759B /* NSParseImage.swift in Sources */,
 				8D5D2D151AA24C6B003BE326 /* UIImage+Enhancing.m in Sources */,
+				8D5D2D201AA25E63003BE326 /* NSParseUser.swift in Sources */,
 				8D5D2D161AA24C6B003BE326 /* UIImage+Filtering.m in Sources */,
 				8D92F7A31AA1AF3200AE759B /* MainTableViewController.m in Sources */,
 				8D92F7A81AA1B38A00AE759B /* FeedsDataManager.swift in Sources */,
