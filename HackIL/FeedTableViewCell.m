@@ -10,6 +10,13 @@
 #import "AFNetworking.h"
 #import "Constants.h"
 
+@interface FeedTableViewCell ()
+
+@property(nonatomic, strong) UILabel *messageLabel;
+@property(nonatomic, strong) UIImageView *displayImageView;
+
+@end
+
 @implementation FeedTableViewCell
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
@@ -19,6 +26,12 @@
         self.displayImageView.contentMode = UIViewContentModeCenter;
         self.displayImageView.clipsToBounds = YES;
         [self addSubview:self.displayImageView];
+        
+        self.messageLabel = [[UILabel alloc] init];
+        self.messageLabel.textColor = [UIColor whiteColor];
+        self.messageLabel.textAlignment = NSTextAlignmentCenter;
+        self.messageLabel.numberOfLines = 0;
+        [self addSubview:self.messageLabel];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
@@ -31,6 +44,8 @@
 }
 
 - (void)setContentValue:(Feed *)feed {
+    self.messageLabel.text = feed.name;
+    
     if (feed.hasCoverImage) {
         if (feed.rawCoverImage.isLoading) {
             NSLog(@"load image in the cell.");
@@ -60,6 +75,8 @@
 - (void)layoutSubviews {
     // This will be a fixed size.
     self.displayImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), [FeedTableViewCell cellHeight:NO]);
+    
+    self.messageLabel.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), [FeedTableViewCell cellHeight:NO]);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

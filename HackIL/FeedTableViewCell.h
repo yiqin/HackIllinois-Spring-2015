@@ -13,7 +13,7 @@
 
 @interface FeedTableViewCell : UITableViewCell
 
-@property(nonatomic, strong) UIImageView *displayImageView;
+
 
 - (void)setContentValue:(Feed *)feed;
 
