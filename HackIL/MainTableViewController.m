@@ -14,7 +14,7 @@
 #import "NSMutableSet+UniqueObject.h"
 #import "YALNavigationBar.h"
 #import "PostingView.h"
-
+#import <Parse/Parse.h>
 
 @interface MainTableViewController ()
 
@@ -216,6 +216,28 @@
     }];
     
 }
+
+- (void)savePost {
+    PFObject *post = [[PFObject alloc] initWithClassName:@"Feed"];
+    post[@"name"] = self.postingView.tf.text;
+    
+    PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:40.0 longitude:-30.0];
+    post[@"geopoint"] = point;
+    
+    if (self.postingView.photoImageView.image) {
+        post[@"image"] = self.postingView.photoImageView.image;
+    }
+    
+    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        PFObject *going = [[PFObject alloc] initWithClassName:@"Going"];
+        going[@"feed"] = post;
+        going[@"user"] = [PFUser currentUser];
+        
+        
+    }];
+}
+
 
 
 #pragma mark - Table view data source

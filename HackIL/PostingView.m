@@ -8,6 +8,7 @@
 
 #import "PostingView.h"
 #import <Colours.h>
+#import <Parse/Parse.h>
 
 @interface PostingView ()
 

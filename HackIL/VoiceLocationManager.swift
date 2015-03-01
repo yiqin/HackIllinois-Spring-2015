@@ -16,6 +16,8 @@ class VoiceLocationManager: NSObject {
     var cityName = "any"
     var stateName = "any"
     
+    var latitude : Double = 0.0
+    var longitude : Double = 0.0
     
     class var sharedInstance : VoiceLocationManager {
         struct Static {
@@ -34,6 +36,8 @@ class VoiceLocationManager: NSObject {
                 // Request succeeded, meaning achievedAccuracy is at least the requested accuracy, and
                 // currentLocation contains the device's current location.
                 
+                self.latitude = currentLocation.coordinate.latitude
+                self.longitude = currentLocation.coordinate.longitude
                 
                 println(currentLocation.description)
                 self.getCurrentCityFromINTULocationManager(currentLocation)
