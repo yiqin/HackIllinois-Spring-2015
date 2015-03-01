@@ -91,7 +91,6 @@
 		8DF87A1D1AA30DC700221CF1 /* LaunchCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A111AA30DC700221CF1 /* LaunchCameraButton.m */; };
 		8DF87A1E1AA30DC700221CF1 /* PaintCodeFile.pcvd in Resources */ = {isa = PBXBuildFile; fileRef = 8DF87A121AA30DC700221CF1 /* PaintCodeFile.pcvd */; };
 		8DF87A201AA32F0C00221CF1 /* VoiceLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A1F1AA32F0C00221CF1 /* VoiceLocationManager.swift */; };
-		8DF87A3F1AA37F4C00221CF1 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8DF87A3E1AA37F4C00221CF1 /* 1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,7 +228,6 @@
 		8DF87A111AA30DC700221CF1 /* LaunchCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchCameraButton.m; sourceTree = "<group>"; };
 		8DF87A121AA30DC700221CF1 /* PaintCodeFile.pcvd */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PaintCodeFile.pcvd; sourceTree = "<group>"; };
 		8DF87A1F1AA32F0C00221CF1 /* VoiceLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceLocationManager.swift; sourceTree = "<group>"; };
-		8DF87A3E1AA37F4C00221CF1 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		CD6A55DFDC11EB2027C45ECD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -388,7 +386,6 @@
 			children = (
 				8D5D2D211AA264C9003BE326 /* Open_Sans */,
 				8D92F7751AA147B500AE759B /* Info.plist */,
-				8DF87A3E1AA37F4C00221CF1 /* 1.jpg */,
 				8D92F7761AA147B500AE759B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -599,7 +596,6 @@
 				8D5D2D351AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				8D92F7831AA147B500AE759B /* Main.storyboard in Resources */,
 				8DF87A1E1AA30DC700221CF1 /* PaintCodeFile.pcvd in Resources */,
-				8DF87A3F1AA37F4C00221CF1 /* 1.jpg in Resources */,
 				8D5D2D331AA264C9003BE326 /* OpenSans-Regular.ttf in Resources */,
 				8D5D2D301AA264C9003BE326 /* OpenSans-Italic.ttf in Resources */,
 				8D5D2D2F1AA264C9003BE326 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
