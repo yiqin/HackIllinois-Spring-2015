@@ -8,9 +8,11 @@
 
 #import "MainTableViewController.h"
 #import "FeedTableViewCell.h"
+#import "ToPostTableViewCell.h"
 #import <HackIL-Swift.h>
 #import "AFNetworking.h"
 #import "NSMutableSet+UniqueObject.h"
+#import "YALNavigationBar.h"
 
 @interface MainTableViewController ()
 
@@ -38,10 +40,15 @@
     
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self.navigationController setValue:[[YALNavigationBar alloc]init] forKeyPath:@"navigationBar"];
     
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // [self.tableView setContentOffset:CGPointMake(0, [ToPostTableViewCell cellHeight]) animated:YES];
+    
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(pressedAddButton:)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(pressedMenuButton:)];
+    self.navigationItem.leftBarButtonItem = menuButton;
     
     [[FeedsDataManager sharedInstance] startLoadingDataFromParse:0 completionClosure:^(BOOL success) {
         if (success) {
@@ -49,17 +56,35 @@
             // [self reloadThisTableView];
         }
     }];
+    
+    
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 - (void)reloadThisTableView {
     self.clickedCollection = [[NSMutableSet alloc] init];
     self.objects = [[NSArray alloc] initWithArray:[FeedsDataManager sharedInstance].objects];
+     // [self.tableView setContentOffset:CGPointMake(0, [ToPostTableViewCell cellHeight]*0.5) animated:NO];
     [self.tableView reloadData];
+   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)pressedAddButton:(UIBarButtonItem *)sender {
+    
+    
+    
+}
+
+- (void)pressedMenuButton:(UIBarButtonItem *)sender {
+    
 }
 
 #pragma mark - Table view data source
@@ -69,39 +94,63 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return self.objects.count+1;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    Feed *feed = [self.objects objectAtIndex:indexPath.row];
-    BOOL isClicked = [self.clickedCollection containsObject:feed];
-    return [FeedTableViewCell cellHeight:isClicked];
+    if (indexPath.row == 0) {
+        return [ToPostTableViewCell cellHeight];
+    }
+    else {
+        Feed *feed = [self.objects objectAtIndex:indexPath.row-1];
+        BOOL isClicked = [self.clickedCollection containsObject:feed];
+        return [FeedTableViewCell cellHeight:isClicked];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *CellIdentifier = @"FeedCell";
-    FeedTableViewCell *cell = (FeedTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    Feed *feed = [self.objects objectAtIndex:indexPath.row];
-    if (feed) {
-        [cell setContentValue:feed];
+    if (indexPath.row == 0) {
+        NSString *CellIdentifier = @"ToPostCell";
+        ToPostTableViewCell *cell = (ToPostTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        if (cell == nil) {
+            cell = [[ToPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        }
+        
+        return cell;
+    }
+    else {
+        NSString *CellIdentifier = @"FeedCell";
+        FeedTableViewCell *cell = (FeedTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        Feed *feed = [self.objects objectAtIndex:indexPath.row-1];
+        if (feed) {
+            [cell setContentValue:feed];
+        }
+        
+        return cell;
     }
     
-    return cell;
+    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    self.clickingIndexPath = indexPath;
-    
-    Feed *feed = [self.objects objectAtIndex:indexPath.row];
-    [self.clickedCollection addOrDeleteUniqueObject:feed];
-    
-    NSArray *indexPaths = [[NSArray alloc] initWithObjects:self.clickingIndexPath, nil];
-    [self.tableView beginUpdates];
-    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationNone];
-    [self.tableView endUpdates];
-    
+    if (indexPath.row == 0) {
+        
+        
+        
+    }
+    else {
+        self.clickingIndexPath = indexPath;
+        
+        Feed *feed = [self.objects objectAtIndex:indexPath.row-1];
+        [self.clickedCollection addOrDeleteUniqueObject:feed];
+        
+        NSArray *indexPaths = [[NSArray alloc] initWithObjects:indexPath, nil];
+        [self.tableView beginUpdates];
+        [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationNone];
+        [self.tableView endUpdates];
+    }
 }
 
 /*

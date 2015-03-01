@@ -47,6 +47,8 @@
 		8D92F7AA1AA1EB7100AE759B /* NSParseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7A91AA1EB7100AE759B /* NSParseImage.swift */; };
 		8D92F7AC1AA1EF4D00AE759B /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7AB1AA1EF4D00AE759B /* Feed.swift */; };
 		8DDB0F2D1AA21154005FA34D /* NSMutableSet+UniqueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB0F2C1AA21154005FA34D /* NSMutableSet+UniqueObject.m */; };
+		8DF879A91AA2C07400221CF1 /* ToPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879A81AA2C07400221CF1 /* ToPostTableViewCell.m */; };
+		8DF879AC1AA2CE5700221CF1 /* YALNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879AB1AA2CE5700221CF1 /* YALNavigationBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +127,10 @@
 		8D92F7AB1AA1EF4D00AE759B /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		8DDB0F2B1AA21154005FA34D /* NSMutableSet+UniqueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+UniqueObject.h"; sourceTree = "<group>"; };
 		8DDB0F2C1AA21154005FA34D /* NSMutableSet+UniqueObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+UniqueObject.m"; sourceTree = "<group>"; };
+		8DF879A71AA2C07400221CF1 /* ToPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToPostTableViewCell.h; sourceTree = "<group>"; };
+		8DF879A81AA2C07400221CF1 /* ToPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToPostTableViewCell.m; sourceTree = "<group>"; };
+		8DF879AA1AA2CE5700221CF1 /* YALNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALNavigationBar.h; sourceTree = "<group>"; };
+		8DF879AB1AA2CE5700221CF1 /* YALNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALNavigationBar.m; sourceTree = "<group>"; };
 		CD6A55DFDC11EB2027C45ECD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -250,6 +256,10 @@
 				8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */,
 				8D92F7A41AA1B07C00AE759B /* FeedTableViewCell.h */,
 				8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */,
+				8DF879A71AA2C07400221CF1 /* ToPostTableViewCell.h */,
+				8DF879A81AA2C07400221CF1 /* ToPostTableViewCell.m */,
+				8DF879AA1AA2CE5700221CF1 /* YALNavigationBar.h */,
+				8DF879AB1AA2CE5700221CF1 /* YALNavigationBar.m */,
 				8D5D2D361AA26D10003BE326 /* RandomColorGenerator.h */,
 				8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */,
 				8D5D2D3E1AA28DA1003BE326 /* YQUIKit */,
@@ -489,6 +499,7 @@
 				8D92F7771AA147B500AE759B /* main.m in Sources */,
 				8D5D2D181AA24C6B003BE326 /* UIImage+Reflection.m in Sources */,
 				8D92F7AA1AA1EB7100AE759B /* NSParseImage.swift in Sources */,
+				8DF879AC1AA2CE5700221CF1 /* YALNavigationBar.m in Sources */,
 				8D5D2D3A1AA2735F003BE326 /* GoingUser.swift in Sources */,
 				8D5D2D151AA24C6B003BE326 /* UIImage+Enhancing.m in Sources */,
 				8D5D2D201AA25E63003BE326 /* NSParseUser.swift in Sources */,
@@ -498,6 +509,7 @@
 				8D5D2D171AA24C6B003BE326 /* UIImage+Masking.m in Sources */,
 				8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */,
 				8D5D2D1C1AA24C6B003BE326 /* UIScrollView+Screenshot.m in Sources */,
+				8DF879A91AA2C07400221CF1 /* ToPostTableViewCell.m in Sources */,
 				8D5D2D141AA24C6B003BE326 /* UIImage+Blurring.m in Sources */,
 				8D5D2D3D1AA28D99003BE326 /* YQLabel.m in Sources */,
 				8D5D2D131AA24C6B003BE326 /* NYXImagesHelper.m in Sources */,

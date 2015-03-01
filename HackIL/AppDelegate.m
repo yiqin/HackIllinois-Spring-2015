@@ -12,6 +12,7 @@
 #import <HackIL-Swift.h>
 #import <AFNetworking.h>
 
+
 @interface AppDelegate ()
 
 @end
@@ -24,22 +25,17 @@
     
     // Setting the navigation bar style
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorFromHexString:@"f0f0f0"]];
-    [[UITabBar appearance] setTintColor:[UIColor colorFromHexString:@"4d4d4d"]];
+    // [[UITabBar appearance] setTintColor:[UIColor colorFromHexString:@"3d5fc4"]];
     // White or black
     // [UIColor colorFromHexString:@"4d4d4d"]
-    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorFromHexString:@"4d4d4d"]];
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor colorFromHexString:@"4d4d4d"], NSForegroundColorAttributeName,
                                                            [UIFont fontWithName:@"OpenSans-Semibold" size:17.0],NSFontAttributeName, nil]];
     
-    
     // Set status bar style
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
-    [[UINavigationBar appearance] setTranslucent:NO];
-    // [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"OpenSans-Semibold" size:17.0], NSFontAttributeName, nil]];
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
     // Initialize Parse.
     [Parse setApplicationId:@"vp04lCdgsjHajEk8gLQfn4kD7DWcdxaYE5FJDrbS"
