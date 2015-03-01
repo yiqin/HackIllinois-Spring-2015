@@ -15,7 +15,7 @@
 
 
 
-- (void)setContentValue:(Feed *)feed;
+- (void)setContentValue:(Feed *)feed withCheckingCliked:(BOOL) isClicked;
 
 + (CGFloat)cellHeight:(BOOL) isClicked;
 

@@ -36,6 +36,11 @@
 @property(nonatomic, strong) UILabel *timeLabel;
 @property(nonatomic) BOOL currStatus;
 
+@property(nonatomic, strong) UIButton *people;
+@property(nonatomic, strong) UIButton *join;
+@property(nonatomic, strong) UIButton *chat;
+
+
 @end
 
 @implementation FeedTableViewCell
@@ -103,6 +108,12 @@
         [self addSubview:self.ghost];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        [self createButtons];
+        
+        
+        
+        
     }
     return self;
 }
@@ -112,7 +123,7 @@
     self.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)setContentValue:(Feed *)feed {
+- (void)setContentValue:(Feed *)feed withCheckingCliked:(BOOL)isClicked {
     self.feed = feed;
     NSString *feedID = feed.objectId;
     self.currStatus = [self LikeStatus:feedID];
@@ -185,6 +196,17 @@
     }
     
     [self.likes setBackgroundColor:[UIColor clearColor]];
+    
+    if (isClicked) {
+        self.join.hidden = NO;
+        self.people.hidden = NO;
+        self.chat.hidden = NO;
+    }
+    else {
+        self.join.hidden = YES;
+        self.people.hidden = YES;
+        self.chat.hidden = YES;
+    }
     
 
 }
@@ -322,14 +344,43 @@
     // Configure the view for the selected state
 }
 
-+ (CGFloat)cellHeight:(BOOL) isClicked {
+- (void)createButtons {
+    self.people = [[UIButton alloc]init];
+    self.join =  [[UIButton alloc]init];
+    self.chat =  [[UIButton alloc]init];
+    
     CGFloat kScreenWidth = [[UIScreen mainScreen] bounds].size.width;
+    CGFloat y = kScreenWidth*kRatio;
+    CGFloat x = kScreenWidth/3;
+    
+    self.people.frame = CGRectMake( 0,y, x, 80 );//x,y, width, height
+    self.join.frame = CGRectMake( x,y, x, 80 );
+    self.chat.frame = CGRectMake( x*2,y, x, 80 );
+    
+    UIImage *peopleImage = [UIImage imageNamed:@"people.png"];
+    [self.people setImage:peopleImage forState:UIControlStateNormal];
+    UIImage *messageImage = [UIImage imageNamed:@"message"];
+    [self.chat setImage:messageImage forState:UIControlStateNormal];
+    UIImage *joinImage = [UIImage imageNamed:@"interested.png"];
+    [self.join setImage:joinImage forState:UIControlStateNormal];
+    
+    [self addSubview:self.people];
+    [self addSubview:self.chat];
+    [self addSubview:self.join];
+    
+    self.people.hidden = YES;
+    self.chat.hidden = YES;
+    self.join.hidden = YES;
+}
+
++ (CGFloat)cellHeight:(BOOL) isClicked {
+    CGFloat kScreenWidth = [[UIScreen mainScreen] bounds].size.width;//width width/3
     
     if (isClicked) {
-        return kScreenWidth*kRatio+80;
+        return kScreenWidth*kRatio+80;//height
     }
     else {
-        return kScreenWidth*kRatio;
+        return kScreenWidth*kRatio; //original height
     }
 }
 

@@ -260,8 +260,9 @@
         FeedTableViewCell *cell = (FeedTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         
         Feed *feed = [self.objects objectAtIndex:indexPath.row-1];
+        BOOL isClicked = [self.clickedCollection containsObject:feed];
         if (feed) {
-            [cell setContentValue:feed];
+            [cell setContentValue:feed withCheckingCliked:isClicked];
         }
         
         return cell;
