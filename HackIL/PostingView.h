@@ -15,6 +15,8 @@
 @property(nonatomic, strong) UITextView *tf;
 @property(nonatomic, strong) UILabel *introPlaceLabel;
 
+@property(nonatomic, strong) UILabel *placeLabel;
+
 @property(nonatomic, strong) UIImageView *photoImageView;
 
 @property(nonatomic, strong) AYVibrantButton *getButton;

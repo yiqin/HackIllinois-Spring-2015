@@ -51,13 +51,13 @@
         [self addSubview:self.introPlaceLabel];
         
         
-        CGFloat buttonWidth = 100;
-        CGFloat buttonHeight = 40;
-        self.getButton = [[AYVibrantButton alloc] initWithFrame:CGRectMake(0.5*CGRectGetWidth(self.frame)-buttonWidth*0.5, 300, buttonWidth, buttonHeight) style:AYVibrantButtonStyleInvert];
+        CGFloat buttonWidth = 180;
+        CGFloat buttonHeight = 44;
+        self.getButton = [[AYVibrantButton alloc] initWithFrame:CGRectMake(0.5*CGRectGetWidth(self.frame)-buttonWidth*0.5, 420, buttonWidth, buttonHeight) style:AYVibrantButtonStyleInvert];
         self.getButton.backgroundColor = [UIColor colorFromHexString:@"ffb745"];
         // self.getButton.vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
         self.getButton.vibrancyEffect = nil;
-        self.getButton.text = @"GET";
+        self.getButton.text = @"I'M LUCKY";
         self.getButton.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:17.0];
         
         
