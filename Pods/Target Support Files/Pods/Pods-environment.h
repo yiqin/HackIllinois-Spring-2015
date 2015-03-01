@@ -90,6 +90,12 @@
 #define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 23
 #define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 0
 
+// INTULocationManager
+#define COCOAPODS_POD_AVAILABLE_INTULocationManager
+#define COCOAPODS_VERSION_MAJOR_INTULocationManager 2
+#define COCOAPODS_VERSION_MINOR_INTULocationManager 0
+#define COCOAPODS_VERSION_PATCH_INTULocationManager 2
+
 // Parse
 #define COCOAPODS_POD_AVAILABLE_Parse
 #define COCOAPODS_VERSION_MAJOR_Parse 1

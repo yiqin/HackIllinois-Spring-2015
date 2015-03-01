@@ -21,6 +21,41 @@ class FeedsDataManager: NSObject {
         return Static.instance
     }
     
+    func startLoadingDataFromParseTwo(keyword:String, completionClosure: (success :Bool) ->()) {
+        
+        var query  = PFQuery(className: "Feed")
+        query.whereKey("name", containsString: keyword)
+        query.orderByDescending("releasedAt")
+        
+        query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                println("Load data (DataManager) from Parse.com.")
+                var recieved:[Feed] = []
+                
+                for object in objects {
+                    let newFeed = Feed(parseObject: object as PFObject)
+                    
+                    newFeed.backgroundSolidColor = RandomColorGenerator.getColor()
+                    
+                    
+                    recieved.append(newFeed)
+                }
+                
+                self.objects = []
+                
+                self.objects += recieved
+                completionClosure(success: true)
+                
+            } else {
+                NSLog("Error: %@ %@", error, error.userInfo!)
+                completionClosure(success: false)
+            }
+        }
+
+        
+        
+        
+    }
     /**
     quick way to start to load article data from Parse.com
     */

@@ -29,6 +29,7 @@ PODS:
   - DateTools (1.5.0)
   - Facebook-iOS-SDK (3.23.0):
     - Bolts (~> 1.0)
+  - INTULocationManager (2.0.2)
   - Parse (1.6.3):
     - Bolts (~> 1.1)
   - ParseFacebookUtils (1.6.3):
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - AYVibrantButton
   - Colours
   - DateTools
+  - INTULocationManager
   - Parse
   - ParseUI
   - SVProgressHUD (HEAD)
@@ -57,6 +59,7 @@ SPEC CHECKSUMS:
   Colours: ecbcbb168f7e6190b76b34df1b477c103cb638eb
   DateTools: 7df78f0c4719eb28cfd2d58a90fafd036e73156c
   Facebook-iOS-SDK: 3d65f685348b789e46a9aacf92bfa85b60b63755
+  INTULocationManager: 83bec34472a706e178face50a4e5e21ca986b7d2
   Parse: f725f76ef200c5127420690fc6882e57c3813923
   ParseFacebookUtils: bb14e63862f920cc3f3864b0e373d6771b765255
   ParseUI: 00c4c39aab3944d88758b55416581650caa37f89

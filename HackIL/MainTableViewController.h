@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CameraSessionView.h"
 
-@interface MainTableViewController : UITableViewController <CACameraSessionDelegate>
+@interface MainTableViewController : UITableViewController <CACameraSessionDelegate, UITextFieldDelegate>
 
 @end

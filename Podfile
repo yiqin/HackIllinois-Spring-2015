@@ -7,3 +7,4 @@ pod 'AsyncDisplayKit'
 pod 'AFNetworking'
 pod 'DateTools'
 pod "AYVibrantButton"
+pod 'INTULocationManager'

@@ -247,6 +247,7 @@
         if (cell == nil) {
             cell = [[ToPostTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         }
+        cell.textField.delegate = self;
         
         return cell;
     }
@@ -283,6 +284,21 @@
         [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationNone];
         [self.tableView endUpdates];
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    [[FeedsDataManager sharedInstance] startLoadingDataFromParseTwo:textField.text completionClosure:^(BOOL success) {
+        if (success) {
+            [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(reloadThisTableView) userInfo:nil repeats:NO];
+        }
+    }];
+    
 }
 
 /*

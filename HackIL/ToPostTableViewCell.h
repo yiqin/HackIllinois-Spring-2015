@@ -10,6 +10,7 @@
 
 @interface ToPostTableViewCell : UITableViewCell
 
+@property(nonatomic, strong) UITextField *textField;
 
 + (CGFloat)cellHeight;
 

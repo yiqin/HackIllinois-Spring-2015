@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DCB7B0C93702156A48439CE6"
-               BuildableName = "libPods-ParseUI.a"
-               BlueprintName = "Pods-ParseUI"
+               BlueprintIdentifier = "458A96EE400FBC758F32F7D1"
+               BuildableName = "libPods-INTULocationManager.a"
+               BlueprintName = "Pods-INTULocationManager"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
