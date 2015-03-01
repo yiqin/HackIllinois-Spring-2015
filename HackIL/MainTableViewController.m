@@ -69,6 +69,8 @@
 }
 
 - (void)reloadThisTableView {
+    [self.refreshControl endRefreshing];
+    
     self.clickedCollection = [[NSMutableSet alloc] init];
     self.objects = [[NSArray alloc] initWithArray:[FeedsDataManager sharedInstance].objects];
 
@@ -84,7 +86,11 @@
 }
 
 - (void)refresh:(id)sender {
-    [self reloadThisTableView];
+    [[FeedsDataManager sharedInstance] startLoadingDataFromParse:0 completionClosure:^(BOOL success) {
+        if (success) {
+            [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(reloadThisTableView) userInfo:nil repeats:NO];
+        }
+    }];
 }
 
 - (void)pressedAddButton:(UIBarButtonItem *)sender {
