@@ -11,7 +11,7 @@
 #import "Colours.h"
 #import <HackIL-Swift.h>
 #import <AFNetworking.h>
-
+#import <SVProgressHUD.h>
 
 @interface AppDelegate ()
 
@@ -59,6 +59,8 @@
     [VoiceLocationManager sharedInstance];
     [[VoiceLocationManager sharedInstance] getCurrentLocation];
     
+    [SVProgressHUD setForegroundColor:[UIColor colorFromHexString:@"4d4d4d"]];
+    [SVProgressHUD setRingThickness:4.50];
     
     return YES;
 }

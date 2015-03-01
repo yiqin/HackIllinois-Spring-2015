@@ -38,7 +38,7 @@ PODS:
   - ParseUI (1.1.0):
     - Parse (~> 1.6)
     - ParseFacebookUtils (~> 1.6)
-  - SVProgressHUD (HEAD based on 1.1.2)
+  - SVProgressHUD (1.1.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -49,7 +49,7 @@ DEPENDENCIES:
   - INTULocationManager
   - Parse
   - ParseUI
-  - SVProgressHUD (HEAD)
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
