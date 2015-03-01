@@ -36,9 +36,9 @@
 @property(nonatomic, strong) UILabel *timeLabel;
 @property(nonatomic) BOOL currStatus;
 
-@property(nonatomic, strong) UIButton *people;
-@property(nonatomic, strong) UIButton *join;
-@property(nonatomic, strong) UIButton *chat;
+@property(nonatomic, strong) UIImageView *people;
+@property(nonatomic, strong) UIImageView *join;
+@property(nonatomic, strong) UIImageView *chat;
 
 
 @end
@@ -109,7 +109,7 @@
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        [self createButtons];
+        [self createButtonsLabel];
         
         
         
@@ -344,25 +344,32 @@
     // Configure the view for the selected state
 }
 
-- (void)createButtons {
-    self.people = [[UIButton alloc]init];
-    self.join =  [[UIButton alloc]init];
-    self.chat =  [[UIButton alloc]init];
+- (void)createButtonsLabel {
+    self.people = [[UIImageView alloc]init];
+    self.join =  [[UIImageView alloc]init];
+    self.chat =  [[UIImageView alloc]init];
     
     CGFloat kScreenWidth = [[UIScreen mainScreen] bounds].size.width;
     CGFloat y = kScreenWidth*kRatio;
     CGFloat x = kScreenWidth/3;
     
-    self.people.frame = CGRectMake( 0,y, x, 80 );//x,y, width, height
-    self.join.frame = CGRectMake( x,y, x, 80 );
-    self.chat.frame = CGRectMake( x*2,y, x, 80 );
+    self.people.frame = CGRectMake( 0, y, x, 80 );//x,y, width, height
+    self.join.frame = CGRectMake( x, y, x, 80 );
+    self.chat.frame = CGRectMake( x*2, y, x, 80 );
     
     UIImage *peopleImage = [UIImage imageNamed:@"people.png"];
-    [self.people setImage:peopleImage forState:UIControlStateNormal];
+    self.people.image = peopleImage;
+    // [self.people setImage:peopleImage forState:UIControlStateNormal];
     UIImage *messageImage = [UIImage imageNamed:@"message"];
-    [self.chat setImage:messageImage forState:UIControlStateNormal];
+    self.chat.image = messageImage;
+    // [self.chat setImage:messageImage forState:UIControlStateNormal];
     UIImage *joinImage = [UIImage imageNamed:@"interested.png"];
-    [self.join setImage:joinImage forState:UIControlStateNormal];
+    self.join.image = joinImage;
+    // [self.join setImage:joinImage forState:UIControlStateNormal];
+    
+    self.people.contentMode = UIViewContentModeCenter;
+    self.chat.contentMode = UIViewContentModeCenter;
+    self.join.contentMode = UIViewContentModeCenter;
     
     [self addSubview:self.people];
     [self addSubview:self.chat];
