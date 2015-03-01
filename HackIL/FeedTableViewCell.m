@@ -228,9 +228,7 @@
     
     self.nameHolder.frame = CGRectMake(40/2+50, tempHeigth-35/2-self.profileSize-8, self.profileSize+4, self.profileSize);
     
-    self.nameHolder.frame = CGRectMake(40/2+50+60, tempHeigth-35/2-self.profileSize-5, self.profileSize, self.profileSize);
-    
-    self.goingUserProfile2.frame = CGRectMake(40/2+50+60*2, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
+    self.goingUserProfile2.frame = CGRectMake(40/2+50+60, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
     //*layout
     self.goingUserProfile3.frame = CGRectMake(40/2+50+60+self.profileSizeSmall*1.2, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
     

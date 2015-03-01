@@ -16,7 +16,6 @@
 #import "PostingView.h"
 
 
-
 @interface MainTableViewController ()
 
 @property(nonatomic, strong) NSArray *objects;
@@ -205,7 +204,7 @@
     
     [self.postingView endEditing:YES];
     
-    [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.35f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
@@ -226,7 +225,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count+1;
+    if (self.objects == 0) {
+        return 0;
+    }
+    else {
+        return self.objects.count+1;
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
