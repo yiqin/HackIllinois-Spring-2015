@@ -13,6 +13,8 @@
 #import "YQLabel.h"
 #import "LikesManager.h"
 #import <Colours.h>
+#import <HackIL-Swift.h>
+#import <PFGeoPoint.h>
 
 @interface FeedTableViewCell ()
 
@@ -31,6 +33,10 @@
 @property(nonatomic, strong) UIImageView *goingUserProfile3;
 @property(nonatomic, strong) NSString *userName;
 @property(nonatomic, strong) UILabel *nameHolder;
+
+@property(nonatomic, strong) UILabel *geoStringHolder;
+
+
 @property(nonatomic, strong) UIButton *ghost;
 @property(nonatomic, strong) UIImageView *likes;
 
@@ -94,6 +100,9 @@
         self.nameHolder.numberOfLines = 0;
         [self addSubview:self.nameHolder];
         
+        self.geoStringHolder = [[UILabel alloc] init];
+        [self addSubview: self.geoStringHolder];
+        
         self.goingUserProfile2 = [[UIImageView alloc] init];
         self.goingUserProfile2.contentMode = UIViewContentModeScaleAspectFill;
         self.goingUserProfile2.layer.masksToBounds = YES;
@@ -143,6 +152,20 @@
     self.goingUserProfile2.image = nil;
     self.goingUserProfile3.image = nil;
     
+    if (feed.hasGeoPoint) {
+        
+        PFGeoPoint *currentLocationGeoPoint = [PFGeoPoint geoPointWithLatitude:[VoiceLocationManager sharedInstance].latitude longitude:[VoiceLocationManager sharedInstance].longitude];
+        
+        double distanceDoubleKilo  = [currentLocationGeoPoint distanceInKilometersTo:feed.geoPoint];
+        double distanceDoubleM = distanceDoubleKilo*1000;
+        // @” print double %f”, d
+        self.geoStringHolder.text = [NSString stringWithFormat:@"%0.2f m", distanceDoubleM];
+        self.geoStringHolder.textColor = [UIColor whiteColor];
+        self.geoStringHolder.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:12];
+    }
+    else {
+        self.geoStringHolder.text = nil;
+    }
     
     // #3
     if (feed.goingUsers.count >= 1) {
@@ -152,6 +175,9 @@
         self.nameHolder.text = self.userName;
         self.nameHolder.textColor = [UIColor whiteColor];
         self.nameHolder.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:12];
+        
+
+        
         self.goingUserProfile1.image = goingUser1.rawCoverImage.image;
         NSLog(@"%f", self.goingUserProfile1.image.size.height);
     }
@@ -267,6 +293,9 @@
     self.goingUserProfile1.frame = CGRectMake(40/2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
     
     self.nameHolder.frame = CGRectMake(40/2+50, tempHeigth-35/2-self.profileSize-8, self.profileSize+4, self.profileSize);
+    
+    self.geoStringHolder.frame = CGRectMake(40/2+50, tempHeigth-35/2-self.profileSize-8+14, self.profileSize+4, self.profileSize);
+    
     
     self.goingUserProfile2.frame = CGRectMake(40/2+50+60, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
     //*layout

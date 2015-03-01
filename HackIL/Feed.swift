@@ -24,6 +24,9 @@ class Feed: NSParseObject {
     
     var backgroundSolidColor : UIColor = UIColor.whiteColor()
     
+    var geoPoint : PFGeoPoint
+    var hasGeoPoint : Bool
+    
     override init(parseObject: PFObject) {
         if let tempName = parseObject["name"] as? String {
             name = tempName
@@ -49,6 +52,15 @@ class Feed: NSParseObject {
         else {
             releasedAt = NSDate()
             releasedAtString = ""
+        }
+        
+        if let tempGeopoint = parseObject["geopoint"] as? PFGeoPoint {
+            geoPoint = tempGeopoint
+            hasGeoPoint = true;
+        }
+        else {
+            geoPoint = PFGeoPoint()
+            hasGeoPoint = false;
         }
         
         super.init(parseObject:parseObject)
