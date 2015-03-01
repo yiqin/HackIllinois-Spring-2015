@@ -19,6 +19,8 @@
 @property(nonatomic, strong) YQLabel *messageLabel;
 @property(nonatomic, strong) UIImageView *displayImageView;
 
+
+// #1
 @property(nonatomic, strong) UIImageView *goingUserProfile1;
 @property(nonatomic, strong) UIImageView *goingUserProfile2;
 @property(nonatomic, strong) UIImageView *goingUserProfile3;
@@ -53,6 +55,8 @@
         self.timeLabel.font = [UIFont fontWithName:@"OpenSans-Light" size:14.0];
         [self addSubview:self.timeLabel];
         
+        
+        // #2
         self.goingUserProfile1 = [[UIImageView alloc] init];
         self.goingUserProfile1.contentMode = UIViewContentModeScaleAspectFill;
         self.goingUserProfile1.layer.masksToBounds = YES;
@@ -91,6 +95,8 @@
     self.goingUserProfile2.image = nil;
     self.goingUserProfile3.image = nil;
     
+    
+    // #3
     if (feed.goingUsers.count >= 1) {
         GoingUser *goingUser1 = [feed.goingUsers objectAtIndex:0];
         NSLog(@"goring user name %@", goingUser1.name);
@@ -170,6 +176,8 @@
     
     self.timeLabel.frame = CGRectMake(0, tempHeight1-30, tempWidth, 30);
     
+    
+    // #4
     self.goingUserProfile1.frame = CGRectMake(40/2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
     self.goingUserProfile2.frame = CGRectMake(40/2+60, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
     self.goingUserProfile3.frame = CGRectMake(40/2+60*2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
