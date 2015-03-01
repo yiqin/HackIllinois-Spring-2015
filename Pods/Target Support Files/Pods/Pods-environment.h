@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 1
 
+// AYVibrantButton
+#define COCOAPODS_POD_AVAILABLE_AYVibrantButton
+#define COCOAPODS_VERSION_MAJOR_AYVibrantButton 1
+#define COCOAPODS_VERSION_MINOR_AYVibrantButton 0
+#define COCOAPODS_VERSION_PATCH_AYVibrantButton 3
+
 // AsyncDisplayKit
 #define COCOAPODS_POD_AVAILABLE_AsyncDisplayKit
 #define COCOAPODS_VERSION_MAJOR_AsyncDisplayKit 1

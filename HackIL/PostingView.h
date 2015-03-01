@@ -10,6 +10,10 @@
 
 @interface PostingView : UIView
 
+@property(nonatomic, strong) UILabel *introLabel;
+@property(nonatomic, strong) UITextView *tf;
+@property(nonatomic, strong) UILabel *introPlaceLabel;
+
 @property(nonatomic, strong) UIImageView *photoImageView;
 
 @end

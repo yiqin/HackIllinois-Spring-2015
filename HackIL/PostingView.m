@@ -10,10 +10,7 @@
 #import <Colours.h>
 @interface PostingView ()
 
-@property(nonatomic, strong) UILabel *introLabel;
-@property(nonatomic, strong) UITextView *tf;
 
-@property(nonatomic, strong) UILabel *introPlaceLabel;
 
 @end
 
@@ -51,12 +48,24 @@
         self.introPlaceLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.introPlaceLabel];
         
+        UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc]
+                                               initWithTarget:self
+                                               action:@selector(hideKeyBoard)];
+        [self addGestureRecognizer:tapGesture];
+        
+        [self.photoImageView addGestureRecognizer:tapGesture];
     }
     return self;
+}
+
+-(void)hideKeyBoard {
+    [self.tf resignFirstResponder];
 }
 
 -(void)layoutSubviews {
     
 }
+
+
 
 @end

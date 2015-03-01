@@ -6,3 +6,4 @@ pod 'Colours'
 pod 'AsyncDisplayKit'
 pod 'AFNetworking'
 pod 'DateTools'
+pod "AYVibrantButton"

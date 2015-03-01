@@ -182,9 +182,7 @@
     [self.postingView insertSubview:photoImageView atIndex:0];
     
     
-//    self.postingView.photoImageView.image = image;
-//    self.postingView.photoImageView.hidden = NO;
-//    [self.postingView updateConstraintsIfNeeded];
+    
 }
 
 - (void)showPostingView {
@@ -203,6 +201,8 @@
 }
 
 - (void)hidePostingView {
+    
+    [self.postingView endEditing:YES];
     
     [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
         
