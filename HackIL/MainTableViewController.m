@@ -21,7 +21,6 @@
 
 @property(nonatomic, strong) NSIndexPath *clickingIndexPath;
 
-@property(nonatomic, strong) UIImageView *launchImageView;
 
 
 @end
@@ -34,8 +33,6 @@
         self.objects = [[NSArray alloc] init];
         self.clickedCollection = [[NSMutableSet alloc] init];
         self.clickingIndexPath = [NSIndexPath indexPathForItem:1 inSection:0];
-        
-        self.launchImageView = [[UIImageView alloc] init];
     }
     return self;
 }
@@ -44,15 +41,7 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [super viewDidLoad];
-    
-    
-    
-    
-    [[UIApplication sharedApplication].keyWindow addSubview:self.launchImageView];
-    
-    
-    
-    
+
     [self.navigationController setValue:[[YALNavigationBar alloc]init] forKeyPath:@"navigationBar"];
     
     self.title = @"Discover";
@@ -77,11 +66,6 @@
     self.refreshControl = refreshControl;
     [self.tableView addSubview:refreshControl];
     
-}
-
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.launchImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame));
 }
 
 - (BOOL)prefersStatusBarHidden {
