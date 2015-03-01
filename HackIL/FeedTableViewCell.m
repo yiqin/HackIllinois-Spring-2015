@@ -15,10 +15,12 @@
 @interface FeedTableViewCell ()
 
 @property(nonatomic) CGFloat profileSize;
+@property(nonatomic) CGFloat profileSizeSmall;
 
 @property(nonatomic, strong) YQLabel *messageLabel;
 @property(nonatomic, strong) UIImageView *displayImageView;
 
+@property(nonatomic, strong) UIView *filterView;
 
 // #1
 @property(nonatomic, strong) UIImageView *goingUserProfile1;
@@ -38,11 +40,17 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.profileSize = 85.0/2;
+        self.profileSizeSmall = 60.0/2;
         
         self.displayImageView = [[UIImageView alloc] init];
-        self.displayImageView.contentMode = UIViewContentModeCenter;
+        self.displayImageView.contentMode = UIViewContentModeScaleAspectFill;
         self.displayImageView.clipsToBounds = YES;
         [self addSubview:self.displayImageView];
+        
+        self.filterView = [[UIView alloc] init];
+        self.filterView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+        self.filterView.hidden = YES;
+        [self addSubview:self.filterView];
         
         self.messageLabel = [[YQLabel alloc] init];
         self.messageLabel.textColor = [UIColor whiteColor];
@@ -73,13 +81,13 @@
         self.goingUserProfile2 = [[UIImageView alloc] init];
         self.goingUserProfile2.contentMode = UIViewContentModeScaleAspectFill;
         self.goingUserProfile2.layer.masksToBounds = YES;
-        self.goingUserProfile2.layer.cornerRadius = self.profileSize*0.5;
+        self.goingUserProfile2.layer.cornerRadius = self.profileSizeSmall*0.5;
         [self addSubview:self.goingUserProfile2];
         
         self.goingUserProfile3 = [[UIImageView alloc] init];
         self.goingUserProfile3.contentMode = UIViewContentModeScaleAspectFill;
         self.goingUserProfile3.layer.masksToBounds = YES;
-        self.goingUserProfile3.layer.cornerRadius = self.profileSize*0.5;
+        self.goingUserProfile3.layer.cornerRadius = self.profileSizeSmall*0.5;
         [self addSubview:self.goingUserProfile3];
         
         self.likes = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart.png"]];
@@ -139,7 +147,7 @@
             [operationManager GET:tempString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
                 
                 self.displayImageView.image = responseObject;
-                
+                self.filterView.hidden = NO;
                 
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 
@@ -147,10 +155,12 @@
         }
         else {
             self.displayImageView.image = feed.rawCoverImage.image;
+            self.filterView.hidden = NO;
         }
     }
     else {
         self.displayImageView.image = nil;
+        self.filterView.hidden = YES;
         self.displayImageView.backgroundColor = feed.backgroundSolidColor;
     }
     
@@ -162,7 +172,7 @@
     CGFloat tempHeigth = [FeedTableViewCell cellHeight:NO];
     
     self.displayImageView.frame = CGRectMake(0, 0, tempWidth, tempHeigth);
-    
+    self.filterView.frame = CGRectMake(0, 0, tempWidth, tempHeigth);
     self.messageLabel.frame = CGRectMake(40, 0, tempWidth-80, tempHeigth);
     
     
@@ -193,8 +203,9 @@
     // #4
     self.goingUserProfile1.frame = CGRectMake(40/2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
     self.nameHolder.frame = CGRectMake(40/2+50, tempHeigth-35/2-self.profileSize-5, self.profileSize, self.profileSize);
-    self.goingUserProfile2.frame = CGRectMake(40/2+50+60, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
-    self.goingUserProfile3.frame = CGRectMake(40/2+50+60*2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
+    
+    self.goingUserProfile2.frame = CGRectMake(40/2+50+60, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
+    self.goingUserProfile3.frame = CGRectMake(40/2+50+60+self.profileSizeSmall*1.2, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
     
     self.likes.frame = CGRectMake(40/2+50+60*4, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
 
