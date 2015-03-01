@@ -42,13 +42,15 @@
     
     [self.navigationController setValue:[[YALNavigationBar alloc]init] forKeyPath:@"navigationBar"];
     
-    // [self.tableView setContentOffset:CGPointMake(0, [ToPostTableViewCell cellHeight]) animated:YES];
     
+    self.title = @"Discover";
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(pressedAddButton:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(pressedMenuButton:)];
     self.navigationItem.leftBarButtonItem = menuButton;
+    
+    
     
     [[FeedsDataManager sharedInstance] startLoadingDataFromParse:0 completionClosure:^(BOOL success) {
         if (success) {
@@ -93,14 +95,33 @@
     }];
 }
 
+
+- (void)setNavigationDiscover {
+    self.title = @"Discover";
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(pressedAddButton:)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(pressedMenuButton:)];
+    self.navigationItem.leftBarButtonItem = menuButton;
+}
+
+- (void)setNavigationPost {
+    self.title = @"Post";
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(pressedCancelButton:)];
+    self.navigationItem.rightBarButtonItem = cancelButton;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+}
+
 - (void)pressedAddButton:(UIBarButtonItem *)sender {
-    
-    
-    
+    [self setNavigationPost];
 }
 
 - (void)pressedMenuButton:(UIBarButtonItem *)sender {
     
+}
+
+- (void)pressedCancelButton:(UIBarButtonItem *)sender {
+    [self setNavigationDiscover];
 }
 
 #pragma mark - Table view data source
