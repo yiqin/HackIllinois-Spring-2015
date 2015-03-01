@@ -91,6 +91,10 @@
 		8DF87A1D1AA30DC700221CF1 /* LaunchCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A111AA30DC700221CF1 /* LaunchCameraButton.m */; };
 		8DF87A1E1AA30DC700221CF1 /* PaintCodeFile.pcvd in Resources */ = {isa = PBXBuildFile; fileRef = 8DF87A121AA30DC700221CF1 /* PaintCodeFile.pcvd */; };
 		8DF87A201AA32F0C00221CF1 /* VoiceLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A1F1AA32F0C00221CF1 /* VoiceLocationManager.swift */; };
+		8DF87A341AA3558000221CF1 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A2F1AA3558000221CF1 /* SVIndefiniteAnimatedView.m */; };
+		8DF87A351AA3558000221CF1 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DF87A311AA3558000221CF1 /* SVProgressHUD.bundle */; };
+		8DF87A361AA3558000221CF1 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A331AA3558000221CF1 /* SVProgressHUD.m */; };
+		8DF87A381AA355C200221CF1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF87A371AA355C200221CF1 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +232,13 @@
 		8DF87A111AA30DC700221CF1 /* LaunchCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchCameraButton.m; sourceTree = "<group>"; };
 		8DF87A121AA30DC700221CF1 /* PaintCodeFile.pcvd */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PaintCodeFile.pcvd; sourceTree = "<group>"; };
 		8DF87A1F1AA32F0C00221CF1 /* VoiceLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceLocationManager.swift; sourceTree = "<group>"; };
+		8DF87A2E1AA3558000221CF1 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		8DF87A2F1AA3558000221CF1 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		8DF87A301AA3558000221CF1 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		8DF87A311AA3558000221CF1 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		8DF87A321AA3558000221CF1 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		8DF87A331AA3558000221CF1 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		8DF87A371AA355C200221CF1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CD6A55DFDC11EB2027C45ECD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -236,6 +247,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF87A381AA355C200221CF1 /* QuartzCore.framework in Frameworks */,
 				8DF879FB1AA30CF500221CF1 /* AVFoundation.framework in Frameworks */,
 				5E4C29DD8D5689BEAAA6A595 /* libPods.a in Frameworks */,
 			);
@@ -352,6 +364,7 @@
 				8D92F7791AA147B500AE759B /* AppDelegate.m */,
 				59D9A2D61AA332D400474DA4 /* LikesManager.h */,
 				59D9A2D71AA332D400474DA4 /* LikesManager.m */,
+				8DF87A2D1AA3558000221CF1 /* SVProgressHUD */,
 				8D5D2D1E1AA25757003BE326 /* Constants.h */,
 				8D92F7A11AA1AF3200AE759B /* MainTableViewController.h */,
 				8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */,
@@ -501,9 +514,24 @@
 			path = CameraWithAVFoundation;
 			sourceTree = "<group>";
 		};
+		8DF87A2D1AA3558000221CF1 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8DF87A2E1AA3558000221CF1 /* SVIndefiniteAnimatedView.h */,
+				8DF87A2F1AA3558000221CF1 /* SVIndefiniteAnimatedView.m */,
+				8DF87A301AA3558000221CF1 /* SVProgressHUD-Prefix.pch */,
+				8DF87A311AA3558000221CF1 /* SVProgressHUD.bundle */,
+				8DF87A321AA3558000221CF1 /* SVProgressHUD.h */,
+				8DF87A331AA3558000221CF1 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = ThirdPartyLibraries/SVProgressHUD;
+			sourceTree = SOURCE_ROOT;
+		};
 		EFC5FA986401E7C1D54E93AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DF87A371AA355C200221CF1 /* QuartzCore.framework */,
 				8DF879FA1AA30CF500221CF1 /* AVFoundation.framework */,
 				CD6A55DFDC11EB2027C45ECD /* libPods.a */,
 			);
@@ -593,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5D2D341AA264C9003BE326 /* OpenSans-Semibold.ttf in Resources */,
+				8DF87A351AA3558000221CF1 /* SVProgressHUD.bundle in Resources */,
 				8D5D2D351AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				8D92F7831AA147B500AE759B /* Main.storyboard in Resources */,
 				8DF87A1E1AA30DC700221CF1 /* PaintCodeFile.pcvd in Resources */,
@@ -699,6 +728,7 @@
 				8DF87A191AA30DC700221CF1 /* CameraToggleButton.m in Sources */,
 				8DF87A1D1AA30DC700221CF1 /* LaunchCameraButton.m in Sources */,
 				8DF87A1B1AA30DC700221CF1 /* Constants.m in Sources */,
+				8DF87A341AA3558000221CF1 /* SVIndefiniteAnimatedView.m in Sources */,
 				8D5D2D3A1AA2735F003BE326 /* GoingUser.swift in Sources */,
 				8DF879D81AA2F4FE00221CF1 /* DesignableImageView.swift in Sources */,
 				8DF879EE1AA2F4FE00221CF1 /* TransitionZoom.swift in Sources */,
@@ -711,6 +741,7 @@
 				8D92F7A31AA1AF3200AE759B /* MainTableViewController.m in Sources */,
 				8D92F7A81AA1B38A00AE759B /* FeedsDataManager.swift in Sources */,
 				8D5D2D171AA24C6B003BE326 /* UIImage+Masking.m in Sources */,
+				8DF87A361AA3558000221CF1 /* SVProgressHUD.m in Sources */,
 				8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */,
 				8D5D2D1C1AA24C6B003BE326 /* UIScrollView+Screenshot.m in Sources */,
 				8DF879F71AA3042C00221CF1 /* PostingView.m in Sources */,
