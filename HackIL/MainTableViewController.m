@@ -21,6 +21,8 @@
 
 @property(nonatomic, strong) NSIndexPath *clickingIndexPath;
 
+
+
 @end
 
 @implementation MainTableViewController
@@ -39,20 +41,22 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     [super viewDidLoad];
-    
+
     [self.navigationController setValue:[[YALNavigationBar alloc]init] forKeyPath:@"navigationBar"];
     
-    // [self.tableView setContentOffset:CGPointMake(0, [ToPostTableViewCell cellHeight]) animated:YES];
-    
+    self.title = @"Discover";
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(pressedAddButton:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
     UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(pressedMenuButton:)];
     self.navigationItem.leftBarButtonItem = menuButton;
     
+    
+    
+    
     [[FeedsDataManager sharedInstance] startLoadingDataFromParse:0 completionClosure:^(BOOL success) {
         if (success) {
-            [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(reloadThisTableView) userInfo:nil repeats:NO];
+            [NSTimer scheduledTimerWithTimeInterval:1.5 target:self selector:@selector(reloadThisTableView) userInfo:nil repeats:NO];
             // [self reloadThisTableView];
         }
     }];
@@ -93,14 +97,66 @@
     }];
 }
 
-- (void)pressedAddButton:(UIBarButtonItem *)sender {
+- (void)setNavigationBarToDiscover {
+    
+    [self.navigationController setValue:[[YALNavigationBar alloc]init] forKeyPath:@"navigationBar"];
+    
+    [UIView transitionWithView:self.navigationController.view duration:0.5f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        
+        self.title = @"";
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(pressedAddButton:)];
+        self.navigationItem.rightBarButtonItem = addButton;
+        
+        UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(pressedMenuButton:)];
+        self.navigationItem.leftBarButtonItem = menuButton;
+        
+    } completion:^(BOOL finished) {
+        
+        [UIView transitionWithView:self.navigationController.view duration:0.5f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+            self.title = @"Discover";
+        } completion:^(BOOL finished) {
+            
+        }];
+    }];
     
     
     
 }
 
+- (void)setNavigationBarToPost {
+    
+    [UIView transitionWithView:self.navigationController.view duration:0.5f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        
+        self.title = @"";
+        UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(pressedPostCancelButton:)];
+        self.navigationItem.rightBarButtonItem = addButton;
+        
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+        
+    } completion:^(BOOL finished) {
+        
+        [UIView transitionWithView:self.navigationController.view duration:0.5f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+            self.title = @"Post";
+        } completion:^(BOOL finished) {
+        }];
+        
+    }];
+   
+    
+    
+}
+
+
+- (void)pressedAddButton:(UIBarButtonItem *)sender {
+    [self setNavigationBarToPost];
+}
+
 - (void)pressedMenuButton:(UIBarButtonItem *)sender {
     
+}
+
+- (void)pressedPostCancelButton:(UIBarButtonItem *)sender {
+    [self setNavigationBarToDiscover];
 }
 
 #pragma mark - Table view data source
