@@ -32,7 +32,7 @@
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                            [UIColor colorFromHexString:@"4d4d4d"], NSForegroundColorAttributeName,
                                                            [UIFont fontWithName:@"OpenSans-Semibold" size:17.0],NSFontAttributeName, nil]];
-    
+    [[UINavigationBar appearance] setTranslucent:NO];
     // Set status bar style
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];

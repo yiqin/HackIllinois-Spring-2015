@@ -57,6 +57,10 @@
         }
     }];
     
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl = refreshControl;
+    [self.tableView addSubview:refreshControl];
     
 }
 
@@ -67,14 +71,20 @@
 - (void)reloadThisTableView {
     self.clickedCollection = [[NSMutableSet alloc] init];
     self.objects = [[NSArray alloc] initWithArray:[FeedsDataManager sharedInstance].objects];
-     // [self.tableView setContentOffset:CGPointMake(0, [ToPostTableViewCell cellHeight]*0.5) animated:NO];
+
+    NSLog(@"%f", self.tableView.contentOffset.y);
+    
+    [self.tableView setContentOffset:CGPointMake(0, [ToPostTableViewCell cellHeight]) animated:NO];
     [self.tableView reloadData];
-   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)refresh:(id)sender {
+    [self reloadThisTableView];
 }
 
 - (void)pressedAddButton:(UIBarButtonItem *)sender {
