@@ -301,8 +301,8 @@
     //*layout
     self.goingUserProfile3.frame = CGRectMake(40/2+50+60+self.profileSizeSmall*1.2, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
     
-    self.likes.frame = CGRectMake(40/2+50+60*4, tempHeigth-35/2-self.profileSize + self.profileSize/2 - 13.5, 28, 27); //x, y, width, height
-    self.ghost.frame = CGRectMake(40/2+50+60*4, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
+    self.likes.frame = CGRectMake(self.frame.size.width-10-self.profileSize, tempHeigth-35/2-self.profileSize+5 + self.profileSize/2 - 13.5, 28, 27); //x, y, width, height
+    self.ghost.frame = CGRectMake(self.frame.size.width-10-self.profileSize, tempHeigth-35/2-self.profileSize+5, self.profileSize, self.profileSize);
 
 }
 

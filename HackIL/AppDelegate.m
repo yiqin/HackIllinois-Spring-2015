@@ -34,8 +34,6 @@
                                                            [UIFont fontWithName:@"OpenSans-Semibold" size:17.0],NSFontAttributeName, nil]];
     [[UINavigationBar appearance] setTranslucent:NO];
     // Set status bar style
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
     
     // Initialize Parse.
     [Parse setApplicationId:@"vp04lCdgsjHajEk8gLQfn4kD7DWcdxaYE5FJDrbS"
