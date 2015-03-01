@@ -49,6 +49,33 @@
 		8DDB0F2D1AA21154005FA34D /* NSMutableSet+UniqueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB0F2C1AA21154005FA34D /* NSMutableSet+UniqueObject.m */; };
 		8DF879A91AA2C07400221CF1 /* ToPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879A81AA2C07400221CF1 /* ToPostTableViewCell.m */; };
 		8DF879AC1AA2CE5700221CF1 /* YALNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879AB1AA2CE5700221CF1 /* YALNavigationBar.m */; };
+		8DF879D61AA2F4FE00221CF1 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879BB1AA2F4FE00221CF1 /* BlurView.swift */; };
+		8DF879D71AA2F4FE00221CF1 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879BC1AA2F4FE00221CF1 /* DesignableButton.swift */; };
+		8DF879D81AA2F4FE00221CF1 /* DesignableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879BD1AA2F4FE00221CF1 /* DesignableImageView.swift */; };
+		8DF879D91AA2F4FE00221CF1 /* DesignableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879BE1AA2F4FE00221CF1 /* DesignableLabel.swift */; };
+		8DF879DA1AA2F4FE00221CF1 /* DesignableTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879BF1AA2F4FE00221CF1 /* DesignableTabBarController.swift */; };
+		8DF879DB1AA2F4FE00221CF1 /* DesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879C01AA2F4FE00221CF1 /* DesignableTextField.swift */; };
+		8DF879DC1AA2F4FE00221CF1 /* DesignableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879C11AA2F4FE00221CF1 /* DesignableTextView.swift */; };
+		8DF879DD1AA2F4FE00221CF1 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879C21AA2F4FE00221CF1 /* DesignableView.swift */; };
+		8DF879DE1AA2F4FE00221CF1 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879C31AA2F4FE00221CF1 /* ImageLoader.swift */; };
+		8DF879DF1AA2F4FE00221CF1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DF879C41AA2F4FE00221CF1 /* Info.plist */; };
+		8DF879E01AA2F4FE00221CF1 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879C51AA2F4FE00221CF1 /* KeyboardLayoutConstraint.swift */; };
+		8DF879E11AA2F4FE00221CF1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879C61AA2F4FE00221CF1 /* LoadingView.swift */; };
+		8DF879E21AA2F4FE00221CF1 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF879C71AA2F4FE00221CF1 /* LoadingView.xib */; };
+		8DF879E31AA2F4FE00221CF1 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879C81AA2F4FE00221CF1 /* Misc.swift */; };
+		8DF879E41AA2F4FE00221CF1 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879C91AA2F4FE00221CF1 /* SoundPlayer.swift */; };
+		8DF879E51AA2F4FE00221CF1 /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879CB1AA2F4FE00221CF1 /* Spring.swift */; };
+		8DF879E61AA2F4FE00221CF1 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879CC1AA2F4FE00221CF1 /* SpringAnimation.swift */; };
+		8DF879E71AA2F4FE00221CF1 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879CD1AA2F4FE00221CF1 /* SpringButton.swift */; };
+		8DF879E81AA2F4FE00221CF1 /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879CE1AA2F4FE00221CF1 /* SpringImageView.swift */; };
+		8DF879E91AA2F4FE00221CF1 /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879CF1AA2F4FE00221CF1 /* SpringLabel.swift */; };
+		8DF879EA1AA2F4FE00221CF1 /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879D01AA2F4FE00221CF1 /* SpringTextField.swift */; };
+		8DF879EB1AA2F4FE00221CF1 /* SpringTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879D11AA2F4FE00221CF1 /* SpringTextView.swift */; };
+		8DF879EC1AA2F4FE00221CF1 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879D21AA2F4FE00221CF1 /* SpringView.swift */; };
+		8DF879ED1AA2F4FE00221CF1 /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879D31AA2F4FE00221CF1 /* TransitionManager.swift */; };
+		8DF879EE1AA2F4FE00221CF1 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879D41AA2F4FE00221CF1 /* TransitionZoom.swift */; };
+		8DF879EF1AA2F4FE00221CF1 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879D51AA2F4FE00221CF1 /* UnwindSegue.swift */; };
+		8DF879F71AA3042C00221CF1 /* PostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879F61AA3042C00221CF1 /* PostingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +158,35 @@
 		8DF879A81AA2C07400221CF1 /* ToPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToPostTableViewCell.m; sourceTree = "<group>"; };
 		8DF879AA1AA2CE5700221CF1 /* YALNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALNavigationBar.h; sourceTree = "<group>"; };
 		8DF879AB1AA2CE5700221CF1 /* YALNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALNavigationBar.m; sourceTree = "<group>"; };
+		8DF879BB1AA2F4FE00221CF1 /* BlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		8DF879BC1AA2F4FE00221CF1 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		8DF879BD1AA2F4FE00221CF1 /* DesignableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
+		8DF879BE1AA2F4FE00221CF1 /* DesignableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableLabel.swift; sourceTree = "<group>"; };
+		8DF879BF1AA2F4FE00221CF1 /* DesignableTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTabBarController.swift; sourceTree = "<group>"; };
+		8DF879C01AA2F4FE00221CF1 /* DesignableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextField.swift; sourceTree = "<group>"; };
+		8DF879C11AA2F4FE00221CF1 /* DesignableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableTextView.swift; sourceTree = "<group>"; };
+		8DF879C21AA2F4FE00221CF1 /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		8DF879C31AA2F4FE00221CF1 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		8DF879C41AA2F4FE00221CF1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DF879C51AA2F4FE00221CF1 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		8DF879C61AA2F4FE00221CF1 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		8DF879C71AA2F4FE00221CF1 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		8DF879C81AA2F4FE00221CF1 /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		8DF879C91AA2F4FE00221CF1 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		8DF879CA1AA2F4FE00221CF1 /* Spring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Spring.h; sourceTree = "<group>"; };
+		8DF879CB1AA2F4FE00221CF1 /* Spring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spring.swift; sourceTree = "<group>"; };
+		8DF879CC1AA2F4FE00221CF1 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		8DF879CD1AA2F4FE00221CF1 /* SpringButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringButton.swift; sourceTree = "<group>"; };
+		8DF879CE1AA2F4FE00221CF1 /* SpringImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringImageView.swift; sourceTree = "<group>"; };
+		8DF879CF1AA2F4FE00221CF1 /* SpringLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringLabel.swift; sourceTree = "<group>"; };
+		8DF879D01AA2F4FE00221CF1 /* SpringTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextField.swift; sourceTree = "<group>"; };
+		8DF879D11AA2F4FE00221CF1 /* SpringTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringTextView.swift; sourceTree = "<group>"; };
+		8DF879D21AA2F4FE00221CF1 /* SpringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
+		8DF879D31AA2F4FE00221CF1 /* TransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
+		8DF879D41AA2F4FE00221CF1 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
+		8DF879D51AA2F4FE00221CF1 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
+		8DF879F51AA3042C00221CF1 /* PostingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostingView.h; sourceTree = "<group>"; };
+		8DF879F61AA3042C00221CF1 /* PostingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostingView.m; sourceTree = "<group>"; };
 		CD6A55DFDC11EB2027C45ECD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -254,12 +310,15 @@
 				8D5D2D1E1AA25757003BE326 /* Constants.h */,
 				8D92F7A11AA1AF3200AE759B /* MainTableViewController.h */,
 				8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */,
+				8DF879F51AA3042C00221CF1 /* PostingView.h */,
+				8DF879F61AA3042C00221CF1 /* PostingView.m */,
 				8D92F7A41AA1B07C00AE759B /* FeedTableViewCell.h */,
 				8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */,
 				8DF879A71AA2C07400221CF1 /* ToPostTableViewCell.h */,
 				8DF879A81AA2C07400221CF1 /* ToPostTableViewCell.m */,
 				8DF879AA1AA2CE5700221CF1 /* YALNavigationBar.h */,
 				8DF879AB1AA2CE5700221CF1 /* YALNavigationBar.m */,
+				8DF879BA1AA2F4FE00221CF1 /* Spring */,
 				8D5D2D361AA26D10003BE326 /* RandomColorGenerator.h */,
 				8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */,
 				8D5D2D3E1AA28DA1003BE326 /* YQUIKit */,
@@ -332,6 +391,40 @@
 			);
 			name = Categories;
 			sourceTree = "<group>";
+		};
+		8DF879BA1AA2F4FE00221CF1 /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				8DF879BB1AA2F4FE00221CF1 /* BlurView.swift */,
+				8DF879BC1AA2F4FE00221CF1 /* DesignableButton.swift */,
+				8DF879BD1AA2F4FE00221CF1 /* DesignableImageView.swift */,
+				8DF879BE1AA2F4FE00221CF1 /* DesignableLabel.swift */,
+				8DF879BF1AA2F4FE00221CF1 /* DesignableTabBarController.swift */,
+				8DF879C01AA2F4FE00221CF1 /* DesignableTextField.swift */,
+				8DF879C11AA2F4FE00221CF1 /* DesignableTextView.swift */,
+				8DF879C21AA2F4FE00221CF1 /* DesignableView.swift */,
+				8DF879C31AA2F4FE00221CF1 /* ImageLoader.swift */,
+				8DF879C41AA2F4FE00221CF1 /* Info.plist */,
+				8DF879C51AA2F4FE00221CF1 /* KeyboardLayoutConstraint.swift */,
+				8DF879C61AA2F4FE00221CF1 /* LoadingView.swift */,
+				8DF879C71AA2F4FE00221CF1 /* LoadingView.xib */,
+				8DF879C81AA2F4FE00221CF1 /* Misc.swift */,
+				8DF879C91AA2F4FE00221CF1 /* SoundPlayer.swift */,
+				8DF879CA1AA2F4FE00221CF1 /* Spring.h */,
+				8DF879CB1AA2F4FE00221CF1 /* Spring.swift */,
+				8DF879CC1AA2F4FE00221CF1 /* SpringAnimation.swift */,
+				8DF879CD1AA2F4FE00221CF1 /* SpringButton.swift */,
+				8DF879CE1AA2F4FE00221CF1 /* SpringImageView.swift */,
+				8DF879CF1AA2F4FE00221CF1 /* SpringLabel.swift */,
+				8DF879D01AA2F4FE00221CF1 /* SpringTextField.swift */,
+				8DF879D11AA2F4FE00221CF1 /* SpringTextView.swift */,
+				8DF879D21AA2F4FE00221CF1 /* SpringView.swift */,
+				8DF879D31AA2F4FE00221CF1 /* TransitionManager.swift */,
+				8DF879D41AA2F4FE00221CF1 /* TransitionZoom.swift */,
+				8DF879D51AA2F4FE00221CF1 /* UnwindSegue.swift */,
+			);
+			path = Spring;
+			sourceTree = SOURCE_ROOT;
 		};
 		EFC5FA986401E7C1D54E93AF /* Frameworks */ = {
 			isa = PBXGroup;
@@ -429,8 +522,10 @@
 				8D5D2D331AA264C9003BE326 /* OpenSans-Regular.ttf in Resources */,
 				8D5D2D301AA264C9003BE326 /* OpenSans-Italic.ttf in Resources */,
 				8D5D2D2F1AA264C9003BE326 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				8DF879DF1AA2F4FE00221CF1 /* Info.plist in Resources */,
 				8D92F7881AA147B500AE759B /* LaunchScreen.xib in Resources */,
 				8D5D2D321AA264C9003BE326 /* OpenSans-LightItalic.ttf in Resources */,
+				8DF879E21AA2F4FE00221CF1 /* LoadingView.xib in Resources */,
 				8D5D2D2C1AA264C9003BE326 /* OpenSans-Bold.ttf in Resources */,
 				8D92F7851AA147B500AE759B /* Images.xcassets in Resources */,
 				8D5D2D311AA264C9003BE326 /* OpenSans-Light.ttf in Resources */,
@@ -487,20 +582,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DDB0F2D1AA21154005FA34D /* NSMutableSet+UniqueObject.m in Sources */,
+				8DF879D91AA2F4FE00221CF1 /* DesignableLabel.swift in Sources */,
+				8DF879D61AA2F4FE00221CF1 /* BlurView.swift in Sources */,
+				8DF879EF1AA2F4FE00221CF1 /* UnwindSegue.swift in Sources */,
+				8DF879DC1AA2F4FE00221CF1 /* DesignableTextView.swift in Sources */,
 				8D5D2D1D1AA24C6B003BE326 /* UIView+Screenshot.m in Sources */,
+				8DF879E01AA2F4FE00221CF1 /* KeyboardLayoutConstraint.swift in Sources */,
+				8DF879DB1AA2F4FE00221CF1 /* DesignableTextField.swift in Sources */,
 				8D5D2D1A1AA24C6B003BE326 /* UIImage+Rotating.m in Sources */,
 				8D5D2D381AA26D10003BE326 /* RandomColorGenerator.m in Sources */,
 				8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */,
+				8DF879E41AA2F4FE00221CF1 /* SoundPlayer.swift in Sources */,
 				8D92F7AC1AA1EF4D00AE759B /* Feed.swift in Sources */,
 				8D92F7A61AA1B07C00AE759B /* FeedTableViewCell.m in Sources */,
 				8D92F79F1AA151BC00AE759B /* NSParseObject.swift in Sources */,
 				8D5D2D191AA24C6B003BE326 /* UIImage+Resizing.m in Sources */,
+				8DF879E91AA2F4FE00221CF1 /* SpringLabel.swift in Sources */,
 				8D5D2D1B1AA24C6B003BE326 /* UIImage+Saving.m in Sources */,
+				8DF879DE1AA2F4FE00221CF1 /* ImageLoader.swift in Sources */,
 				8D92F7771AA147B500AE759B /* main.m in Sources */,
+				8DF879E11AA2F4FE00221CF1 /* LoadingView.swift in Sources */,
+				8DF879E31AA2F4FE00221CF1 /* Misc.swift in Sources */,
 				8D5D2D181AA24C6B003BE326 /* UIImage+Reflection.m in Sources */,
 				8D92F7AA1AA1EB7100AE759B /* NSParseImage.swift in Sources */,
+				8DF879ED1AA2F4FE00221CF1 /* TransitionManager.swift in Sources */,
 				8DF879AC1AA2CE5700221CF1 /* YALNavigationBar.m in Sources */,
+				8DF879DD1AA2F4FE00221CF1 /* DesignableView.swift in Sources */,
+				8DF879E71AA2F4FE00221CF1 /* SpringButton.swift in Sources */,
+				8DF879EA1AA2F4FE00221CF1 /* SpringTextField.swift in Sources */,
+				8DF879E81AA2F4FE00221CF1 /* SpringImageView.swift in Sources */,
 				8D5D2D3A1AA2735F003BE326 /* GoingUser.swift in Sources */,
+				8DF879D81AA2F4FE00221CF1 /* DesignableImageView.swift in Sources */,
+				8DF879EE1AA2F4FE00221CF1 /* TransitionZoom.swift in Sources */,
+				8DF879DA1AA2F4FE00221CF1 /* DesignableTabBarController.swift in Sources */,
+				8DF879E51AA2F4FE00221CF1 /* Spring.swift in Sources */,
 				8D5D2D151AA24C6B003BE326 /* UIImage+Enhancing.m in Sources */,
 				8D5D2D201AA25E63003BE326 /* NSParseUser.swift in Sources */,
 				8D5D2D161AA24C6B003BE326 /* UIImage+Filtering.m in Sources */,
@@ -509,10 +624,15 @@
 				8D5D2D171AA24C6B003BE326 /* UIImage+Masking.m in Sources */,
 				8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */,
 				8D5D2D1C1AA24C6B003BE326 /* UIScrollView+Screenshot.m in Sources */,
+				8DF879F71AA3042C00221CF1 /* PostingView.m in Sources */,
+				8DF879EB1AA2F4FE00221CF1 /* SpringTextView.swift in Sources */,
+				8DF879EC1AA2F4FE00221CF1 /* SpringView.swift in Sources */,
 				8DF879A91AA2C07400221CF1 /* ToPostTableViewCell.m in Sources */,
 				8D5D2D141AA24C6B003BE326 /* UIImage+Blurring.m in Sources */,
 				8D5D2D3D1AA28D99003BE326 /* YQLabel.m in Sources */,
+				8DF879E61AA2F4FE00221CF1 /* SpringAnimation.swift in Sources */,
 				8D5D2D131AA24C6B003BE326 /* NYXImagesHelper.m in Sources */,
+				8DF879D71AA2F4FE00221CF1 /* DesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +759,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HackIL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HackIL/HackIL-Bridging-Header.h";
@@ -653,6 +774,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HackIL/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HackIL/HackIL-Bridging-Header.h";

@@ -13,6 +13,7 @@
 #import "AFNetworking.h"
 #import "NSMutableSet+UniqueObject.h"
 #import "YALNavigationBar.h"
+#import "PostingView.h"
 
 @interface MainTableViewController ()
 
@@ -20,6 +21,9 @@
 @property(nonatomic, strong) NSMutableSet *clickedCollection;
 
 @property(nonatomic, strong) NSIndexPath *clickingIndexPath;
+
+@property(nonatomic, strong) PostingView *postingView;
+@property(nonatomic) CGFloat aminationHeight;
 
 @end
 
@@ -31,6 +35,14 @@
         self.objects = [[NSArray alloc] init];
         self.clickedCollection = [[NSMutableSet alloc] init];
         self.clickingIndexPath = [NSIndexPath indexPathForItem:1 inSection:0];
+        
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat screenWidth = screenRect.size.width;
+        CGFloat screenHeight = screenRect.size.height;
+
+        self.postingView = [[PostingView alloc] initWithFrame:CGRectMake(0, screenHeight, screenWidth, screenHeight-64)];
+        
+        self.aminationHeight = screenHeight-64;
     }
     return self;
 }
@@ -63,6 +75,12 @@
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     [self.tableView addSubview:refreshControl];
+    
+    [self.view addSubview:self.postingView];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
     
 }
 
@@ -109,11 +127,12 @@
     self.title = @"Post";
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(pressedCancelButton:)];
     self.navigationItem.rightBarButtonItem = cancelButton;
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] init];
+    self.navigationItem.leftBarButtonItem = cancelButton;
 }
 
 - (void)pressedAddButton:(UIBarButtonItem *)sender {
     [self setNavigationPost];
+    [self showPostingView];
 }
 
 - (void)pressedMenuButton:(UIBarButtonItem *)sender {
@@ -122,7 +141,39 @@
 
 - (void)pressedCancelButton:(UIBarButtonItem *)sender {
     [self setNavigationDiscover];
+    [self hidePostingView];
 }
+
+- (void)showPostingView {
+    
+    [UIView animateWithDuration:1.0f delay:0.0f usingSpringWithDamping:.2 initialSpringVelocity:0.8 options:0 animations:^{
+        
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat screenWidth = screenRect.size.width;
+        CGFloat screenHeight = screenRect.size.height;
+        self.postingView.frame = CGRectMake(0, 0, screenWidth, screenHeight-64);
+        
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (void)hidePostingView {
+    
+    [UIView animateWithDuration:1.0f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+        
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat screenWidth = screenRect.size.width;
+        CGFloat screenHeight = screenRect.size.height;
+        self.postingView.frame = CGRectMake(0, screenHeight, screenWidth, screenHeight-64);
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+}
+
 
 #pragma mark - Table view data source
 
