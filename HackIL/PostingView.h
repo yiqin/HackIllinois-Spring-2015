@@ -10,4 +10,6 @@
 
 @interface PostingView : UIView
 
+@property(nonatomic, strong) UIImageView *photoImageView;
+
 @end

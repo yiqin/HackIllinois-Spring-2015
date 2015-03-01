@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CameraSessionView.h"
 
-@interface MainTableViewController : UITableViewController
+@interface MainTableViewController : UITableViewController <CACameraSessionDelegate>
 
 @end

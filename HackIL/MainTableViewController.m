@@ -15,6 +15,8 @@
 #import "YALNavigationBar.h"
 #import "PostingView.h"
 
+
+
 @interface MainTableViewController ()
 
 @property(nonatomic, strong) NSArray *objects;
@@ -24,6 +26,8 @@
 
 @property(nonatomic, strong) PostingView *postingView;
 @property(nonatomic) CGFloat aminationHeight;
+
+@property (nonatomic, strong) CameraSessionView *cameraView;
 
 @end
 
@@ -114,7 +118,6 @@
     }];
 }
 
-
 - (void)setNavigationDiscover {
     self.title = @"Discover";
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(pressedAddButton:)];
@@ -150,6 +153,38 @@
 
 - (void)pressedCameraButton:(UIBarButtonItem *)sender {
     
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    _cameraView = [[CameraSessionView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+    
+    [_cameraView setTopBarColor:[UIColor clearColor]];
+    [_cameraView hideFlashButton];
+    [_cameraView hideCameraToogleButton];
+    [_cameraView hideDismissButton];
+    
+    _cameraView.delegate = self;
+    [self.navigationController.view addSubview:_cameraView];
+    
+}
+
+-(void)didCaptureImage:(UIImage *)image {
+    //Use the image that is received
+    [self.cameraView removeFromSuperview];
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    UIImageView *photoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight-64)];
+    // photoImageView.contentMode = UIViewContentModeBottom;
+    photoImageView.image = image;
+    [self.postingView insertSubview:photoImageView atIndex:0];
+    
+    
+//    self.postingView.photoImageView.image = image;
+//    self.postingView.photoImageView.hidden = NO;
+//    [self.postingView updateConstraintsIfNeeded];
 }
 
 - (void)showPostingView {

@@ -76,6 +76,19 @@
 		8DF879EE1AA2F4FE00221CF1 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879D41AA2F4FE00221CF1 /* TransitionZoom.swift */; };
 		8DF879EF1AA2F4FE00221CF1 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879D51AA2F4FE00221CF1 /* UnwindSegue.swift */; };
 		8DF879F71AA3042C00221CF1 /* PostingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879F61AA3042C00221CF1 /* PostingView.m */; };
+		8DF879FB1AA30CF500221CF1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF879FA1AA30CF500221CF1 /* AVFoundation.framework */; };
+		8DF87A131AA30DC700221CF1 /* CameraDismissButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF879FE1AA30DC700221CF1 /* CameraDismissButton.m */; };
+		8DF87A141AA30DC700221CF1 /* CameraFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A001AA30DC700221CF1 /* CameraFlashButton.m */; };
+		8DF87A151AA30DC700221CF1 /* CameraFocalReticule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A021AA30DC700221CF1 /* CameraFocalReticule.m */; };
+		8DF87A161AA30DC700221CF1 /* CameraSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A041AA30DC700221CF1 /* CameraSessionView.m */; };
+		8DF87A171AA30DC700221CF1 /* CameraShutterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A061AA30DC700221CF1 /* CameraShutterButton.m */; };
+		8DF87A181AA30DC700221CF1 /* CameraStyleKitClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A081AA30DC700221CF1 /* CameraStyleKitClass.m */; };
+		8DF87A191AA30DC700221CF1 /* CameraToggleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A0A1AA30DC700221CF1 /* CameraToggleButton.m */; };
+		8DF87A1A1AA30DC700221CF1 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A0C1AA30DC700221CF1 /* CaptureSessionManager.m */; };
+		8DF87A1B1AA30DC700221CF1 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A0E1AA30DC700221CF1 /* Constants.m */; };
+		8DF87A1C1AA30DC700221CF1 /* Cool Camera Mockup.sketch in Resources */ = {isa = PBXBuildFile; fileRef = 8DF87A0F1AA30DC700221CF1 /* Cool Camera Mockup.sketch */; };
+		8DF87A1D1AA30DC700221CF1 /* LaunchCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A111AA30DC700221CF1 /* LaunchCameraButton.m */; };
+		8DF87A1E1AA30DC700221CF1 /* PaintCodeFile.pcvd in Resources */ = {isa = PBXBuildFile; fileRef = 8DF87A121AA30DC700221CF1 /* PaintCodeFile.pcvd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +200,29 @@
 		8DF879D51AA2F4FE00221CF1 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		8DF879F51AA3042C00221CF1 /* PostingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostingView.h; sourceTree = "<group>"; };
 		8DF879F61AA3042C00221CF1 /* PostingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostingView.m; sourceTree = "<group>"; };
+		8DF879FA1AA30CF500221CF1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8DF879FD1AA30DC700221CF1 /* CameraDismissButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraDismissButton.h; sourceTree = "<group>"; };
+		8DF879FE1AA30DC700221CF1 /* CameraDismissButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraDismissButton.m; sourceTree = "<group>"; };
+		8DF879FF1AA30DC700221CF1 /* CameraFlashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraFlashButton.h; sourceTree = "<group>"; };
+		8DF87A001AA30DC700221CF1 /* CameraFlashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraFlashButton.m; sourceTree = "<group>"; };
+		8DF87A011AA30DC700221CF1 /* CameraFocalReticule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraFocalReticule.h; sourceTree = "<group>"; };
+		8DF87A021AA30DC700221CF1 /* CameraFocalReticule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraFocalReticule.m; sourceTree = "<group>"; };
+		8DF87A031AA30DC700221CF1 /* CameraSessionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSessionView.h; sourceTree = "<group>"; };
+		8DF87A041AA30DC700221CF1 /* CameraSessionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraSessionView.m; sourceTree = "<group>"; };
+		8DF87A051AA30DC700221CF1 /* CameraShutterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraShutterButton.h; sourceTree = "<group>"; };
+		8DF87A061AA30DC700221CF1 /* CameraShutterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraShutterButton.m; sourceTree = "<group>"; };
+		8DF87A071AA30DC700221CF1 /* CameraStyleKitClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraStyleKitClass.h; sourceTree = "<group>"; };
+		8DF87A081AA30DC700221CF1 /* CameraStyleKitClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraStyleKitClass.m; sourceTree = "<group>"; };
+		8DF87A091AA30DC700221CF1 /* CameraToggleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraToggleButton.h; sourceTree = "<group>"; };
+		8DF87A0A1AA30DC700221CF1 /* CameraToggleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraToggleButton.m; sourceTree = "<group>"; };
+		8DF87A0B1AA30DC700221CF1 /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
+		8DF87A0C1AA30DC700221CF1 /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
+		8DF87A0D1AA30DC700221CF1 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8DF87A0E1AA30DC700221CF1 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		8DF87A0F1AA30DC700221CF1 /* Cool Camera Mockup.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cool Camera Mockup.sketch"; sourceTree = "<group>"; };
+		8DF87A101AA30DC700221CF1 /* LaunchCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchCameraButton.h; sourceTree = "<group>"; };
+		8DF87A111AA30DC700221CF1 /* LaunchCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchCameraButton.m; sourceTree = "<group>"; };
+		8DF87A121AA30DC700221CF1 /* PaintCodeFile.pcvd */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PaintCodeFile.pcvd; sourceTree = "<group>"; };
 		CD6A55DFDC11EB2027C45ECD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -195,6 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DF879FB1AA30CF500221CF1 /* AVFoundation.framework in Frameworks */,
 				5E4C29DD8D5689BEAAA6A595 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +258,7 @@
 		8D5D2CFA1AA24C6B003BE326 /* ThirdPartyLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				8DF879FC1AA30DC700221CF1 /* CameraWithAVFoundation */,
 				8D5D2CFB1AA24C6B003BE326 /* NYXImagesKit */,
 			);
 			path = ThirdPartyLibraries;
@@ -426,9 +464,39 @@
 			path = Spring;
 			sourceTree = SOURCE_ROOT;
 		};
+		8DF879FC1AA30DC700221CF1 /* CameraWithAVFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				8DF879FD1AA30DC700221CF1 /* CameraDismissButton.h */,
+				8DF879FE1AA30DC700221CF1 /* CameraDismissButton.m */,
+				8DF879FF1AA30DC700221CF1 /* CameraFlashButton.h */,
+				8DF87A001AA30DC700221CF1 /* CameraFlashButton.m */,
+				8DF87A011AA30DC700221CF1 /* CameraFocalReticule.h */,
+				8DF87A021AA30DC700221CF1 /* CameraFocalReticule.m */,
+				8DF87A031AA30DC700221CF1 /* CameraSessionView.h */,
+				8DF87A041AA30DC700221CF1 /* CameraSessionView.m */,
+				8DF87A051AA30DC700221CF1 /* CameraShutterButton.h */,
+				8DF87A061AA30DC700221CF1 /* CameraShutterButton.m */,
+				8DF87A071AA30DC700221CF1 /* CameraStyleKitClass.h */,
+				8DF87A081AA30DC700221CF1 /* CameraStyleKitClass.m */,
+				8DF87A091AA30DC700221CF1 /* CameraToggleButton.h */,
+				8DF87A0A1AA30DC700221CF1 /* CameraToggleButton.m */,
+				8DF87A0B1AA30DC700221CF1 /* CaptureSessionManager.h */,
+				8DF87A0C1AA30DC700221CF1 /* CaptureSessionManager.m */,
+				8DF87A0D1AA30DC700221CF1 /* Constants.h */,
+				8DF87A0E1AA30DC700221CF1 /* Constants.m */,
+				8DF87A0F1AA30DC700221CF1 /* Cool Camera Mockup.sketch */,
+				8DF87A101AA30DC700221CF1 /* LaunchCameraButton.h */,
+				8DF87A111AA30DC700221CF1 /* LaunchCameraButton.m */,
+				8DF87A121AA30DC700221CF1 /* PaintCodeFile.pcvd */,
+			);
+			path = CameraWithAVFoundation;
+			sourceTree = "<group>";
+		};
 		EFC5FA986401E7C1D54E93AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DF879FA1AA30CF500221CF1 /* AVFoundation.framework */,
 				CD6A55DFDC11EB2027C45ECD /* libPods.a */,
 			);
 			name = Frameworks;
@@ -519,6 +587,7 @@
 				8D5D2D341AA264C9003BE326 /* OpenSans-Semibold.ttf in Resources */,
 				8D5D2D351AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				8D92F7831AA147B500AE759B /* Main.storyboard in Resources */,
+				8DF87A1E1AA30DC700221CF1 /* PaintCodeFile.pcvd in Resources */,
 				8D5D2D331AA264C9003BE326 /* OpenSans-Regular.ttf in Resources */,
 				8D5D2D301AA264C9003BE326 /* OpenSans-Italic.ttf in Resources */,
 				8D5D2D2F1AA264C9003BE326 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
@@ -530,6 +599,7 @@
 				8D92F7851AA147B500AE759B /* Images.xcassets in Resources */,
 				8D5D2D311AA264C9003BE326 /* OpenSans-Light.ttf in Resources */,
 				8D5D2D2D1AA264C9003BE326 /* OpenSans-BoldItalic.ttf in Resources */,
+				8DF87A1C1AA30DC700221CF1 /* Cool Camera Mockup.sketch in Resources */,
 				8D5D2D2E1AA264C9003BE326 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,15 +654,20 @@
 				8DDB0F2D1AA21154005FA34D /* NSMutableSet+UniqueObject.m in Sources */,
 				8DF879D91AA2F4FE00221CF1 /* DesignableLabel.swift in Sources */,
 				8DF879D61AA2F4FE00221CF1 /* BlurView.swift in Sources */,
+				8DF87A171AA30DC700221CF1 /* CameraShutterButton.m in Sources */,
+				8DF87A131AA30DC700221CF1 /* CameraDismissButton.m in Sources */,
 				8DF879EF1AA2F4FE00221CF1 /* UnwindSegue.swift in Sources */,
 				8DF879DC1AA2F4FE00221CF1 /* DesignableTextView.swift in Sources */,
+				8DF87A161AA30DC700221CF1 /* CameraSessionView.m in Sources */,
 				8D5D2D1D1AA24C6B003BE326 /* UIView+Screenshot.m in Sources */,
 				8DF879E01AA2F4FE00221CF1 /* KeyboardLayoutConstraint.swift in Sources */,
 				8DF879DB1AA2F4FE00221CF1 /* DesignableTextField.swift in Sources */,
 				8D5D2D1A1AA24C6B003BE326 /* UIImage+Rotating.m in Sources */,
 				8D5D2D381AA26D10003BE326 /* RandomColorGenerator.m in Sources */,
 				8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */,
+				8DF87A181AA30DC700221CF1 /* CameraStyleKitClass.m in Sources */,
 				8DF879E41AA2F4FE00221CF1 /* SoundPlayer.swift in Sources */,
+				8DF87A151AA30DC700221CF1 /* CameraFocalReticule.m in Sources */,
 				8D92F7AC1AA1EF4D00AE759B /* Feed.swift in Sources */,
 				8D92F7A61AA1B07C00AE759B /* FeedTableViewCell.m in Sources */,
 				8D92F79F1AA151BC00AE759B /* NSParseObject.swift in Sources */,
@@ -601,6 +676,7 @@
 				8D5D2D1B1AA24C6B003BE326 /* UIImage+Saving.m in Sources */,
 				8DF879DE1AA2F4FE00221CF1 /* ImageLoader.swift in Sources */,
 				8D92F7771AA147B500AE759B /* main.m in Sources */,
+				8DF87A141AA30DC700221CF1 /* CameraFlashButton.m in Sources */,
 				8DF879E11AA2F4FE00221CF1 /* LoadingView.swift in Sources */,
 				8DF879E31AA2F4FE00221CF1 /* Misc.swift in Sources */,
 				8D5D2D181AA24C6B003BE326 /* UIImage+Reflection.m in Sources */,
@@ -611,10 +687,14 @@
 				8DF879E71AA2F4FE00221CF1 /* SpringButton.swift in Sources */,
 				8DF879EA1AA2F4FE00221CF1 /* SpringTextField.swift in Sources */,
 				8DF879E81AA2F4FE00221CF1 /* SpringImageView.swift in Sources */,
+				8DF87A191AA30DC700221CF1 /* CameraToggleButton.m in Sources */,
+				8DF87A1D1AA30DC700221CF1 /* LaunchCameraButton.m in Sources */,
+				8DF87A1B1AA30DC700221CF1 /* Constants.m in Sources */,
 				8D5D2D3A1AA2735F003BE326 /* GoingUser.swift in Sources */,
 				8DF879D81AA2F4FE00221CF1 /* DesignableImageView.swift in Sources */,
 				8DF879EE1AA2F4FE00221CF1 /* TransitionZoom.swift in Sources */,
 				8DF879DA1AA2F4FE00221CF1 /* DesignableTabBarController.swift in Sources */,
+				8DF87A1A1AA30DC700221CF1 /* CaptureSessionManager.m in Sources */,
 				8DF879E51AA2F4FE00221CF1 /* Spring.swift in Sources */,
 				8D5D2D151AA24C6B003BE326 /* UIImage+Enhancing.m in Sources */,
 				8D5D2D201AA25E63003BE326 /* NSParseUser.swift in Sources */,
