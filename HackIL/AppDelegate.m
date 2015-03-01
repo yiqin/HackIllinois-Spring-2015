@@ -56,7 +56,8 @@
         }];
     }
     
-    
+    [VoiceLocationManager sharedInstance];
+    [[VoiceLocationManager sharedInstance] getCurrentLocation];
     
     
     return YES;

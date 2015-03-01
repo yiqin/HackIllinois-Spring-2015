@@ -89,6 +89,7 @@
 		8DF87A1C1AA30DC700221CF1 /* Cool Camera Mockup.sketch in Resources */ = {isa = PBXBuildFile; fileRef = 8DF87A0F1AA30DC700221CF1 /* Cool Camera Mockup.sketch */; };
 		8DF87A1D1AA30DC700221CF1 /* LaunchCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A111AA30DC700221CF1 /* LaunchCameraButton.m */; };
 		8DF87A1E1AA30DC700221CF1 /* PaintCodeFile.pcvd in Resources */ = {isa = PBXBuildFile; fileRef = 8DF87A121AA30DC700221CF1 /* PaintCodeFile.pcvd */; };
+		8DF87A201AA32F0C00221CF1 /* VoiceLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF87A1F1AA32F0C00221CF1 /* VoiceLocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +224,7 @@
 		8DF87A101AA30DC700221CF1 /* LaunchCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchCameraButton.h; sourceTree = "<group>"; };
 		8DF87A111AA30DC700221CF1 /* LaunchCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchCameraButton.m; sourceTree = "<group>"; };
 		8DF87A121AA30DC700221CF1 /* PaintCodeFile.pcvd */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PaintCodeFile.pcvd; sourceTree = "<group>"; };
+		8DF87A1F1AA32F0C00221CF1 /* VoiceLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceLocationManager.swift; sourceTree = "<group>"; };
 		CD6A55DFDC11EB2027C45ECD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -416,6 +418,7 @@
 		8D92F7AD1AA1F0D300AE759B /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				8DF87A1F1AA32F0C00221CF1 /* VoiceLocationManager.swift */,
 				8D92F7A71AA1B38A00AE759B /* FeedsDataManager.swift */,
 			);
 			name = DataManager;
@@ -709,6 +712,7 @@
 				8DF879EC1AA2F4FE00221CF1 /* SpringView.swift in Sources */,
 				8DF879A91AA2C07400221CF1 /* ToPostTableViewCell.m in Sources */,
 				8D5D2D141AA24C6B003BE326 /* UIImage+Blurring.m in Sources */,
+				8DF87A201AA32F0C00221CF1 /* VoiceLocationManager.swift in Sources */,
 				8D5D2D3D1AA28D99003BE326 /* YQLabel.m in Sources */,
 				8DF879E61AA2F4FE00221CF1 /* SpringAnimation.swift in Sources */,
 				8D5D2D131AA24C6B003BE326 /* NYXImagesHelper.m in Sources */,

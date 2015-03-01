@@ -12,3 +12,4 @@
 #import "RandomColorGenerator.h"
 
 #import <DateTools.h>
+#import "INTULocationManager.h"
