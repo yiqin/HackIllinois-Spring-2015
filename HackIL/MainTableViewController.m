@@ -348,7 +348,16 @@
         Feed *feed = [self.objects objectAtIndex:indexPath.row-1];
         [self.clickedCollection addOrDeleteUniqueObject:feed];
         
-        NSArray *indexPaths = [[NSArray alloc] initWithObjects:indexPath, nil];
+        NSArray *indexPaths;
+        if (indexPath.row-2 >= 0) {
+            NSIndexPath *tempIndexPath = [NSIndexPath indexPathForRow:indexPath.row-2 inSection:0];
+            indexPaths = [[NSArray alloc] initWithObjects:@[tempIndexPath, indexPath], nil];
+        }
+        else {
+            indexPaths = [[NSArray alloc] initWithObjects:indexPath, nil];
+        }
+        indexPaths = [[NSArray alloc] initWithObjects:indexPath, nil];
+        
         [self.tableView beginUpdates];
         [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation: UITableViewRowAnimationNone];
         [self.tableView endUpdates];

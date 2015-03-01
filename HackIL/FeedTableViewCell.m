@@ -54,6 +54,7 @@
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        self.clipsToBounds = YES;
         self.profileSize = 85.0/2;
         self.profileSizeSmall = 60.0/2;
         
@@ -211,6 +212,8 @@
         self.joinLabel.hidden = NO;
         self.chatLabel.hidden = NO;
         self.peopleLabel.hidden = NO;
+        
+        self.tempButton.hidden = NO;
     }
     else {
         self.join.hidden = YES;
@@ -220,6 +223,8 @@
         self.joinLabel.hidden = YES;
         self.peopleLabel.hidden = YES;
         self.chatLabel.hidden = YES;
+        
+        self.tempButton.hidden = YES;
     }
     
 }
@@ -426,6 +431,7 @@
     self.tempButton =  [UIButton buttonWithType:UIButtonTypeRoundedRect];
     self.tempButton.frame = CGRectMake(0, y, kScreenWidth, 80);
     [self addSubview:self.tempButton];
+    self.tempButton.hidden = YES;
 }
 
 + (CGFloat)cellHeight:(BOOL) isClicked {
