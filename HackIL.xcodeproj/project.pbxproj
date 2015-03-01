@@ -32,6 +32,7 @@
 		8D5D2D351AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D5D2D2B1AA264C9003BE326 /* OpenSans-SemiboldItalic.ttf */; };
 		8D5D2D381AA26D10003BE326 /* RandomColorGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */; };
 		8D5D2D3A1AA2735F003BE326 /* GoingUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D391AA2735F003BE326 /* GoingUser.swift */; };
+		8D5D2D3D1AA28D99003BE326 /* YQLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D3C1AA28D99003BE326 /* YQLabel.m */; };
 		8D92F7771AA147B500AE759B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7761AA147B500AE759B /* main.m */; };
 		8D92F77A1AA147B500AE759B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F7791AA147B500AE759B /* AppDelegate.m */; };
 		8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D92F77B1AA147B500AE759B /* HackIL.xcdatamodeld */; };
@@ -99,6 +100,8 @@
 		8D5D2D361AA26D10003BE326 /* RandomColorGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomColorGenerator.h; sourceTree = "<group>"; };
 		8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomColorGenerator.m; sourceTree = "<group>"; };
 		8D5D2D391AA2735F003BE326 /* GoingUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoingUser.swift; sourceTree = "<group>"; };
+		8D5D2D3B1AA28D99003BE326 /* YQLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQLabel.h; sourceTree = "<group>"; };
+		8D5D2D3C1AA28D99003BE326 /* YQLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQLabel.m; sourceTree = "<group>"; };
 		8D92F7711AA147B500AE759B /* HackIL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackIL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D92F7751AA147B500AE759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D92F7761AA147B500AE759B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -208,6 +211,15 @@
 			path = Open_Sans;
 			sourceTree = "<group>";
 		};
+		8D5D2D3E1AA28DA1003BE326 /* YQUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				8D5D2D3B1AA28D99003BE326 /* YQLabel.h */,
+				8D5D2D3C1AA28D99003BE326 /* YQLabel.m */,
+			);
+			name = YQUIKit;
+			sourceTree = "<group>";
+		};
 		8D92F7681AA147B500AE759B = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +252,7 @@
 				8D92F7A51AA1B07C00AE759B /* FeedTableViewCell.m */,
 				8D5D2D361AA26D10003BE326 /* RandomColorGenerator.h */,
 				8D5D2D371AA26D10003BE326 /* RandomColorGenerator.m */,
+				8D5D2D3E1AA28DA1003BE326 /* YQUIKit */,
 				8D5D2CFA1AA24C6B003BE326 /* ThirdPartyLibraries */,
 				8DDB0F2E1AA2115A005FA34D /* Categories */,
 				8D92F7AD1AA1F0D300AE759B /* DataManager */,
@@ -486,6 +499,7 @@
 				8D92F77D1AA147B500AE759B /* HackIL.xcdatamodeld in Sources */,
 				8D5D2D1C1AA24C6B003BE326 /* UIScrollView+Screenshot.m in Sources */,
 				8D5D2D141AA24C6B003BE326 /* UIImage+Blurring.m in Sources */,
+				8D5D2D3D1AA28D99003BE326 /* YQLabel.m in Sources */,
 				8D5D2D131AA24C6B003BE326 /* NYXImagesHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

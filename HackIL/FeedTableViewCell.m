@@ -10,15 +10,18 @@
 #import "AFNetworking.h"
 #import "Constants.h"
 #import "RandomColorGenerator.h"
+#import "YQLabel.h"
 
 @interface FeedTableViewCell ()
 
 @property(nonatomic) CGFloat profileSize;
 
-@property(nonatomic, strong) UILabel *messageLabel;
+@property(nonatomic, strong) YQLabel *messageLabel;
 @property(nonatomic, strong) UIImageView *displayImageView;
 
 @property(nonatomic, strong) UIImageView *goingUserProfile1;
+@property(nonatomic, strong) UIImageView *goingUserProfile2;
+@property(nonatomic, strong) UIImageView *goingUserProfile3;
 
 @property(nonatomic, strong) UILabel *timeLabel;
 
@@ -36,7 +39,7 @@
         self.displayImageView.clipsToBounds = YES;
         [self addSubview:self.displayImageView];
         
-        self.messageLabel = [[UILabel alloc] init];
+        self.messageLabel = [[YQLabel alloc] init];
         self.messageLabel.textColor = [UIColor whiteColor];
         self.messageLabel.textAlignment = NSTextAlignmentCenter;
         self.messageLabel.numberOfLines = 0;
@@ -56,6 +59,17 @@
         self.goingUserProfile1.layer.cornerRadius = self.profileSize*0.5;
         [self addSubview:self.goingUserProfile1];
         
+        self.goingUserProfile2 = [[UIImageView alloc] init];
+        self.goingUserProfile2.contentMode = UIViewContentModeScaleAspectFill;
+        self.goingUserProfile2.layer.masksToBounds = YES;
+        self.goingUserProfile2.layer.cornerRadius = self.profileSize*0.5;
+        [self addSubview:self.goingUserProfile2];
+        
+        self.goingUserProfile3 = [[UIImageView alloc] init];
+        self.goingUserProfile3.contentMode = UIViewContentModeScaleAspectFill;
+        self.goingUserProfile3.layer.masksToBounds = YES;
+        self.goingUserProfile3.layer.cornerRadius = self.profileSize*0.5;
+        [self addSubview:self.goingUserProfile3];
         
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -73,13 +87,29 @@
     self.timeLabel.text = feed.releasedAtString;
     NSLog(@"%@", self.timeLabel);
     
-    if (feed.goingUsers.count > 0) {
+    self.goingUserProfile1.image = nil;
+    self.goingUserProfile2.image = nil;
+    self.goingUserProfile3.image = nil;
+    
+    if (feed.goingUsers.count >= 1) {
         GoingUser *goingUser1 = [feed.goingUsers objectAtIndex:0];
         NSLog(@"goring user name %@", goingUser1.name);
         self.goingUserProfile1.image = goingUser1.rawCoverImage.image;
         NSLog(@"%f", self.goingUserProfile1.image.size.height);
-        
     }
+    if (feed.goingUsers.count >= 2) {
+        GoingUser *goingUser2 = [feed.goingUsers objectAtIndex:1];
+        NSLog(@"goring user name %@", goingUser2.name);
+        self.goingUserProfile2.image = goingUser2.rawCoverImage.image;
+        NSLog(@"%f", self.goingUserProfile2.image.size.height);
+    }
+    if (feed.goingUsers.count >= 3) {
+        GoingUser *goingUser3 = [feed.goingUsers objectAtIndex:2];
+        NSLog(@"goring user name %@", goingUser3.name);
+        self.goingUserProfile3.image = goingUser3.rawCoverImage.image;
+        NSLog(@"%f", self.goingUserProfile3.image.size.height);
+    }
+    
     
     if (feed.hasCoverImage) {
         if (feed.rawCoverImage.isLoading) {
@@ -110,15 +140,39 @@
 - (void)layoutSubviews {
     // This will be a fixed size.
     CGFloat tempWidth = CGRectGetWidth(self.frame);
-    CGFloat tempHeigth = CGRectGetHeight(self.frame);
+    CGFloat tempHeigth = [FeedTableViewCell cellHeight:NO];
     
-    self.displayImageView.frame = CGRectMake(0, 0, tempWidth, [FeedTableViewCell cellHeight:NO]);
+    self.displayImageView.frame = CGRectMake(0, 0, tempWidth, tempHeigth);
     
-    self.messageLabel.frame = CGRectMake(40, 0, tempWidth-80, [FeedTableViewCell cellHeight:NO]);
+    self.messageLabel.frame = CGRectMake(40, 0, tempWidth-80, tempHeigth);
     
-    self.timeLabel.frame = CGRectMake(0, 65, tempWidth, 30);
+    
+    
+    
+    UILabel *tempLabel = [[UILabel alloc] initWithFrame: CGRectMake(40, 0, tempWidth-80, tempHeigth)];
+    tempLabel.text = self.messageLabel.text;
+    tempLabel.textAlignment = NSTextAlignmentCenter;
+    tempLabel.numberOfLines = 0;
+    tempLabel.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:17.0];
+    
+    NSLog(@"%@", tempLabel.text);
+    [tempLabel sizeToFit];
+    CGFloat tempHeight1 = ([FeedTableViewCell cellHeight:NO]-CGRectGetHeight(tempLabel.frame))*0.5;
+    
+    NSLog(@"tempHeight1    %f", tempHeight1);
+    
+    
+    
+    // [self.messageLabel sizeToFit];
+    // self.messageLabel.backgroundColor = [UIColor whiteColor];
+    
+    // self.messageLabel.center  = CGSizeMake(<#CGFloat width#>, )
+    
+    self.timeLabel.frame = CGRectMake(0, tempHeight1-30, tempWidth, 30);
     
     self.goingUserProfile1.frame = CGRectMake(40/2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
+    self.goingUserProfile2.frame = CGRectMake(40/2+60, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
+    self.goingUserProfile3.frame = CGRectMake(40/2+60*2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
     
 }
 
