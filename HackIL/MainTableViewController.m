@@ -15,6 +15,7 @@
 #import "YALNavigationBar.h"
 #import "PostingView.h"
 #import <Parse/Parse.h>
+#import <AFNetworking.h>
 
 @interface MainTableViewController ()
 
@@ -81,6 +82,10 @@
     [self.tableView addSubview:refreshControl];
     
     [self.navigationController.view addSubview:self.postingView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(savePost) name:@"savePost" object:nil];
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -89,7 +94,7 @@
 }
 
 - (BOOL)prefersStatusBarHidden {
-    return YES;
+    return NO;
 }
 
 - (void)reloadThisTableView {
@@ -218,24 +223,56 @@
 }
 
 - (void)savePost {
-    PFObject *post = [[PFObject alloc] initWithClassName:@"Feed"];
-    post[@"name"] = self.postingView.tf.text;
     
-    PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:40.0 longitude:-30.0];
-    post[@"geopoint"] = point;
-    
-    if (self.postingView.photoImageView.image) {
-        post[@"image"] = self.postingView.photoImageView.image;
-    }
-    
-    [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    NSArray *ranColors = @[@"http://files.parsetfss.com/80bf5d55-10a8-400f-8ee6-56ba5df99927/tfss-0014881a-7a69-4ad9-aaa6-35bec49cf18c-helen.jpg",@"http://files.parsetfss.com/80bf5d55-10a8-400f-8ee6-56ba5df99927/tfss-239bad1b-f898-48ef-a20c-334fcb92fd4c-jocelyn.jpg",@"http://files.parsetfss.com/80bf5d55-10a8-400f-8ee6-56ba5df99927/tfss-eb54585c-51d7-4304-8b12-20c01dac3ae9-yiqin.jpg"];
+    NSArray *strings = @[@"Helen",@"Jocelyn",@"Yi"];
+    int size = (int)[ranColors count];
+    int rand =(int) arc4random_uniform(size);
+    NSString *tempString  = [ranColors objectAtIndex:2];
+    NSString *userString = [strings objectAtIndex:2];
+    AFHTTPRequestOperationManager *operationManager = [AFHTTPRequestOperationManager manager];
+    operationManager.responseSerializer = [AFImageResponseSerializer serializer];
+    [operationManager GET:tempString parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        PFObject *going = [[PFObject alloc] initWithClassName:@"Going"];
-        going[@"feed"] = post;
-        going[@"user"] = [PFUser currentUser];
+        PFObject *post = [[PFObject alloc] initWithClassName:@"Feed"];
+        post[@"name"] = self.postingView.tf.text;
         
+        PFGeoPoint *point = [PFGeoPoint geoPointWithLatitude:[VoiceLocationManager sharedInstance].latitude longitude:[VoiceLocationManager sharedInstance].longitude];
+        post[@"geopoint"] = point;
+        
+        
+        post[@"releasedAt"] = [NSDate date];
+        
+        if (self.postingView.photoImageView.image) {
+            NSData *imageData2 = UIImagePNGRepresentation(self.postingView.photoImageView.image);
+            PFFile *imageFile2 = [PFFile fileWithName:@"image.png" data:imageData2];
+            post[@"image"] = imageFile2;
+        }
+        
+        [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            
+            PFObject *going = [[PFObject alloc] initWithClassName:@"Going"];
+            going[@"feed"] = post;
+            going[@"user"] = [PFUser currentUser];
+            going[@"user_name"] = userString;
+            NSData *imageData1 = UIImagePNGRepresentation(responseObject);
+            PFFile *imageFile1 = [PFFile fileWithName:@"user_profile.png" data:imageData1];
+            going[@"user_profileImage"] = imageFile1;
+            
+            [going saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                
+                [self hidePostingView];
+                
+            }];
+            
+        }];
+
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
+    
+    
 }
 
 

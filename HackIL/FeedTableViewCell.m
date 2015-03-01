@@ -12,6 +12,7 @@
 #import "RandomColorGenerator.h"
 #import "YQLabel.h"
 #import "LikesManager.h"
+#import <Colours.h>
 
 @interface FeedTableViewCell ()
 
@@ -120,7 +121,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = [UIColor colorFromHexString:@"f0f0f0"];
 }
 
 - (void)setContentValue:(Feed *)feed withCheckingCliked:(BOOL)isClicked {

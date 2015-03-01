@@ -29,7 +29,7 @@
         self.textField.returnKeyType = UIReturnKeySearch;
         self.textField.layer.borderWidth = 0.50f;
         [self.textField setBorderStyle:UITextBorderStyleLine];
-        self.textField.layer.borderColor = [[UIColor grayColor] CGColor];
+        self.textField.layer.borderColor = [[UIColor colorFromHexString:@"4d4d4d"] CGColor];
         // self.textField.layer.cornerRadius = 5;
         // self.textField.clipsToBounds = YES;
         

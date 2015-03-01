@@ -81,9 +81,7 @@
 }
 
 - (void)goToAppStore:(UIButton*)button {
-    
-    
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"savePost" object:nil];
 }
 
 -(void)hideKeyBoard {

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Yalantis. All rights reserved.
 //
 
-static float const defaultHeight = 64.f;
+static float const defaultHeight = 44.f;
 
 #import "YALNavigationBar.h"
 
