@@ -36,7 +36,6 @@ PODS:
   - ParseUI (1.1.0):
     - Parse (~> 1.6)
     - ParseFacebookUtils (~> 1.6)
-  - Spring (1.0.1)
   - SVProgressHUD (HEAD based on 1.1.2)
 
 DEPENDENCIES:
@@ -46,7 +45,6 @@ DEPENDENCIES:
   - DateTools
   - Parse
   - ParseUI
-  - Spring (~> 1.0.1)
   - SVProgressHUD (HEAD)
 
 SPEC CHECKSUMS:
@@ -59,7 +57,6 @@ SPEC CHECKSUMS:
   Parse: f725f76ef200c5127420690fc6882e57c3813923
   ParseFacebookUtils: bb14e63862f920cc3f3864b0e373d6771b765255
   ParseUI: 00c4c39aab3944d88758b55416581650caa37f89
-  Spring: e89869046a8b25c17fed7a5b123685738a63b26a
   SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
 
 COCOAPODS: 0.35.0
