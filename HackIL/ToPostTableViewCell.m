@@ -29,14 +29,12 @@
     self.backgroundColor = [UIColor whiteColor];
 }
 
-
 - (void)layoutSubviews {
     
 }
 
 + (CGFloat)cellHeight {
-    return 100;
+    return 50;
 }
-
 
 @end
