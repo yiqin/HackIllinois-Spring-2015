@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59D9A2D81AA332D400474DA4 /* LikesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D9A2D71AA332D400474DA4 /* LikesManager.m */; };
 		5E4C29DD8D5689BEAAA6A595 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6A55DFDC11EB2027C45ECD /* libPods.a */; };
 		8D5D2D131AA24C6B003BE326 /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2CFD1AA24C6B003BE326 /* NYXImagesHelper.m */; };
 		8D5D2D141AA24C6B003BE326 /* UIImage+Blurring.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5D2D001AA24C6B003BE326 /* UIImage+Blurring.m */; };
@@ -103,6 +104,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59D9A2D61AA332D400474DA4 /* LikesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikesManager.h; sourceTree = "<group>"; };
+		59D9A2D71AA332D400474DA4 /* LikesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikesManager.m; sourceTree = "<group>"; };
 		69046B0FDD868508318D6AB7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		82CEB7904133DCD12B8FEF07 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8D5D2CFC1AA24C6B003BE326 /* NYXImagesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesHelper.h; sourceTree = "<group>"; };
@@ -347,6 +350,8 @@
 			children = (
 				8D92F7781AA147B500AE759B /* AppDelegate.h */,
 				8D92F7791AA147B500AE759B /* AppDelegate.m */,
+				59D9A2D61AA332D400474DA4 /* LikesManager.h */,
+				59D9A2D71AA332D400474DA4 /* LikesManager.m */,
 				8D5D2D1E1AA25757003BE326 /* Constants.h */,
 				8D92F7A11AA1AF3200AE759B /* MainTableViewController.h */,
 				8D92F7A21AA1AF3200AE759B /* MainTableViewController.m */,
@@ -682,6 +687,7 @@
 				8DF87A141AA30DC700221CF1 /* CameraFlashButton.m in Sources */,
 				8DF879E11AA2F4FE00221CF1 /* LoadingView.swift in Sources */,
 				8DF879E31AA2F4FE00221CF1 /* Misc.swift in Sources */,
+				59D9A2D81AA332D400474DA4 /* LikesManager.m in Sources */,
 				8D5D2D181AA24C6B003BE326 /* UIImage+Reflection.m in Sources */,
 				8D92F7AA1AA1EB7100AE759B /* NSParseImage.swift in Sources */,
 				8DF879ED1AA2F4FE00221CF1 /* TransitionManager.swift in Sources */,

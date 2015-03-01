@@ -11,6 +11,7 @@
 #import "Constants.h"
 #import "RandomColorGenerator.h"
 #import "YQLabel.h"
+#import "LikesManager.h"
 
 @interface FeedTableViewCell ()
 
@@ -19,6 +20,7 @@
 
 @property(nonatomic, strong) YQLabel *messageLabel;
 @property(nonatomic, strong) UIImageView *displayImageView;
+@property(nonatomic, strong) Feed *feed;
 
 @property(nonatomic, strong) UIView *filterView;
 
@@ -28,9 +30,11 @@
 @property(nonatomic, strong) UIImageView *goingUserProfile3;
 @property(nonatomic, strong) NSString *userName;
 @property(nonatomic, strong) UILabel *nameHolder;
+@property(nonatomic, strong) UIButton *ghost;
 @property(nonatomic, strong) UIImageView *likes;
 
 @property(nonatomic, strong) UILabel *timeLabel;
+@property(nonatomic) BOOL currStatus;
 
 @end
 
@@ -90,8 +94,13 @@
         self.goingUserProfile3.layer.cornerRadius = self.profileSizeSmall*0.5;
         [self addSubview:self.goingUserProfile3];
         
-        self.likes = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart.png"]];
+        self.likes = [[UIImageView alloc] init];
         [self addSubview:self.likes];
+        
+        self.ghost =  [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [self.ghost addTarget:self action:@selector(ghostPressed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self addSubview:self.ghost];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
@@ -104,6 +113,10 @@
 }
 
 - (void)setContentValue:(Feed *)feed {
+    self.feed = feed;
+    NSString *feedID = feed.objectId;
+    self.currStatus = [self LikeStatus:feedID];
+    
     self.messageLabel.text = feed.name;
     self.timeLabel.text = feed.releasedAtString;
     NSLog(@"%@", self.timeLabel);
@@ -164,6 +177,16 @@
         self.displayImageView.backgroundColor = feed.backgroundSolidColor;
     }
     
+    if (self.currStatus) {
+        [self.likes setImage:[UIImage imageNamed:@"favourite-active.png"]];
+    }
+    else {
+        [self.likes setImage:[UIImage imageNamed:@"favorite.png"]];
+    }
+    
+    [self.likes setBackgroundColor:[UIColor clearColor]];
+    
+
 }
 
 - (void)layoutSubviews {
@@ -202,14 +225,98 @@
     
     // #4
     self.goingUserProfile1.frame = CGRectMake(40/2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
-    self.nameHolder.frame = CGRectMake(40/2+50, tempHeigth-35/2-self.profileSize-5, self.profileSize, self.profileSize);
     
-    self.goingUserProfile2.frame = CGRectMake(40/2+50+60, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
+    self.nameHolder.frame = CGRectMake(40/2+50, tempHeigth-35/2-self.profileSize-8, self.profileSize+4, self.profileSize);
+    
+    self.nameHolder.frame = CGRectMake(40/2+50+60, tempHeigth-35/2-self.profileSize-5, self.profileSize, self.profileSize);
+    
+    self.goingUserProfile2.frame = CGRectMake(40/2+50+60*2, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
+    //*layout
     self.goingUserProfile3.frame = CGRectMake(40/2+50+60+self.profileSizeSmall*1.2, CGRectGetMinY(self.goingUserProfile1.frame)+self.profileSize - self.profileSizeSmall, self.profileSizeSmall, self.profileSizeSmall);
     
-    self.likes.frame = CGRectMake(40/2+50+60*4, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
+    self.likes.frame = CGRectMake(40/2+50+60*4, tempHeigth-35/2-self.profileSize + self.profileSize/2 - 13.5, 28, 27); //x, y, width, height
+    self.ghost.frame = CGRectMake(40/2+50+60*4, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
 
 }
+
+-(void)ghostPressed:(UIButton*)sender
+{
+    LikesManager *singleton = [LikesManager sharedManager];
+    //   NSMutableArray *myLikes = [singleton loadLikes];
+    NSLog(@"currentstatus: %d", self.currStatus);
+    if (self.currStatus == NO) {
+        [UIImageView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveLinear                      animations:^{
+            [self.likes setImage:[UIImage imageNamed:@"favourite-active.png"]];
+            self.likes.transform = CGAffineTransformScale(self.likes.transform, 1.0, 1.0);
+            NSLog(@"currStatusNo");
+            
+        }
+                              completion:^(BOOL completed) {
+                                  [UIImageView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveLinear
+                                                        animations:^{
+                                                            self.likes.transform =
+                                                            CGAffineTransformScale(self.likes.transform, 0.5, 0.5);
+                                                        }
+                                                        completion:^(BOOL finished) {
+                                                            
+                                                        }];
+                                  
+                              }];
+        [singleton addLikes:self.feed.objectId];
+        [singleton saveLikes];
+        _currStatus = YES;
+        NSMutableArray *data = [singleton loadLikes];
+        NSLog(@"loadid: %@", self.feed.objectId);
+        NSLog(@"loaddatano: %@", data);
+        
+    }
+    else {
+        [UIImageView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveLinear                      animations:^{
+            [self.likes setImage:[UIImage imageNamed:@"favorite.png"]];
+            self.likes.transform = CGAffineTransformScale(self.likes.transform, 1.0,1.0);
+            
+            
+        }
+                              completion:^(BOOL completed) {
+                                  [UIImageView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveLinear
+                                                        animations:^{
+                                                            self.likes.transform =
+                                                            CGAffineTransformScale(CGAffineTransformIdentity, 0.5, 0.5);
+                                                            
+                                                        }
+                                                        completion:^(BOOL finished) {
+                                                            
+                                                        }];
+                                  
+                              }];
+        [singleton deleteLikes:self.feed.objectId];
+        _currStatus = NO;
+        
+    }
+}
+
+-(BOOL)LikeStatus:(NSString*)feedID {
+    BOOL status = NO;
+    LikesManager *singleton = [LikesManager sharedManager];
+    [singleton loadLikes];
+    
+    // [[FeedsDataManager sharedInstance].objects objectAtIndex:]
+    NSMutableArray *myLikes = [[NSMutableArray alloc]init];
+    myLikes = [singleton loadLikes];
+    NSLog(@"mylikes %@", myLikes);
+    NSUInteger size = [myLikes count];
+    for (int i = 0; i < size; i++) {
+        NSString *currLike = [myLikes objectAtIndex:i];
+        if ([currLike isEqualToString: feedID]) {
+            status = YES;
+        }
+        
+    }
+    NSLog(@"likestatus: %d",status);
+    return status;
+    
+}
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
