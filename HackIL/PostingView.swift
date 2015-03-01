@@ -1,13 +1,13 @@
 //
-//  PostingView.h
+//  PostingView.swift
 //  HackIL
 //
 //  Created by Yi Qin on 3/1/15.
 //  Copyright (c) 2015 Yi Qin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+import UIKit
 
-@interface PostingView : UIView
+class PostingView: SpringView {
 
-@end
+}
