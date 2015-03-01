@@ -41,6 +41,11 @@
 @property(nonatomic, strong) UIImageView *join;
 @property(nonatomic, strong) UIImageView *chat;
 
+@property(nonatomic, strong) UILabel *peopleLabel;
+@property(nonatomic, strong) UILabel *joinLabel;
+@property(nonatomic, strong) UILabel *chatLabel;
+
+@property(nonatomic, strong) UIButton *tempButton;
 
 @end
 
@@ -202,14 +207,21 @@
         self.join.hidden = NO;
         self.people.hidden = NO;
         self.chat.hidden = NO;
+        
+        self.joinLabel.hidden = NO;
+        self.chatLabel.hidden = NO;
+        self.peopleLabel.hidden = NO;
     }
     else {
         self.join.hidden = YES;
         self.people.hidden = YES;
         self.chat.hidden = YES;
+        
+        self.joinLabel.hidden = YES;
+        self.peopleLabel.hidden = YES;
+        self.chatLabel.hidden = YES;
     }
     
-
 }
 
 - (void)layoutSubviews {
@@ -354,17 +366,40 @@
     CGFloat y = kScreenWidth*kRatio;
     CGFloat x = kScreenWidth/3;
     
-    self.people.frame = CGRectMake( 0, y, x, 80 );//x,y, width, height
-    self.join.frame = CGRectMake( x, y, x, 80 );
-    self.chat.frame = CGRectMake( x*2, y, x, 80 );
+    self.people.frame = CGRectMake( 0, y-10, x, 80 );//x,y, width, height
+    self.join.frame = CGRectMake( x, y-10, x, 80 );
+    self.chat.frame = CGRectMake( x*2, y-10, x, 80 );
     
-    UIImage *peopleImage = [UIImage imageNamed:@"people.png"];
+    
+    self.peopleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, y+36, x, 30)];
+    self.peopleLabel.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:13.0];
+    self.peopleLabel.textColor = [UIColor colorFromHexString:@"4d4d4d"];
+    self.peopleLabel.textAlignment = NSTextAlignmentCenter;
+    self.peopleLabel.text = @"PEOPLE";
+    
+    self.joinLabel = [[UILabel alloc] initWithFrame:CGRectMake(x, y+36, x, 30)];
+    self.joinLabel.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:13.0];
+    self.joinLabel.textColor = [UIColor colorFromHexString:@"4d4d4d"];
+    self.joinLabel.textAlignment = NSTextAlignmentCenter;
+    self.joinLabel.text = @"I'M IN";
+    
+    self.chatLabel = [[UILabel alloc] initWithFrame:CGRectMake(x*2, y+36, x, 30)];
+    self.chatLabel.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:13.0];
+    self.chatLabel.textColor = [UIColor colorFromHexString:@"4d4d4d"];
+    self.chatLabel.textAlignment = NSTextAlignmentCenter;
+    self.chatLabel.text = @"CHAT";
+    
+
+    
+    
+    
+    UIImage *peopleImage = [UIImage imageNamed:@"people"];
     self.people.image = peopleImage;
     // [self.people setImage:peopleImage forState:UIControlStateNormal];
     UIImage *messageImage = [UIImage imageNamed:@"message"];
     self.chat.image = messageImage;
     // [self.chat setImage:messageImage forState:UIControlStateNormal];
-    UIImage *joinImage = [UIImage imageNamed:@"interested.png"];
+    UIImage *joinImage = [UIImage imageNamed:@"interested"];
     self.join.image = joinImage;
     // [self.join setImage:joinImage forState:UIControlStateNormal];
     
@@ -379,6 +414,18 @@
     self.people.hidden = YES;
     self.chat.hidden = YES;
     self.join.hidden = YES;
+    
+    self.joinLabel.hidden = YES;
+    self.peopleLabel.hidden = YES;
+    self.chatLabel.hidden = YES;
+    
+    [self addSubview:self.peopleLabel];
+    [self addSubview:self.joinLabel];
+    [self addSubview:self.chatLabel];
+    
+    self.tempButton =  [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.tempButton.frame = CGRectMake(0, y, kScreenWidth, 80);
+    [self addSubview:self.tempButton];
 }
 
 + (CGFloat)cellHeight:(BOOL) isClicked {

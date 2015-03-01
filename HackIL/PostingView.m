@@ -51,6 +51,8 @@
         [self addSubview:self.introPlaceLabel];
         
         
+        
+        
         CGFloat buttonWidth = 180;
         CGFloat buttonHeight = 44;
         self.getButton = [[AYVibrantButton alloc] initWithFrame:CGRectMake(0.5*CGRectGetWidth(self.frame)-buttonWidth*0.5, 420, buttonWidth, buttonHeight) style:AYVibrantButtonStyleInvert];
