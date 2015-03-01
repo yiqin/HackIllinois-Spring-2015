@@ -24,6 +24,9 @@
 @property(nonatomic, strong) UIImageView *goingUserProfile1;
 @property(nonatomic, strong) UIImageView *goingUserProfile2;
 @property(nonatomic, strong) UIImageView *goingUserProfile3;
+@property(nonatomic, strong) NSString *userName;
+@property(nonatomic, strong) UILabel *nameHolder;
+@property(nonatomic, strong) UIImageView *likes;
 
 @property(nonatomic, strong) UILabel *timeLabel;
 
@@ -63,6 +66,10 @@
         self.goingUserProfile1.layer.cornerRadius = self.profileSize*0.5;
         [self addSubview:self.goingUserProfile1];
         
+        self.nameHolder = [[UILabel alloc] init];
+        self.nameHolder.numberOfLines = 0;
+        [self addSubview:self.nameHolder];
+        
         self.goingUserProfile2 = [[UIImageView alloc] init];
         self.goingUserProfile2.contentMode = UIViewContentModeScaleAspectFill;
         self.goingUserProfile2.layer.masksToBounds = YES;
@@ -75,6 +82,8 @@
         self.goingUserProfile3.layer.cornerRadius = self.profileSize*0.5;
         [self addSubview:self.goingUserProfile3];
         
+        self.likes = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"heart.png"]];
+        [self addSubview:self.likes];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
@@ -100,6 +109,10 @@
     if (feed.goingUsers.count >= 1) {
         GoingUser *goingUser1 = [feed.goingUsers objectAtIndex:0];
         NSLog(@"goring user name %@", goingUser1.name);
+        self.userName = goingUser1.name;
+        self.nameHolder.text = self.userName;
+        self.nameHolder.textColor = [UIColor whiteColor];
+        self.nameHolder.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:12];
         self.goingUserProfile1.image = goingUser1.rawCoverImage.image;
         NSLog(@"%f", self.goingUserProfile1.image.size.height);
     }
@@ -179,9 +192,12 @@
     
     // #4
     self.goingUserProfile1.frame = CGRectMake(40/2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
-    self.goingUserProfile2.frame = CGRectMake(40/2+60, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
-    self.goingUserProfile3.frame = CGRectMake(40/2+60*2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
+    self.nameHolder.frame = CGRectMake(40/2+50, tempHeigth-35/2-self.profileSize-5, self.profileSize, self.profileSize);
+    self.goingUserProfile2.frame = CGRectMake(40/2+50+60, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
+    self.goingUserProfile3.frame = CGRectMake(40/2+50+60*2, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
     
+    self.likes.frame = CGRectMake(40/2+50+60*4, tempHeigth-35/2-self.profileSize, self.profileSize, self.profileSize);
+
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
