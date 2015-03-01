@@ -42,6 +42,7 @@
 
         self.postingView = [[PostingView alloc] initWithFrame:CGRectMake(0, screenHeight, screenWidth, screenHeight-64)];
         
+        
         self.aminationHeight = screenHeight-64;
     }
     return self;
@@ -76,7 +77,7 @@
     self.refreshControl = refreshControl;
     [self.tableView addSubview:refreshControl];
     
-    [self.view addSubview:self.postingView];
+    [self.navigationController.view addSubview:self.postingView];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -126,8 +127,11 @@
 - (void)setNavigationPost {
     self.title = @"Post";
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(pressedCancelButton:)];
-    self.navigationItem.rightBarButtonItem = cancelButton;
     self.navigationItem.leftBarButtonItem = cancelButton;
+    
+    UIBarButtonItem *cameraButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(pressedCameraButton:)];
+    
+    self.navigationItem.rightBarButtonItem = cameraButton;
 }
 
 - (void)pressedAddButton:(UIBarButtonItem *)sender {
@@ -144,24 +148,28 @@
     [self hidePostingView];
 }
 
+- (void)pressedCameraButton:(UIBarButtonItem *)sender {
+    
+}
+
 - (void)showPostingView {
     
-    [UIView animateWithDuration:1.0f delay:0.0f usingSpringWithDamping:.2 initialSpringVelocity:0.8 options:0 animations:^{
+    [UIView animateWithDuration:1.0f delay:0.0f usingSpringWithDamping:.8 initialSpringVelocity:0.1 options:0 animations:^{
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
         CGFloat screenHeight = screenRect.size.height;
-        self.postingView.frame = CGRectMake(0, 0, screenWidth, screenHeight-64);
-        
+        self.postingView.frame = CGRectMake(0, 64, screenWidth, screenHeight-64);
         
     } completion:^(BOOL finished) {
         
     }];
+    
 }
 
 - (void)hidePostingView {
     
-    [UIView animateWithDuration:1.0f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionCurveEaseOut animations:^{
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
