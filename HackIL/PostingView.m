@@ -8,6 +8,7 @@
 
 #import "PostingView.h"
 #import <Colours.h>
+
 @interface PostingView ()
 
 
@@ -20,10 +21,10 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        self.backgroundColor = [UIColor colorFromHexString:@"3d5fc4"];\
+        self.backgroundColor = [UIColor colorFromHexString:@"3d5fc4"];
         
-        self.photoImageView = [[UIImageView alloc] initWithFrame:frame];
-        self.photoImageView.hidden = YES;
+        self.photoImageView = [[UIImageView alloc] init];
+        self.photoImageView.hidden = NO;
         [self addSubview: self.photoImageView];
         
         self.introLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, CGRectGetWidth(frame), 20)];
@@ -48,14 +49,40 @@
         self.introPlaceLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:self.introPlaceLabel];
         
+        
+        CGFloat buttonWidth = 100;
+        CGFloat buttonHeight = 40;
+        self.getButton = [[AYVibrantButton alloc] initWithFrame:CGRectMake(0.5*CGRectGetWidth(self.frame)-buttonWidth*0.5, 300, buttonWidth, buttonHeight) style:AYVibrantButtonStyleInvert];
+        self.getButton.backgroundColor = [UIColor colorFromHexString:@"ffb745"];
+        // self.getButton.vibrancyEffect = [UIVibrancyEffect effectForBlurEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight]];
+        self.getButton.vibrancyEffect = nil;
+        self.getButton.text = @"GET";
+        self.getButton.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:17.0];
+        
+        
+        self.getButton.cornerRadius = buttonHeight*0.5;
+        self.getButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
+        
+        [self.getButton addTarget:self action:@selector(goToAppStore:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self addSubview:self.getButton];
+        
+        
+        
         UITapGestureRecognizer * tapGesture = [[UITapGestureRecognizer alloc]
                                                initWithTarget:self
                                                action:@selector(hideKeyBoard)];
-        [self addGestureRecognizer:tapGesture];
-        
+        // [self addGestureRecognizer:tapGesture];
+        [self.photoImageView setUserInteractionEnabled:YES];
         [self.photoImageView addGestureRecognizer:tapGesture];
     }
     return self;
+}
+
+- (void)goToAppStore:(UIButton*)button {
+    
+    
+    
 }
 
 -(void)hideKeyBoard {
@@ -63,6 +90,7 @@
 }
 
 -(void)layoutSubviews {
+    self.photoImageView.frame = CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame));
     
 }
 

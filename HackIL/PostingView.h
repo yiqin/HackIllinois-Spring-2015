@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AYVibrantButton.h"
 
 @interface PostingView : UIView
 
@@ -15,5 +16,7 @@
 @property(nonatomic, strong) UILabel *introPlaceLabel;
 
 @property(nonatomic, strong) UIImageView *photoImageView;
+
+@property(nonatomic, strong) AYVibrantButton *getButton;
 
 @end

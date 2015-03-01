@@ -179,8 +179,9 @@
     UIImageView *photoImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight-64)];
     // photoImageView.contentMode = UIViewContentModeBottom;
     photoImageView.image = image;
-    [self.postingView insertSubview:photoImageView atIndex:0];
+    // [self.postingView insertSubview:photoImageView atIndex:0];
     
+    self.postingView.photoImageView.image = image;
     
     
 }
