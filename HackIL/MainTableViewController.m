@@ -227,7 +227,7 @@
 
 - (void)savePost {
     
-    [SVProgressHUD showWithStatus:@"Loading..."];
+    // [SVProgressHUD showWithStatus:@"Loading..."];
     
     NSArray *ranColors = @[@"http://files.parsetfss.com/80bf5d55-10a8-400f-8ee6-56ba5df99927/tfss-0014881a-7a69-4ad9-aaa6-35bec49cf18c-helen.jpg",@"http://files.parsetfss.com/80bf5d55-10a8-400f-8ee6-56ba5df99927/tfss-239bad1b-f898-48ef-a20c-334fcb92fd4c-jocelyn.jpg",@"http://files.parsetfss.com/80bf5d55-10a8-400f-8ee6-56ba5df99927/tfss-eb54585c-51d7-4304-8b12-20c01dac3ae9-yiqin.jpg"];
     NSArray *strings = @[@"Helen",@"Jocelyn",@"Yi"];

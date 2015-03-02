@@ -157,9 +157,9 @@
         PFGeoPoint *currentLocationGeoPoint = [PFGeoPoint geoPointWithLatitude:[VoiceLocationManager sharedInstance].latitude longitude:[VoiceLocationManager sharedInstance].longitude];
         
         double distanceDoubleKilo  = [currentLocationGeoPoint distanceInKilometersTo:feed.geoPoint];
-        double distanceDoubleM = distanceDoubleKilo*1000;
+        double distanceDoubleM = distanceDoubleKilo;
         // @” print double %f”, d
-        self.geoStringHolder.text = [NSString stringWithFormat:@"%0.2f m", distanceDoubleM];
+        self.geoStringHolder.text = [NSString stringWithFormat:@"%0.2f km", distanceDoubleM];
         self.geoStringHolder.textColor = [UIColor whiteColor];
         self.geoStringHolder.font = [UIFont fontWithName:@"OpenSans-SemiBold" size:12];
     }
