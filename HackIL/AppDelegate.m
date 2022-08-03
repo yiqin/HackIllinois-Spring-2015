@@ -23,7 +23,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    // Setting the navigation bar style..
+    // Setting the navigation bar style..testfdate
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorFromHexString:@"f0f0f0"]];
     // [[UITabBar appearance] setTintColor:[UIColor colorFromHexString:@"3d5fc4"]];
     // White or black
